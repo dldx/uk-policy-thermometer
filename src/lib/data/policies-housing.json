@@ -1,0 +1,633 @@
+[
+  {
+    "party_name": "Labour",
+    "color": "#E4003B",
+    "policies": []
+  },
+  {
+    "party_name": "Conservative",
+    "color": "#0087DC",
+    "policies": [
+      {
+        "date_announced": "2023-10-26",
+        "policy_text": "The **Levelling Up and Regeneration Act 2023** received Royal Assent. This legislation fundamentally reformed the planning system, introducing **National Development Management Policies (NDMPs)** to standardise planning rules and introducing a new **Infrastructure Levy** to replace Section 106 agreements for funding local infrastructure and affordable housing.",
+        "source": {
+          "url": "https://www.legislation.gov.uk/ukpga/2023/55",
+          "notes:": "Key piece of government legislation for planning reform, passed in October 2023."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 5,
+            "weight": 2,
+            "reasoning": "The Levelling Up and Regeneration Act introduces NDMPs for standardized planning and Infrastructure Levy. NDMPs could streamline development, increasing supply, but the Infrastructure Levy, replacing Section 106, may increase costs if not implemented carefully. These could offset each other resulting in neutral price impact."
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "The Levelling Up and Regeneration Act primarily reforms the planning system and introduces the Infrastructure Levy. While the Infrastructure Levy is intended to fund affordable housing, the Act does not directly address renters' rights or protections. The impact on renters is indirect and uncertain, so it is neutral. NDMPs do not directly affect renters rights."
+          }
+        }
+      },
+      {
+        "date_announced": "2023-12-19",
+        "policy_text": "Revision of the **National Planning Policy Framework (NPPF)** to make the 300,000 homes a year target a guide, not a mandatory requirement for local authorities, allowing local councils to exercise more flexibility when assessing local housing need, especially where development would harm the Green Belt.",
+        "source": {
+          "url": "https://www.gov.uk/government/publications/national-planning-policy-framework--2",
+          "notes:": "Revised NPPF was published in December 2023, following consultation on planning reforms."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 3,
+            "weight": 2,
+            "reasoning": "Revising the NPPF to make the 300,000 homes target a guide, not a requirement, weakens incentives for local authorities to meet housing need. Allowing councils to prioritize Green Belt protection over housing increases limits supply, pushing prices higher. Likely a moderate price increase."
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "Revising the NPPF to make the 300,000 homes a year target a guide rather than mandatory has an uncertain impact on renters' rights. It may lead to fewer homes being built, potentially increasing demand and rents, but it also gives local authorities more flexibility. The net effect is neutral because there is no direct impact on existing renters' rights."
+          }
+        }
+      },
+      {
+        "date_announced": "2023-07-24",
+        "policy_text": "Launch of the **Long-Term Plan for Housing** to promote regeneration and inner-city densification by focusing on building 'beautiful homes' on underused brownfield sites in high-demand regions.",
+        "source": {
+          "url": "https://lordslibrary.parliament.uk/long-term-plan-for-housing/",
+          "notes:": "The government's new strategy, announced by Michael Gove, for increasing housing supply."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 6,
+            "weight": 2,
+            "reasoning": "The Long-Term Plan focuses on regeneration and inner-city densification on brownfield sites. Building on brownfield land in high-demand areas increases supply where it is needed most, helping to relieve price pressure. This should lead to a moderate price decrease."
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "The Long-Term Plan for Housing focuses on regeneration and building 'beautiful homes' on brownfield sites. While increasing housing supply can indirectly benefit renters by easing demand, the plan does not directly address renters' rights, protections, or affordability. Therefore, the impact is neutral in the short term."
+          }
+        }
+      },
+      {
+        "date_announced": "2023-05-17",
+        "policy_text": "Introduction of the **Renters (Reform) Bill** to Parliament, which included the pledge to ban 'no-fault' **Section 21 evictions** to provide more security for tenants, alongside strengthening grounds for landlords to take back possession when necessary.",
+        "source": {
+          "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-9538/",
+          "notes:": "The Bill was introduced in May 2023 and progressed through Parliament during the year."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 5,
+            "weight": 2,
+            "reasoning": "The Renters (Reform) Bill, banning Section 21 evictions, provides more security for tenants. While beneficial for renters, it may slightly reduce the attractiveness of buy-to-let investments, but this is likely to have negligible impact on prices. Strengthening grounds for landlords to take back possession somewhat balances this. Overall, neutral impact."
+          },
+          "renters_rights": {
+            "score": 8,
+            "weight": 3,
+            "reasoning": "The Renters (Reform) Bill, including the ban on 'no-fault' Section 21 evictions, significantly strengthens renters' rights. This provides increased security of tenure and reduces the risk of arbitrary eviction. Strengthening grounds for landlords also protects tenants by limiting unfair evictions. Therefore, this represents a significant improvement for renters."
+          }
+        }
+      },
+      {
+        "date_announced": "2023-11-22",
+        "policy_text": "Announcement in the Autumn Statement of **£110 million for building on brownfield land** to deliver tens of thousands of new homes and help unlock large housing schemes in cities and towns, consistent with the brownfield-first strategy.",
+        "source": {
+          "url": "https://www.gov.uk/government/publications/autumn-statement-2023/autumn-statement-2023",
+          "notes:": "Funding commitment as part of the wider plan to boost housing supply in urban areas."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 6,
+            "weight": 1,
+            "reasoning": "£110 million for building on brownfield land can deliver new homes, increasing supply. While the sum is not huge relative to overall housing need, it is a positive step that will likely contribute to a moderate price decrease in localized areas. The weight is low because of the scale of the investment."
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "Allocating £110 million for building on brownfield land can potentially increase housing supply, which could indirectly benefit renters by easing demand and stabilizing rents. However, this is an indirect and long-term effect, with no immediate or direct impact on renters' rights or protections. So, it is neutral."
+          }
+        }
+      },
+      {
+        "date_announced": "2023-06-27",
+        "policy_text": "Introduction of the **Leasehold and Freehold Reform Bill** to abolish leasehold for new houses (with limited exceptions), cap ground rents, and make it cheaper and easier for existing leaseholders to buy their freehold or extend their lease, fulfilling a long-standing reform commitment.",
+        "source": {
+          "url": "https://www.gov.uk/government/news/leasehold-and-freehold-reform-bill-introduced-to-parliament",
+          "notes:": "The Bill was introduced to the House of Commons in late 2023."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "The Leasehold and Freehold Reform Bill, abolishing leasehold for new houses and capping ground rents, primarily impacts existing leaseholders and new house construction, not the broader housing market. Although it may make homeownership more attractive, the overall impact on prices will be minor."
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "The Leasehold and Freehold Reform Bill focuses on leasehold ownership and ground rents, primarily benefiting homeowners rather than renters. While some renters may eventually become leaseholders, the bill does not directly address renters' rights, security of tenure, or affordability. Thus, its impact on renters is neutral."
+          }
+        }
+      },
+      {
+        "date_announced": "2023-07-24",
+        "policy_text": "Commitment to use government powers to **intervene and create new development corporations** to drive regeneration in areas where local councils are failing to bring forward local plans or meet housing need.",
+        "source": {
+          "url": "https://lordslibrary.parliament.uk/long-term-plan-for-housing/",
+          "notes:": "Part of the Long-Term Plan for Housing, signalling a willingness to bypass slow local planning processes."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 4,
+            "weight": 2,
+            "reasoning": "Government intervention to create development corporations can help to accelerate housing delivery in areas where local councils are failing. This intervention will encourage more building. If councils are not delivering local plans this suggests that there are constraints and that there will be difficulties delivering houses, it is therefore hard to see how government intervention will improve things and prices may rise as a result."
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "Government intervention to create new development corporations aims to address housing need, but it does not directly impact renters' rights or protections. It is an indirect measure that may lead to increased housing supply in the long term, potentially benefiting renters but with no immediate or guaranteed effect. The action is therefore neutral."
+          }
+        }
+      },
+      {
+        "date_announced": "2023-07-24",
+        "policy_text": "Proposals to **mandate the use of 'pattern book' development** (fast-track planning for pre-approved, high-quality designs) and allow homeowners to add new floors to existing properties, subject to consultation on permitted development rights.",
+        "source": {
+          "url": "https://www.gov.uk/government/consultations/long-term-plan-for-housing-consultation",
+          "notes:": "Measures announced as part of the July 2023 Long-Term Plan, designed to simplify and speed up planning."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "Mandating pattern book development and allowing homeowners to add new floors could modestly increase housing supply and affordability. However, consultation on permitted development rights limits the potential impact. The impact on prices is ambiguous as some areas would be more restrictive than others and so there would be a neutral impact."
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "Proposals to mandate 'pattern book' development and allow homeowners to add new floors could increase housing supply but do not directly address renters' rights or protections. The impact on renters is indirect and uncertain, with no guarantee of affordability or improved conditions for existing renters. It is neutral."
+          }
+        }
+      },
+      {
+        "date_announced": "2023-04-01",
+        "policy_text": "Limiting increases in **social rents to a maximum of 7% for one year** for the 2023-24 financial year, in response to the high inflation environment, to protect social housing tenants.",
+        "source": {
+          "url": "https://www.gov.uk/government/news/social-housing-rent-cap-comes-into-force-at-7",
+          "notes:": "Implementation of a temporary measure announced in late 2022 to assist tenants with the cost of living."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "Limiting social rent increases to 7% protects existing social housing tenants from high inflation. This does not directly affect market prices for non-social housing. The effect is neutral since market rents are unaffected."
+          },
+          "renters_rights": {
+            "score": 6,
+            "weight": 2,
+            "reasoning": "Limiting increases in social rents to a maximum of 7% protects social housing tenants from excessive rent increases in a high-inflation environment. While not a comprehensive rent control measure, it provides a moderate level of affordability protection for a specific segment of renters. This is a moderate positive impact."
+          }
+        }
+      },
+      {
+        "date_announced": "2023-07-24",
+        "policy_text": "Requiring all new residential buildings over 18 metres in height to have a **second staircase** (or other suitable means of escape) to meet updated building safety requirements, following the Grenfell Tower Inquiry.",
+        "source": {
+          "url": "https://www.gov.uk/government/news/update-on-second-staircases-in-new-residential-buildings",
+          "notes:": "A policy change to the Building Regulations to enhance safety for high-rise residents."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 4,
+            "weight": 1,
+            "reasoning": "Requiring a second staircase in new buildings over 18 meters adds to construction costs. While important for safety, this increases building costs, potentially leading to modest increases in prices of new developments. However the cost would not be sufficient to move the score lower than 4."
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "Requiring second staircases in new residential buildings over 18 meters primarily addresses building safety, which is important for all residents. While improved safety benefits renters, it doesn't directly impact their rights, security of tenure, or affordability. Therefore, its impact on renters' rights is neutral."
+          }
+        }
+      },
+      {
+        "date_announced": "2024-05-24",
+        "policy_text": "The **Leasehold and Freehold Reform Act 2024** received Royal Assent, strengthening leaseholders' rights by making it cheaper and easier to extend their lease or buy their freehold, removing the requirement to pay 'marriage value,' and increasing the standard lease extension term to 990 years.",
+        "source": {
+          "url": "https://commonslibrary.parliament.uk/leasehold-reform-in-england-and-wales/",
+          "notes:": "Legislation passed by the Conservative Government during the 'wash-up' period before the General Election. This was a long-term commitment."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "This act primarily strengthens leaseholders' rights and reduces costs associated with extending leases or buying freeholds. While it may have a slight impact on individual property values for leasehold properties, it is unlikely to significantly affect overall housing prices or rents across the market. The impact on supply and demand is minimal. Therefore, a neutral score is appropriate."
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "The Leasehold and Freehold Reform Act 2024 primarily impacts homeowners and leaseholders seeking to buy their freehold. It does not directly affect renters' rights, security of tenure, or affordability. Therefore, it has a neutral impact on renters."
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "**Commitment to deliver 1.6 million new homes** in England over the next five years, prioritising brownfield land in urban areas for development.",
+        "source": {
+          "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+          "notes:": "Key target from the 2024 General Election Manifesto."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 7,
+            "weight": 3,
+            "reasoning": "A commitment to deliver 1.6 million new homes should increase housing supply, especially with the focus on brownfield land. Increased supply typically puts downward pressure on prices and rents, improving affordability. The scale of the commitment (1.6 million homes) warrants a high weight. Prioritizing brownfield helps with deliverability."
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "A commitment to deliver new homes in England does not directly impact renters' rights. While an increase in housing supply could theoretically ease rental costs over time, this policy is focused on construction and lacks specific mechanisms to protect or enhance renters' rights in the short or medium term."
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Making the increased **Stamp Duty Land Tax threshold permanent for first-time buyers**, meaning they will not pay the tax on the first £425,000 of a property's value (up from £300,000).",
+        "source": {
+          "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+          "notes:": "This was an extension of a September 2022 measure due to end in March 2025, and a key Manifesto pledge."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 4,
+            "weight": 2,
+            "reasoning": "Making the increased Stamp Duty Land Tax threshold permanent for first-time buyers increases demand without a guaranteed increase in supply. This leads to a moderate increase in prices as more first-time buyers compete for the same properties. This mainly impacts the lower end of the market, and the weight reflects this sectoral effect."
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "Making the increased Stamp Duty Land Tax threshold permanent for first-time buyers does not directly affect renters' rights. It is designed to help people buy homes, not to improve the conditions or rights of those who rent."
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Introduction of a **new and improved Help to Buy scheme** to provide first-time buyers with an equity loan of up to 20% (up to 40% in London) toward the cost of a new-build home, requiring only a 5% deposit.",
+        "source": {
+          "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+          "notes:": "A new scheme to replace the previous Help to Buy equity loan scheme which closed to new applications in 2023."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 3,
+            "weight": 2,
+            "reasoning": "The Help to Buy scheme increases demand, particularly for new-build homes. This is likely to lead to a moderate price increase as developers can capitalize on the increased purchasing power. The weight reflects the fact that this is a sectoral scheme affecting primarily new-builds and first time buyers."
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "The Help to Buy scheme provides first-time buyers with an equity loan to purchase a new-build home. This does not directly affect renters' rights. While it could potentially enable some renters to become homeowners, it doesn't change the legal or practical protections available to renters."
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "**Fast-track planning route for new homes in the 20 largest cities** in England, with a focus on delivering on brownfield land with strong design codes.",
+        "source": {
+          "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+          "notes:": "A measure to speed up development in urban centres, included in the Manifesto."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 7,
+            "weight": 2,
+            "reasoning": "A fast-track planning route for new homes, especially on brownfield land with strong design codes, should increase supply, leading to a moderate decrease in prices. The focus on the 20 largest cities means this is a regional rather than national effect, thus the weight of 2. Brownfield focus increases deliverability likelihood."
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "A fast-track planning route for new homes in the 20 largest cities in England does not directly impact renters' rights. Increased housing supply could theoretically ease rental costs over time, this policy is focused on construction and lacks specific mechanisms to protect or enhance renters' rights in the short or medium term."
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Protection of the **Green Belt from uncontrolled development** by maintaining national planning protections while prioritising building in inner cities and on brownfield sites.",
+        "source": {
+          "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+          "notes:": "Long-standing policy reaffirmed in the Manifesto."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 3,
+            "weight": 2,
+            "reasoning": "Protecting the Green Belt restricts housing supply, putting upward pressure on prices. While prioritizing brownfield development mitigates this somewhat, the overall effect of Green Belt protection is to limit the land available for development, leading to moderate price increases. Weight reflects the continuing significant size of the Green Belt."
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "Protecting the Green Belt from uncontrolled development does not directly impact renters' rights. This policy primarily concerns land use and environmental protection, not the legal or practical protections available to renters. The focus on building on brownfield sites may indirectly influence rental costs over time, but this is speculative."
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Pledge to **pass the Renters Reform Bill** to deliver fairness in the rental market, including abolishing Section 21 'no-fault' evictions after necessary court reforms are delivered, and strengthening grounds for landlords to evict anti-social tenants.",
+        "source": {
+          "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+          "notes:": "Continuation of a major piece of legislation that was underway before the election was called."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 5,
+            "weight": 2,
+            "reasoning": "Passing the Renters Reform Bill to abolish Section 21 evictions and strengthen grounds for eviction of anti-social tenants has mixed effects. Abolishing Section 21 could slightly decrease rental supply if landlords become more cautious. Strengthening grounds for eviction might slightly increase supply. On balance, the impact is likely neutral. Weight reflects the significant size of the rental market."
+          },
+          "renters_rights": {
+            "score": 8,
+            "weight": 3,
+            "reasoning": "Pledging to pass the Renters Reform Bill, including abolishing Section 21 'no-fault' evictions and strengthening grounds for landlords to evict anti-social tenants, represents a significant improvement to renters' rights. Abolishing Section 21 provides a major increase in housing security by preventing arbitrary evictions, provided the court reforms are appropriately delivered. Strengthening grounds for eviction balances this by addressing legitimate landlord concerns regarding anti-social behavior."
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Scrapping legacy EU **'nutrient neutrality' rules** to immediately unblock the building of up to 100,000 new homes, requiring developers to pay a one-off mitigation fee instead.",
+        "source": {
+          "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+          "notes:": "A policy aimed at easing planning constraints, previously proposed in 2023."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 3,
+            "weight": 2,
+            "reasoning": "Scrapping nutrient neutrality rules is intended to unblock housing development, increasing supply. However, the environmental concerns related to nutrient pollution might lead to other restrictions or increased costs in the future. Unblocking supply should reduce prices somewhat, however, the removal of this protection may have other longer term negative impacts that counteract any increase in housing. Also only affects a segment of the market. Net impact is a slight price increase overall due to reduced environmental protection that may reduce supply long term."
+          },
+          "renters_rights": {
+            "score": 3,
+            "weight": 2,
+            "reasoning": "Scrapping legacy EU 'nutrient neutrality' rules to unblock building has a negative impact on renters' rights by potentially prioritizing development over environmental protections and sustainable development.  While increasing housing supply could theoretically reduce rental costs over time, weakening environmental safeguards could lead to lower-quality housing and decreased access to green spaces, disproportionately affecting renters.  This could be construed as reducing quality of life and environmental standards for renters with minimal immediate benefit and uncertain long term impact on affordability. Prioritizing development without environmental considerations undermines the right to adequate housing that includes healthy living conditions."
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Introduction of a **two-year temporary Capital Gains Tax relief** for landlords who sell their properties to their existing tenants to promote owner-occupation.",
+        "source": {
+          "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+          "notes:": "A tax incentive from the Manifesto aimed at increasing the rate of tenants buying their rented homes."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 6,
+            "weight": 1,
+            "reasoning": "A two-year temporary Capital Gains Tax relief for landlords who sell to existing tenants might slightly increase owner-occupation rates and potentially free up some rental properties. This could moderately decrease prices, especially in the rental market, but the effect is likely small and temporary. The time limit and specific target group reduces the impact. Landlords are likely to only sell to tenants if the price is similar to what they could get on the open market."
+          },
+          "renters_rights": {
+            "score": 6,
+            "weight": 2,
+            "reasoning": "Introducing a two-year temporary Capital Gains Tax relief for landlords who sell their properties to their existing tenants offers a moderate improvement to renters' rights. This policy incentivizes owner-occupation and could enable some renters to become homeowners, increasing their housing security and stability. However, it is a temporary measure with a limited scope, affecting only those renters whose landlords are willing to sell to them."
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Continuing to **support leaseholders affected by historic building safety problems** by requiring the continuation of developer-funded remediation programmes for mid- and high-rise buildings.",
+        "source": {
+          "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+          "notes:": "Reaffirmation of the commitment to the Building Safety Act's principles to protect leaseholders from cladding costs."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 5,
+            "weight": 2,
+            "reasoning": "Supporting leaseholders affected by building safety problems by continuing developer-funded remediation programs mainly addresses building safety issues and reduces costs for existing leaseholders. It has minimal impact on overall housing prices or rents, mainly affecting properties already impacted by safety concerns. The overall effect should be neutral. It may have a minor positive impact as it removes uncertainty which had depressed values."
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "Continuing to support leaseholders affected by historic building safety problems does not directly affect renters' rights. While building safety is crucial, this policy focuses on remediation for existing issues affecting leaseholders, not the broader rights or protections afforded to renters. There could be an indirect positive impact if the policy improves the overall quality of housing stock and ensures habitable conditions."
+          }
+        }
+      },
+      {
+        "date_announced": "2025-10-27",
+        "policy_text": "Scrap Stamp Duty Land Tax on primary residences for all buyers.",
+        "source": {
+          "url": "https://www.conservatives.com/our-plan-for-britain",
+          "notes:": "Mentioned in 'Our Plan to get Britain back on Track - Conservatives' and referenced in a housing policy round-up following the Conservative Party conference."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 4,
+            "weight": 2,
+            "reasoning": "Scrapping stamp duty increases demand, especially for first-time buyers, without directly increasing supply. This incentivizes purchasing, leading to higher prices due to increased competition.  The effect is moderately inflationary, as it reduces transaction costs and makes home buying more accessible."
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "This policy focuses on home ownership and does not directly impact renters' rights. It's a fiscal policy change related to property transactions, and while it could stimulate the housing market, its effect on renters is neutral."
+          }
+        }
+      },
+      {
+        "date_announced": "2025-10-27",
+        "policy_text": "Prioritise brownfield sites for development and clear the path to tens of thousands of new homes in London by rewriting the London Plan.",
+        "source": {
+          "url": "https://www.conservatives.com/our-plan-for-britain",
+          "notes:": "Mentioned in 'Our Plan to get Britain back on Track - Conservatives' and an October 2025 speech on 'Building Homes and Communities'."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 7,
+            "weight": 2,
+            "reasoning": "Prioritizing brownfield development increases housing supply, particularly in urban areas like London. Rewriting the London Plan to allow more housing directly increases supply, putting downward pressure on prices. The policy has a regional impact (London) and is moderately certain to increase supply."
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "This policy aims to increase housing supply by prioritizing brownfield sites. Increased supply *could* indirectly benefit renters by stabilizing or reducing rents, but the effect is not direct or guaranteed, therefore it is neutral."
+          }
+        }
+      },
+      {
+        "date_announced": "2025-10-27",
+        "policy_text": "Introduce a 'First Jobs Bonus' savings scheme, a £5,000 tax cut for young people entering work for the first time, to incentivise saving for home ownership.",
+        "source": {
+          "url": "https://www.conservatives.com/our-plan-for-britain",
+          "notes:": "Mentioned in 'Our Plan to get Britain back on Track - Conservatives'."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 3,
+            "weight": 2,
+            "reasoning": "The 'First Jobs Bonus' increases the purchasing power of young people, incentivizing saving for homeownership. This boosts demand without a corresponding supply increase, leading to higher prices. Similar to Help-to-Buy, this subsidy is likely capitalized into higher prices."
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "This policy is focused on incentivizing homeownership through a savings scheme. It has no direct or indirect impact on renters' rights. It's geared toward helping people transition *out* of renting, so it doesn't affect the rights of those currently renting."
+          }
+        }
+      },
+      {
+        "date_announced": "2025-10-06",
+        "policy_text": "Reduce well-intentioned regulation and high affordable housing targets that are argued to prevent building.",
+        "source": {
+          "url": "https://www.themj.co.uk/conservatives-reduced-affordable-housing-targets",
+          "notes:": "Stated by the Shadow Housing Secretary James Cleverly at the Conservative Party conference."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 4,
+            "weight": 2,
+            "reasoning": "Reducing regulation, including affordable housing targets, could decrease housing supply if it disincentivizes development, especially if it leads to fewer affordable units being built overall. Lowering affordable housing targets also means potentially more market-rate units with higher selling price than without the regulations."
+          },
+          "renters_rights": {
+            "score": 3,
+            "weight": 1,
+            "reasoning": "Reducing regulation and affordable housing targets could harm renters' rights in the long run by limiting the supply of affordable rental properties. This could lead to increased rents and reduced housing options, weakening affordability protections for renters. Although regulations are well-intentioned, the result might be more restrictions on building."
+          }
+        }
+      },
+      {
+        "date_announced": "2025-10-06",
+        "policy_text": "Encourage downsizing for older couples by easing property tax burdens to free up family-sized homes.",
+        "source": {
+          "url": "https://www.conservatives.com/news/building-homes-and-communities",
+          "notes:": "Mentioned in a speech by James Cleverly on 'Building Homes and Communities'."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 6,
+            "weight": 1,
+            "reasoning": "Encouraging downsizing by easing property tax burdens can increase the supply of larger family homes. However, the scale of impact is uncertain, as it depends on the take-up rate among older couples. This could free up larger homes, but it's not guaranteed to significantly impact overall prices."
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "Encouraging downsizing is primarily targeted at older homeowners. While freeing up family homes could indirectly benefit renters, it does not directly affect their rights or protections. The impact is too indirect to warrant a higher or lower score."
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Retain the commitment to protect the Green Belt from uncontrolled development, while ensuring more homes are built in inner cities.",
+        "source": {
+          "url": "https://bpf.org.uk/our-work/conservative-manifesto-bpf-analysis/",
+          "notes:": "A policy from the 2024 Conservative General Election Manifesto, which is referenced in subsequent 2025 policy discussions."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 5,
+            "weight": 2,
+            "reasoning": "Protecting the Green Belt limits outward expansion and could constrain supply, while building in inner cities increases supply locally. The net effect is likely neutral nationally, as the Green Belt restriction partially offsets the inner-city building boost. The overall effect balances each other out. "
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "Protecting the Green Belt while building more homes in inner cities could have a slightly positive indirect effect on renters by increasing housing supply in urban areas. However, this effect is not direct or guaranteed, and the policy itself does not address renters' rights directly. Therefore, it is a neutral impact."
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Continue support for leaseholders affected by historic building safety problems by requiring the continuation of developer-funded remediation programmes for mid- and high-rise buildings.",
+        "source": {
+          "url": "https://bpf.org.uk/our-work/conservative-manifesto-bpf-analysis/",
+          "notes:": "A policy from the 2024 Conservative General Election Manifesto, consistent with ongoing commitments to building safety."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "Continuing support for leaseholders with building safety issues primarily addresses safety concerns and liability. It has minimal direct impact on overall house prices or rents, focusing instead on consumer protection and risk mitigation. The supply and demand remain unchanged."
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "Continuing support for leaseholders affected by building safety problems primarily benefits homeowners. While it addresses housing quality and safety issues, it does not directly impact renters' rights. Leaseholders are owners not renters."
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Complete the process of leasehold reform, including capping ground rents at £250 (reducing to peppercorn over time) and ending the misuse of forfeiture.",
+        "source": {
+          "url": "https://bpf.org.uk/our-work/conservative-manifesto-bpf-analysis/",
+          "notes:": "A policy from the 2024 Conservative General Election Manifesto, reflecting the continuation of the reform agenda."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 6,
+            "weight": 1,
+            "reasoning": "Leasehold reform, including capping ground rents and ending forfeiture, mainly affects the rights and costs of leaseholders. While it improves affordability for leaseholders, the impact on overall house prices is minor. The primary impact is on the financial terms of leasehold agreements, not the broad housing market."
+          },
+          "renters_rights": {
+            "score": 6,
+            "weight": 2,
+            "reasoning": "Leasehold reform, including capping ground rents and ending forfeiture, provides increased security and financial stability for leaseholders. Although this benefits homeowners, it can also indirectly improve the rental market by making more properties available for rent under fairer terms. Improves the balance between renter/landlord rights."
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Pass a Renters Reform Bill to deliver fairness for landlords and renters, including abolishing Section 21 'no fault' evictions and strengthening other grounds for landlords to evict anti-social tenants.",
+        "source": {
+          "url": "https://bpf.org.uk/our-work/conservative-manifesto-bpf-analysis/",
+          "notes:": "A commitment from the 2024 Conservative General Election Manifesto, though its ultimate fate in 2025 is subject to current parliamentary activity."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 5,
+            "weight": 2,
+            "reasoning": "The Renters Reform Bill aims to balance landlord and renter rights. Abolishing Section 21 evictions provides more security for renters, but this could potentially reduce supply of rental properties if landlords become more cautious, offset by strenghtening eviction grounds. The net impact on rents and prices is uncertain, making it mostly neutral."
+          },
+          "renters_rights": {
+            "score": 8,
+            "weight": 3,
+            "reasoning": "Passing a Renters Reform Bill that abolishes Section 21 'no fault' evictions and strengthens grounds for eviction of anti-social tenants significantly strengthens renters' rights. Abolishing Section 21 provides greater security of tenure, a fundamental right, while clarifying eviction grounds offers better protection from arbitrary eviction. This is a major improvement to renters' rights."
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Develop a new and improved Help to Buy scheme to provide first-time buyers with an equity loan of up to 20% towards the cost of a new build home, requiring a 5% deposit.",
+        "source": {
+          "url": "https://bpf.org.uk/our-work/conservative-manifesto-bpf-analysis/",
+          "notes:": "A commitment from the 2024 Conservative General Election Manifesto to support first-time buyers."
+        },
+        "scores": {
+          "price_impact": {
+            "score": 3,
+            "weight": 2,
+            "reasoning": "A new Help to Buy scheme increases demand for new build homes by providing equity loans to first-time buyers. This increases purchasing power, inflating prices of new builds due to higher demand relative to supply. It is similar to previous Help-to-Buy schemes and will have a similar inflationary effect."
+          },
+          "renters_rights": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "A new and improved Help to Buy scheme is focused on assisting first-time buyers with homeownership. While it can help people transition out of renting, it has no direct impact on the rights of current renters."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "party_name": "Reform UK",
+    "color": "#12B6CF",
+    "policies": []
+  },
+  {
+    "party_name": "Green Party",
+    "color": "#02A95B",
+    "policies": []
+  },
+  {
+    "party_name": "Lib Dems",
+    "color": "#FAA61A",
+    "policies": []
+  },
+  {
+    "party_name": "Scottish National Party",
+    "color": "#000",
+    "policies": []
+  }
+]

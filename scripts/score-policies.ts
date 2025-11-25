@@ -222,6 +222,181 @@ When a policy has both positive and negative economic effects:
             `,
         },
     },
+    housing: {
+        file: "policies-housing.json",
+        criteria: ["price_impact", "renters_rights"],
+        prompts: {
+            price_impact: `
+**FRAMEWORK:** Score based on the policy's likely impact on house prices and rents, considering:
+- **Supply-Side Effects**: Impact on housing supply (new construction, conversions, densification)
+- **Demand-Side Effects**: Impact on buyer/renter demand, purchasing power, competition
+- **Market Mechanisms**: Effects on transaction costs, liquidity, speculation, investment dynamics
+- **Geographic Distribution**: National vs. regional effects, urban vs. rural impacts
+- **Time Horizons**: Short-term vs. long-term price effects
+
+**Score (1-10):** Rate the policy's net impact on housing affordability (via prices and rents):
+
+**1-2: Severe Price Increase** - Policy significantly raises house prices and/or rents
+- Examples: Major restrictions on supply (strict green belt protections blocking development), demand subsidies without supply increases (Help to Buy without building targets), policies encouraging speculative investment
+- Evidence: Reduced housing supply, increased competition for limited stock, subsidies capitalized into prices
+- Economic mechanism: Demand increase or supply decrease causing significant market imbalance
+
+**3-4: Moderate Price Increase** - Policy likely to raise prices but with some offsetting factors
+- Examples: Modest demand subsidies (smaller-scale Help to Buy), stamp duty cuts without supply response, regulations that increase building costs modestly, policies favoring owner-occupation over rental supply
+- Evidence: Net reduction in effective supply, increased purchasing power capitalized into prices, higher construction costs
+- Economic mechanism: Demand slightly outpacing supply, or marginal cost increases
+
+**5: Neutral** - Policy has NO significant net impact on prices OR positive and negative effects cancel out
+- Examples: Administrative changes with no market impact, revenue-neutral tax adjustments, policies affecting very small segments, regulatory changes that don't affect supply or demand meaningfully
+- Key test: Would housing economists expect measurable price effects? If no, score 5.
+- Also use for policies with genuinely balanced effects (e.g., demand increase matched by supply increase)
+
+**6-7: Moderate Price Decrease** - Policy likely to lower prices through supply increases or demand reduction
+- Examples: Modest increases in housing supply (brownfield development, planning reform in specific areas), policies removing transaction costs, measures deterring speculation, affordability requirements that increase net supply
+- Evidence: Increased construction, reduced transaction costs enabling market liquidity, decreased speculative demand
+- Economic mechanism: Supply increase outpacing demand, or reduced competition from investors/speculators
+
+**8-10: Significant Price Decrease** - Policy substantially lowers house prices and/or rents
+- Examples: Major planning reform enabling large-scale development, land value tax shifting incentives toward development, large social housing programs reducing market demand, policies strongly deterring speculative investment, significant reductions in building regulations without safety compromise
+- Evidence: Large supply increases, fundamental market restructuring, major shifts in land use incentives
+- Economic mechanism: Transformative supply response, demand shift from ownership to social housing, or elimination of speculative premium
+
+**Weight (1-3):** Based on the SCALE and CERTAINTY of price impact:
+
+**3: Major/National Impact with High Certainty** - Clear, evidence-based effects on national housing market
+- Policies affecting overall housing supply significantly (major planning reform, national housebuilding programs)
+- Demand-side policies affecting millions of households (national subsidies, major tax changes)
+- Policies with strong economic consensus on direction and magnitude of effect
+- Estimated impact on national house prices >5% or affecting >500,000 homes
+
+**2: Significant Sectoral/Regional Impact or Moderate National Impact** - Substantial effects on specific markets or moderate national effects
+- Regional planning changes, city-specific policies (London Plan rewrite)
+- Policies affecting specific segments (first-time buyers, social housing, rental sector)
+- Estimated impact 2-5% on national prices or >100,000 homes in specific regions
+- Evidence-based but with some uncertainty about magnitude
+
+**1: Minor/Localized Impact or High Uncertainty** - Limited market effects or unclear direction
+- Small-scale programs, localized policies, pilot schemes
+- Policies with ambiguous effects (e.g., demand subsidy with unclear supply response)
+- Administrative changes with minimal market impact
+- Estimated impact <2% or affecting <100,000 homes
+
+**GUIDANCE FOR COMPLEX HOUSING POLICIES:**
+
+**Supply-Side Policies:**
+- **Planning Reform** (liberalization): Generally reduces prices (7-9) by increasing supply; weight depends on scope (national reform = 3, local = 2)
+- **Affordable Housing Requirements**: Score depends on net effect - if requirements block development, may increase market prices (3-4, weight 2); if they enable development and increase total supply, may be neutral or positive (5-6, weight 2)
+- **Building Regulations**: Safety regulations may increase costs modestly (4-5, weight 1); excessive regulations reducing supply significantly (2-3, weight 2)
+
+**Demand-Side Policies:**
+- **Buyer Subsidies (Help to Buy, First-Time Buyer schemes)**: Generally increase prices (3-4, weight 2-3) by increasing demand without guaranteed supply response - evidence shows subsidies largely capitalized into prices
+- **Stamp Duty Cuts**: Modest price increases (4-5, weight 2) - reduces transaction costs but may increase competition and be capitalized into prices
+- **Tax Incentives for Investors**: Typically increase prices (2-4, weight 2-3) by increasing speculative demand without adding to occupied stock
+
+**Tenure-Specific Policies:**
+- **Social Housing Construction**: Reduces market prices (7-9, weight 3) by reducing market demand and increasing overall supply
+- **Rental Market Policies**: Depends on net effect on supply - rent controls reducing supply (2-3, weight 2); tenant protections without supply reduction (5-6, weight 1)
+- **Leasehold Reform**: Minor impact on prices (5-6, weight 1) unless it unlocks significant supply
+
+**Geographic and Time Considerations:**
+- Distinguish between short-term price spikes (demand subsidies) and long-term affordability (supply increases)
+- Consider regional variation - policies may reduce London prices (high weight) while having minimal impact elsewhere
+- Favor long-term affordability over short-term price stability
+
+**Evidence-Based Reasoning:**
+Reference economic research on housing supply elasticity, price-to-income ratios, historical policy effects, and the fundamental economics of supply and demand. Be specific about the mechanism by which the policy affects prices.
+            `,
+            renters_rights: `
+**FRAMEWORK:** Score based on the policy's impact on renters' rights and protections, considering:
+- **Security of Tenure**: Stability, protection from arbitrary eviction, long-term housing security
+- **Eviction Protections**: Due process, notice periods, grounds for eviction, anti-retaliation measures
+- **Affordability Protections**: Rent controls, rent caps, protection from excessive increases
+- **Housing Quality**: Standards for maintenance, repairs, habitability, enforcement mechanisms
+- **Legal Protections**: Access to justice, dispute resolution, tenant representation, enforcement of rights
+- **Power Balance**: Shifting power dynamics between landlords and tenants
+
+**Score (1-10):** Rate the policy's net impact on renters' rights and protections:
+
+**1-2: Severe Harm to Renters' Rights** - Policy significantly weakens tenant protections
+- Examples: Eliminating no-fault eviction bans, removing rent controls without replacements, weakening habitability standards, restricting tenants' legal recourse, enabling retaliatory evictions
+- Evidence: Reduced security of tenure, increased eviction rates, loss of affordability protections
+- Rights framework: Violates right to adequate housing (ICESCR Article 11), increases housing insecurity
+
+**3-4: Moderate Harm to Renters' Rights** - Policy weakens some tenant protections
+- Examples: Shortening notice periods, narrowing grounds for rent increase challenges, reducing maintenance obligations, limiting access to dispute resolution
+- Evidence: Modest reduction in tenant security or legal protections
+- Rights framework: Shifts power balance toward landlords without offsetting protections
+
+**5: Neutral** - Policy has NO significant net impact on renters' rights OR positive and negative effects balance
+- Examples: Administrative changes without substantive impact, policies affecting landlords and tenants equally, procedural updates maintaining status quo
+- Key test: Would tenant advocacy organizations see this as materially affecting renters' rights? If no, score 5.
+
+**6-7: Moderate Improvement to Renters' Rights** - Policy enhances tenant protections
+- Examples: Extending notice periods, strengthening grounds needed for eviction, moderate rent increase caps, improved maintenance enforcement, better access to legal aid
+- Evidence: Increased security of tenure, reduced arbitrary evictions, better affordability protections
+- Rights framework: Advances right to adequate housing, improves power balance
+
+**8-10: Significant Improvement to Renters' Rights** - Policy substantially strengthens tenant protections
+- Examples: Abolishing Section 21 no-fault evictions, comprehensive rent controls, strong anti-retaliation provisions, guaranteed legal representation, robust habitability standards with enforcement
+- Evidence: Major increase in housing security, strong affordability protections, enforceable rights
+- Rights framework: Transforms tenant-landlord relationship, recognizes housing as human right
+
+**Weight (1-3):** Based on the FUNDAMENTALITY and SCALE of rights affected:
+
+**3: Fundamental Rights Affecting Millions** - Core housing security for large tenant population
+- Security of tenure policies (no-fault eviction bans, long-term tenancy rights)
+- National-level protections affecting >1 million renters
+- Policies addressing fundamental housing instability or homelessness risk
+- Rights with strong consensus on importance (e.g., protection from arbitrary eviction)
+
+**2: Significant Rights for Substantial Population** - Important protections for many renters
+- Rent control policies, eviction process reforms, quality standards
+- Regional or sectoral policies affecting 100k-1M renters
+- Policies improving but not fundamentally transforming tenant security
+- Rights with moderate impact on housing stability
+
+**1: Limited Scope or Administrative Rights** - Localized or procedural protections
+- Minor procedural improvements, small-scale pilot programs
+- Policies affecting <100k renters or specific circumstances
+- Administrative changes with modest practical impact
+- Important for affected individuals but limited broader significance
+
+**GUIDANCE FOR COMPLEX RENTAL POLICIES:**
+
+**Security of Tenure:**
+- **No-Fault Eviction Ban** (abolishing Section 21): Major improvement (8-10, weight 3) - fundamental security increase
+- **Extended Notice Periods**: Moderate improvement (6-7, weight 2) - better planning time but doesn't prevent eviction
+- **Eviction Moratoriums**: Temporary improvement (6-7, weight 2-3 depending on scale) unless permanent
+- **Stronger Eviction Grounds**: Improvement if it restricts arbitrary evictions (6-8, weight 2-3)
+
+**Affordability Protections:**
+- **Comprehensive Rent Controls**: Major improvement (8-9, weight 3) if well-designed; may be neutral (5) or harmful (3-4) if poorly designed reducing supply
+- **Rent Increase Caps** (e.g., CPI-linked): Moderate improvement (6-7, weight 2) - limits exploitation without full control
+- **Rent Transparency Requirements**: Minor improvement (5-6, weight 1) - information helps but doesn't guarantee affordability
+- **First-Month Rent Caps**: Limited improvement (5-6, weight 1) - addresses entry barrier but not ongoing costs
+
+**Tenant Protections:**
+- **Anti-Retaliation Laws**: Significant improvement (7-8, weight 2) - enables tenants to exercise other rights
+- **Repair and Maintenance Standards**: Moderate improvement (6-7, weight 2) if enforceable; neutral (5) if aspirational
+- **Right to Legal Representation**: Significant improvement (7-8, weight 2) - levels playing field in disputes
+- **Deposit Protection Schemes**: Moderate improvement (6-7, weight 2) - protects tenants from abuse
+
+**Landlord Protections (Balanced Approach):**
+- Policies that ONLY strengthen landlord rights without tenant protections: Score 2-4, weight 1-2
+- Policies that balance landlord and tenant needs fairly: Score 5-6, weight 1
+- Remember: The framework asks specifically about RENTERS' rights, so landlord-focused policies score low unless they have demonstrable tenant benefits
+
+**Evidence-Based Reasoning:**
+Reference tenant rights frameworks (ICESCR, domestic case law), eviction statistics, comparative international standards, research on housing security and health outcomes, and tenant advocacy positions. Be specific about which rights are affected and how.
+
+**IMPORTANT CONSIDERATIONS:**
+- Distinguish between policies that *enable* tenant protections (good) vs. policies that merely *study* issues (neutral)
+- Consider enforcement mechanisms - rights without enforcement are worth less
+- Weigh immediate impact vs. long-term cultural change in landlord-tenant relationships
+- Consider intersectional impacts (e.g., policies particularly affecting low-income renters, families, disabled people)
+            `,
+        },
+    },
 };
 
 const DATA_DIR = path.join(process.cwd(), "src/lib/data");

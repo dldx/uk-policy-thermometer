@@ -26,6 +26,14 @@
         policies: Policy[];
     }
 
+    interface TweenedPolicy extends Policy {
+        party_name: string;
+        party_color: string;
+        date: Date;
+        tweenedScore: number;
+        tweenedWeight: number;
+    }
+
     let {
         data,
         criterion = "human_rights",
@@ -35,12 +43,152 @@
     let visibleParties = $state(new Set(data.map((d) => d.party_name)));
 
     // State for locked tooltip (for click-to-persist behavior)
-    let lockedTooltip = $state<Policy | null>(null);
+    let lockedTooltip = $state<TweenedPolicy | null>(null);
 
     // State for hovered party
     let hoveredParty = $state<string | null>(null);
 
     let clickTimeout: ReturnType<typeof setTimeout> | null = null;
+
+    // Store tweened values for each policy
+    interface TweenState {
+        current: number;
+        target: number;
+        startTime: number;
+        startValue: number;
+    }
+
+    let scoreTweens = $state<Map<string, TweenState>>(new Map());
+    let weightTweens = $state<Map<string, TweenState>>(new Map());
+    let animationFrame: number | null = null;
+
+    const TWEEN_DURATION = 600; // milliseconds
+
+    // Easing function (cubic out)
+    function cubicOut(t: number): number {
+        const f = t - 1;
+        return f * f * f + 1;
+    }
+
+    // Update all tween values
+    function updateTweens(timestamp: number) {
+        let needsUpdate = false;
+
+        // Update score tweens
+        for (const [key, tween] of scoreTweens.entries()) {
+            if (tween.current !== tween.target) {
+                const elapsed = timestamp - tween.startTime;
+                const progress = Math.min(elapsed / TWEEN_DURATION, 1);
+                const easedProgress = cubicOut(progress);
+
+                tween.current =
+                    tween.startValue +
+                    (tween.target - tween.startValue) * easedProgress;
+
+                if (progress < 1) {
+                    needsUpdate = true;
+                } else {
+                    tween.current = tween.target; // Snap to target
+                }
+            }
+        }
+
+        // Update weight tweens
+        for (const [key, tween] of weightTweens.entries()) {
+            if (tween.current !== tween.target) {
+                const elapsed = timestamp - tween.startTime;
+                const progress = Math.min(elapsed / TWEEN_DURATION, 1);
+                const easedProgress = cubicOut(progress);
+
+                tween.current =
+                    tween.startValue +
+                    (tween.target - tween.startValue) * easedProgress;
+
+                if (progress < 1) {
+                    needsUpdate = true;
+                } else {
+                    tween.current = tween.target; // Snap to target
+                }
+            }
+        }
+
+        if (needsUpdate) {
+            // Trigger reactivity
+            scoreTweens = new Map(scoreTweens);
+            weightTweens = new Map(weightTweens);
+            animationFrame = requestAnimationFrame(updateTweens);
+        } else {
+            animationFrame = null;
+        }
+    }
+
+    // Update tween targets when criterion changes
+    $effect(() => {
+        const currentCriterion = criterion;
+        const timestamp = performance.now();
+
+        const newScoreTweens = new Map(scoreTweens);
+        const newWeightTweens = new Map(weightTweens);
+        let hasChanges = false;
+
+        for (const party of data) {
+            for (const policy of party.policies) {
+                const policyKey = `${party.party_name}-${policy.date_announced}-${policy.policy_text.substring(0, 50)}`;
+                const newScore = policy.scores[currentCriterion]?.score ?? 0;
+                const newWeight = policy.scores[currentCriterion]?.weight ?? 0;
+
+                // Update or create score tween
+                const scoreTween = newScoreTweens.get(policyKey);
+                if (!scoreTween) {
+                    newScoreTweens.set(policyKey, {
+                        current: newScore,
+                        target: newScore,
+                        startTime: timestamp,
+                        startValue: newScore,
+                    });
+                    hasChanges = true;
+                } else if (scoreTween.target !== newScore) {
+                    newScoreTweens.set(policyKey, {
+                        ...scoreTween,
+                        startValue: scoreTween.current,
+                        target: newScore,
+                        startTime: timestamp,
+                    });
+                    hasChanges = true;
+                }
+
+                // Update or create weight tween
+                const weightTween = newWeightTweens.get(policyKey);
+                if (!weightTween) {
+                    newWeightTweens.set(policyKey, {
+                        current: newWeight,
+                        target: newWeight,
+                        startTime: timestamp,
+                        startValue: newWeight,
+                    });
+                    hasChanges = true;
+                } else if (weightTween.target !== newWeight) {
+                    newWeightTweens.set(policyKey, {
+                        ...weightTween,
+                        startValue: weightTween.current,
+                        target: newWeight,
+                        startTime: timestamp,
+                    });
+                    hasChanges = true;
+                }
+            }
+        }
+
+        if (hasChanges) {
+            scoreTweens = newScoreTweens;
+            weightTweens = newWeightTweens;
+
+            // Start animation if not already running
+            if (animationFrame === null) {
+                animationFrame = requestAnimationFrame(updateTweens);
+            }
+        }
+    });
 
     function handlePartyClick(partyName: string) {
         if (clickTimeout) clearTimeout(clickTimeout);
@@ -76,27 +224,35 @@
         }
     }
 
-    // Flatten all policies with party info for SveltePlot
-    let allPolicies = $derived(
-        data
-            .filter((party) => visibleParties.has(party.party_name))
-            .flatMap((party) =>
-                party.policies.map((policy) => ({
-                    ...policy,
-                    party_name: party.party_name,
-                    party_color: party.color,
-                    date: new Date(policy.date_announced),
-                })),
-            ),
-    );
+    // Flatten all policies with party info and tweened scores
+    let tweenedPolicies = $derived.by(() => {
+        const policies: TweenedPolicy[] = [];
 
-    function handlePolicyClick(
-        policy: Policy & {
-            party_name: string;
-            party_color: string;
-            date: Date;
-        },
-    ) {
+        for (const party of data.filter((party) =>
+            visibleParties.has(party.party_name),
+        )) {
+            for (const policy of party.policies) {
+                const policyKey = `${party.party_name}-${policy.date_announced}-${policy.policy_text.substring(0, 50)}`;
+                const scoreTween = scoreTweens.get(policyKey);
+                const weightTween = weightTweens.get(policyKey);
+
+                if (scoreTween && weightTween) {
+                    policies.push({
+                        ...policy,
+                        party_name: party.party_name,
+                        party_color: party.color,
+                        date: new Date(policy.date_announced),
+                        tweenedScore: scoreTween.current,
+                        tweenedWeight: weightTween.current,
+                    });
+                }
+            }
+        }
+
+        return policies;
+    });
+
+    function handlePolicyClick(policy: TweenedPolicy) {
         if (lockedTooltip === policy) {
             lockedTooltip = null;
         } else {
@@ -192,14 +348,17 @@
         >
             <!-- Weighted LOESS Regression Lines for each party -->
             {#each data.filter( (p) => visibleParties.has(p.party_name), ) as party}
+                {@const partyTweenedPolicies = tweenedPolicies.filter(
+                    (p) =>
+                        p.party_name === party.party_name &&
+                        p.scores[criterion],
+                )}
                 {@const loessData = weightedLoess(
-                    party.policies
-                        .filter((p) => p.scores[criterion])
-                        .map((p) => ({
-                            x: new Date(p.date_announced).getTime(),
-                            y: p.scores[criterion].score,
-                            w: 2 ** p.scores[criterion].weight, // Use exponential weight to make important policies count more
-                        })),
+                    partyTweenedPolicies.map((p) => ({
+                        x: p.date.getTime(),
+                        y: p.tweenedScore,
+                        w: 2 ** p.tweenedWeight, // Use exponential weight to make important policies count more
+                    })),
                     0.2,
                 ).map((d) => ({ date: new Date(d.x), score: d.y }))}
                 <Line
@@ -238,10 +397,10 @@
 
                 <!-- Data Points -->
                 <Dot
-                    data={party.policies.filter((p) => p.scores[criterion])}
-                    x={(d: Policy) => new Date(d.date_announced)}
-                    y={(d: Policy) => d.scores[criterion].score}
-                    r={(d: Policy) => 2 ** d.scores[criterion].weight + 2}
+                    data={partyTweenedPolicies}
+                    x={(d: TweenedPolicy) => d.date}
+                    y={(d: TweenedPolicy) => d.tweenedScore}
+                    r={(d: TweenedPolicy) => 2 ** d.tweenedWeight + 2}
                     fill={party.color}
                     opacity={hoveredParty
                         ? hoveredParty === party.party_name
@@ -254,9 +413,9 @@
             <!-- Tooltips -->
             {#snippet overlay()}
                 <HTMLTooltip
-                    data={allPolicies.filter((p) => p.scores[criterion])}
+                    data={tweenedPolicies}
                     x="date"
-                    y={(d) => d.scores[criterion]?.score ?? 0}
+                    y={(d: TweenedPolicy) => d.tweenedScore}
                 >
                     {#snippet children({ datum })}
                         <div

@@ -3,8 +3,9 @@
     import migrationPolicies from "$lib/data/policies-migration.json";
     import environmentalPolicies from "$lib/data/policies-environmental.json";
     import economicPolicies from "$lib/data/policies-economic.json";
+    import housingPolicies from "$lib/data/policies-housing.json";
 
-    type Topic = "migration" | "environmental" | "economic";
+    type Topic = "migration" | "environmental" | "economic" | "housing";
 
     const topics = {
         migration: {
@@ -35,6 +36,16 @@
             criteriaLabels: {
                 inequality: "Inequality",
                 economic_democracy: "Economic Democracy",
+            },
+        },
+        housing: {
+            data: housingPolicies,
+            title: "Housing Policy",
+            subtitle: "House Price & Rent Impact Tracker",
+            criteria: ["price_impact", "renters_rights"],
+            criteriaLabels: {
+                price_impact: "Price Impact",
+                renters_rights: "Renters' Rights",
             },
         },
     };
