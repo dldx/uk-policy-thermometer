@@ -1,41 +1,55 @@
-<script>
-    import { Plot, Dot, RegressionY, HTMLTooltip } from "svelteplot";
+<script lang="ts">
+    import { Plot, Dot, Line, RegressionY, HTMLTooltip } from "svelteplot";
+    import { weightedLoess } from "../utils";
 
-    /**
-     * @typedef {Object} Policy
-     * @property {string} date_announced
-     * @property {number} raw_human_rights_score
-     * @property {string} policy_text
-     * @property {number} weight
-     * @property {string} [reasoning]
-     * @property {{url?: string, notes?: string}} [source]
-     */
+    interface Policy {
+        date_announced: string;
+        raw_human_rights_score: number;
+        policy_text: string;
+        weight: number;
+        reasoning?: string;
+        source?: {
+            url?: string;
+            notes?: string;
+        };
+    }
 
-    /**
-     * @typedef {Object} Party
-     * @property {string} party_name
-     * @property {string} color
-     * @property {Policy[]} policies
-     */
+    interface Party {
+        party_name: string;
+        color: string;
+        policies: Policy[];
+    }
 
-    /** @type {{ data: Party[] }} */
-    let { data } = $props();
+    let { data }: { data: Party[] } = $props();
 
     // State for toggling parties
     let visibleParties = $state(new Set(data.map((d) => d.party_name)));
 
     // State for locked tooltip (for click-to-persist behavior)
-    /** @type {Policy | null} */
-    let lockedTooltip = $state(null);
+    let lockedTooltip = $state<Policy | null>(null);
 
     // State for hovered party
-    /** @type {string | null} */
-    let hoveredParty = $state(null);
+    let hoveredParty = $state<string | null>(null);
 
-    /**
-     * @param {string} partyName
-     */
-    function toggleParty(partyName) {
+    let clickTimeout: ReturnType<typeof setTimeout> | null = null;
+
+    function handlePartyClick(partyName: string) {
+        if (clickTimeout) clearTimeout(clickTimeout);
+        clickTimeout = setTimeout(() => {
+            toggleParty(partyName);
+            clickTimeout = null;
+        }, 250);
+    }
+
+    function handlePartyDoubleClick(partyName: string) {
+        if (clickTimeout) {
+            clearTimeout(clickTimeout);
+            clickTimeout = null;
+        }
+        isolateParty(partyName);
+    }
+
+    function toggleParty(partyName: string) {
         if (visibleParties.has(partyName)) {
             visibleParties.delete(partyName);
         } else {
@@ -43,6 +57,14 @@
         }
         // Trigger reactivity for set
         visibleParties = new Set(visibleParties);
+    }
+
+    function isolateParty(partyName: string) {
+        if (visibleParties.size === 1 && visibleParties.has(partyName)) {
+            visibleParties = new Set(data.map((d) => d.party_name));
+        } else {
+            visibleParties = new Set([partyName]);
+        }
     }
 
     // Flatten all policies with party info for SveltePlot
@@ -59,15 +81,57 @@
             ),
     );
 
-    /**
-     * @param {Policy & {party_name: string, party_color: string, date: Date}} policy
-     */
-    function handlePolicyClick(policy) {
+    function handlePolicyClick(
+        policy: Policy & {
+            party_name: string;
+            party_color: string;
+            date: Date;
+        },
+    ) {
         if (lockedTooltip === policy) {
             lockedTooltip = null;
         } else {
             lockedTooltip = policy;
         }
+    }
+
+    function tooltipPosition(node: HTMLElement, _datum: any) {
+        const updatePosition = () => {
+            const parentRect = node.parentElement?.getBoundingClientRect();
+            if (!parentRect) return;
+
+            const { width, height } = node.getBoundingClientRect();
+            const { top: anchorY, left: anchorX } = parentRect;
+
+            let translateX = "-100%";
+            let translateY = "-100%";
+            let marginTop = "-10px";
+            let marginLeft = "-10px";
+
+            // Check top overflow
+            if (anchorY - height - 20 < 0) {
+                translateY = "0%";
+                marginTop = "10px";
+            }
+
+            // Check left overflow
+            if (anchorX - width - 20 < 0) {
+                translateX = "0%";
+                marginLeft = "10px";
+            }
+
+            node.style.transform = `translate(${translateX}, ${translateY})`;
+            node.style.marginTop = marginTop;
+            node.style.marginLeft = marginLeft;
+        };
+
+        updatePosition();
+
+        return {
+            update() {
+                updatePosition();
+            },
+        };
     }
 </script>
 
@@ -84,7 +148,8 @@
                     : "transparent"}
                 style:border-color={party.color}
                 style:opacity={visibleParties.has(party.party_name) ? 1 : 0.5}
-                onclick={() => toggleParty(party.party_name)}
+                onclick={() => handlePartyClick(party.party_name)}
+                ondblclick={() => handlePartyDoubleClick(party.party_name)}
             >
                 <span
                     class="w-3 h-3 rounded-full"
@@ -102,13 +167,13 @@
         class="w-full bg-white rounded-xl shadow-sm border border-gray-100 p-4 relative chart-container"
     >
         <Plot
-            height={500}
+            height={600}
             x={{
                 domain: [new Date("2021-01-01"), new Date("2025-12-31")],
                 grid: true,
             }}
             y={{
-                domain: [1, 10],
+                domain: [0, 10],
                 grid: true,
             }}
             marginLeft={50}
@@ -116,17 +181,20 @@
             marginTop={20}
             marginBottom={40}
         >
-            <!-- LOESS Regression Lines for each party -->
+            <!-- Weighted LOESS Regression Lines for each party -->
             {#each data.filter( (p) => visibleParties.has(p.party_name), ) as party}
-                <RegressionY
-                    data={party.policies.map((p) => ({
-                        date: new Date(p.date_announced),
-                        score: p.raw_human_rights_score,
-                    }))}
+                {@const loessData = weightedLoess(
+                    party.policies.map((p) => ({
+                        x: new Date(p.date_announced).getTime(),
+                        y: p.raw_human_rights_score,
+                        w: 2 ** p.weight, // Use exponential weight to make important policies count more
+                    })),
+                    0.2,
+                ).map((d) => ({ date: new Date(d.x), score: d.y }))}
+                <Line
+                    data={loessData}
                     x="date"
                     y="score"
-                    type="loess"
-                    span={0.25}
                     stroke={party.color}
                     strokeWidth={hoveredParty === party.party_name ? 5 : 4}
                     strokeOpacity={hoveredParty &&
@@ -135,23 +203,42 @@
                         : 1}
                     onpointerenter={() => (hoveredParty = party.party_name)}
                     onpointerleave={() => (hoveredParty = null)}
+                    curve="basis"
+                />
+                <!-- <RegressionY
+                    data={party.policies.map((p) => ({
+                        date: new Date(p.date_announced),
+                        score: p.raw_human_rights_score,
+                    }))}
+                    type="loess"
+                    span={0.25}
+                    x="date"
+                    y="score"
+                    stroke={"grey"}
+                    strokeWidth={hoveredParty === party.party_name ? 5 : 4}
+                    strokeOpacity={hoveredParty &&
+                    hoveredParty !== party.party_name
+                        ? 0.1
+                        : 1}
+                    onpointerenter={() => (hoveredParty = party.party_name)}
+                    onpointerleave={() => (hoveredParty = null)}
+                    curve="basis"
+                /> -->
+
+                <!-- Data Points -->
+                <Dot
+                    data={party.policies}
+                    x={(d: Policy) => new Date(d.date_announced)}
+                    y={(d: Policy) => d.raw_human_rights_score}
+                    r={(d: Policy) => 2 ** d.weight + 2}
+                    fill={party.color}
+                    opacity={hoveredParty
+                        ? hoveredParty === party.party_name
+                            ? 0.5 // hover opacity of selected party
+                            : 0.05 // hover opacity of other parties
+                        : 0.2}
                 />
             {/each}
-
-            <!-- Data Points -->
-            <Dot
-                data={allPolicies}
-                x="date"
-                y="raw_human_rights_score"
-                r={(d) => 2 ** d.weight + 2}
-                fill={(d) => d.party_color}
-                opacity={(d) =>
-                    hoveredParty && hoveredParty !== d.party_name
-                        ? hoveredParty !== null
-                            ? 0.1
-                            : 0.05
-                        : 1}
-            />
 
             <!-- Tooltips -->
             {#snippet overlay()}
@@ -163,6 +250,7 @@
                     {#snippet children({ datum })}
                         <div
                             class="tooltip-content max-w-md cursor-pointer"
+                            use:tooltipPosition={datum}
                             onclick={(e) => {
                                 e.stopPropagation();
                                 handlePolicyClick(datum);
@@ -305,6 +393,7 @@
             0 10px 15px -3px rgba(0, 0, 0, 0.1),
             0 4px 6px -2px rgba(0, 0, 0, 0.05);
         max-width: 28rem;
+        pointer-events: auto;
     }
 
     :global(.tooltip-content a) {

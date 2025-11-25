@@ -25,7 +25,7 @@
 </div>
 
 <div class="min-h-screen bg-gray-50 p-8 font-sans">
-    <div class="max-w-5xl mx-auto space-y-8">
+    <div class="max-w-7xl mx-auto space-y-8">
         <header class="text-center space-y-4">
             <h1
                 class="text-5xl font-bold text-gray-900 tracking-tight font-display"

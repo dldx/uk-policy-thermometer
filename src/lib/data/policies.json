@@ -1441,6 +1441,336 @@
     "color": "#02A95B",
     "policies": [
       {
+        "date_announced": "2021-03-24",
+        "policy_text": "Oppose and scrap the government's 'New Plan for Immigration' (which led to the Nationality and Borders Act), particularly its 'two-tier' system that treats refugees differently based on arrival route.",
+        "source": {
+          "url": "https://hansard.parliament.uk/commons/2021-03-24/debates/464FFFBB-ECA5-4788-BC36-60F8B7D8D9D1/NewPlanForImmigration",
+          "notes": "Direct political opposition to the government's major policy announcement of 2021, articulated in parliamentary debates and public statements."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Opposing and scrapping the 'two-tier' system improves human rights by ending discriminatory treatment of refugees based on arrival route, which is a core principle of refugee law and protection, impacting critical rights like non-refoulement and non-discrimination."
+      },
+      {
+        "date_announced": "2021-01-01",
+        "policy_text": "Immediately abolish all 'Hostile Environment' policies, including the 'No Recourse to Public Funds' (NRPF) condition, to ensure migrants can access support and avoid destitution.",
+        "source": {
+          "url": "https://www.ein.org.uk/news/green-party-pledges-end-hostile-environment-reduce-immigration-fees-and-abolish-minimum-income",
+          "notes": "A core, continuous policy and a major focus of Green Party campaigns throughout the year."
+        },
+        "raw_human_rights_score": 10,
+        "weight": 3,
+        "reasoning": "Abolishing the 'Hostile Environment' and NRPF would prevent destitution, ensuring access to basic support and upholding the right to an adequate standard of living for migrants, a critical human right."
+      },
+      {
+        "date_announced": "2021-01-01",
+        "policy_text": "Establish a comprehensive system of safe and legal routes to sanctuary for those fleeing danger, including expanded family reunion rules and humanitarian visas.",
+        "source": {
+          "url": "https://www.local.gov.uk/about/campaigns/general-election-hub/green-party-manifesto",
+          "notes": "Policy championed in 2021 in response to dangerous Channel crossings and the government's restrictive policies."
+        },
+        "raw_human_rights_score": 10,
+        "weight": 3,
+        "reasoning": "Establishing safe and legal routes prevents dangerous journeys, potentially saving lives and ensuring access to sanctuary, thereby upholding fundamental human rights, including the right to seek asylum and family life."
+      },
+      {
+        "date_announced": "2021-01-01",
+        "policy_text": "Grant asylum seekers the immediate and unrestricted right to work while their application is being processed, without a 12-month waiting period or restriction to the Shortage Occupation List.",
+        "source": {
+          "url": "https://commonslibrary.parliament.uk/research-briefings/sn01908/",
+          "notes": "A long-standing policy supported by the Greens to end destitution and promote self-sufficiency, often contrasted with the government's restrictive 12-month rule."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Granting immediate right to work prevents destitution, promotes self-sufficiency, and upholds the dignity and economic rights of asylum seekers, addressing a critical aspect of their well-being."
+      },
+      {
+        "date_announced": "2021-01-01",
+        "policy_text": "End the use of immigration detention for all migrants and asylum seekers, and immediately close all Immigration Removal Centres and temporary accommodation sites like barracks.",
+        "source": {
+          "url": "https://www.ein.org.uk/news/green-party-pledges-end-hostile-environment-reduce-immigration-fees-and-abolish-minimum-income",
+          "notes": "Policy based on the principle that migration is a civil matter, not a criminal one."
+        },
+        "raw_human_rights_score": 10,
+        "weight": 3,
+        "reasoning": "Ending immigration detention for all migrants and closing IRCs and barracks is a substantial improvement, upholding the right to liberty and human dignity by addressing practices often criticized for arbitrary detention and inhumane conditions."
+      },
+      {
+        "date_announced": "2021-01-01",
+        "policy_text": "Create a new, separate Department of Migration and Asylum to handle immigration and citizenship, removing these functions from the remit of the Home Office.",
+        "source": {
+          "url": "https://www.ein.org.uk/news/green-party-pledges-end-hostile-environment-reduce-immigration-fees-and-abolish-minimum-income",
+          "notes": "A key structural reform policy advocated to ensure a more humane and less carceral approach to migration."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "This is a structural reform aimed at fostering a more humane and less carceral approach to migration, which could indirectly lead to improved human rights outcomes by changing the institutional culture and priorities."
+      },
+      {
+        "date_announced": "2021-01-01",
+        "policy_text": "Abolish the high application fees for visas, settlement, and citizenship (e.g., the Immigration Health Surcharge and processing fees) to end the 'hostile fee environment'.",
+        "source": {
+          "url": "https://www.local.gov.uk/about/campaigns/general-election-hub/green-party-manifesto",
+          "notes": "Policy aimed at making it financially possible for people to legalise their status and integrate fully."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 2,
+        "reasoning": "Abolishing high fees removes significant financial barriers, making it easier for migrants to regularize their status, access essential services like healthcare (by removing IHS), and integrate fully, thus improving their socio-economic rights and security."
+      },
+      {
+        "date_announced": "2021-01-01",
+        "policy_text": "Abolish the punitive ten-year route to settlement and establish a clear, fast-track route to Indefinite Leave to Remain after a maximum of five years for all legal migrants.",
+        "source": {
+          "url": "https://www.ein.org.uk/news/green-party-pledges-end-hostile-environment-reduce-immigration-fees-and-abolish-minimum-income",
+          "notes": "Policy to ensure timely integration and reduce prolonged insecurity for migrants."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 2,
+        "reasoning": "Abolishing the punitive ten-year route and establishing a faster path to settlement significantly improves migrants' security, stability, and ability to integrate fully into society, upholding rights to family life and long-term planning."
+      },
+      {
+        "date_announced": "2021-01-01",
+        "policy_text": "Remove the minimum income requirement for spouses of UK residents/visa holders to uphold the right to a family life and promote family reunification.",
+        "source": {
+          "url": "https://www.local.gov.uk/about/campaigns/general-election-hub/green-party-manifesto",
+          "notes": "Policy to remove financial discrimination from family migration routes."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 2,
+        "reasoning": "Removing the minimum income requirement directly upholds the right to family life by eliminating a significant financial barrier to family reunification, preventing arbitrary separation of families."
+      },
+      {
+        "date_announced": "2021-01-01",
+        "policy_text": "Ensure full workplace rights and protection from exploitation for all migrant workers through national pay, terms, and conditions, regardless of visa status.",
+        "source": {
+          "url": "https://www.local.gov.uk/about/campaigns/general-election-hub/green-party-manifesto",
+          "notes": "Policy to prevent the undercutting of wages and ensure ethical recruitment of overseas workers."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Ensuring full workplace rights and protection from exploitation for all migrant workers upholds fundamental labor rights and human dignity, preventing severe economic abuse and vulnerability."
+      },
+      {
+        "date_announced": "2022-01-01",
+        "policy_text": "Immediately abolish the 'Hostile Environment' regime, the 'No Recourse to Public Funds' (NRPF) condition, and the Immigration Health Surcharge.",
+        "source": {
+          "url": "https://www.ein.org.uk/news/green-party-pledges-end-hostile-environment-reduce-immigration-fees-and-abolish-minimum-income",
+          "notes": "A core, long-standing policy, actively campaigned on in 2022 to counter the negative impacts of the Nationality and Borders Act."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Abolishing the 'Hostile Environment' and 'No Recourse to Public Funds' directly prevents severe harm, destitution, and enables access to essential services, upholding critical rights. Removing the IHS improves access to healthcare."
+      },
+      {
+        "date_announced": "2022-04-14",
+        "policy_text": "Immediately scrap the Nationality and Borders Act 2022 and end the policy of differentiating between refugees based on their route of arrival (the 'two-tier' system).",
+        "source": {
+          "url": "https://freemovement.org.uk/home-secretary-announces-major-asylum-and-other-changes-in-new-policy-paper-restoring-order-and-control/",
+          "notes": "Direct political opposition to the government's flagship legislation and a core policy in 2022."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Scrapping the Nationality and Borders Act and the 'two-tier' system removes discriminatory practices that undermine the right to seek asylum and can lead to refoulement, protecting critical human rights."
+      },
+      {
+        "date_announced": "2022-04-14",
+        "policy_text": "Immediately cease the government's plan to deport asylum seekers to Rwanda and commit to fair processing of all asylum claims within the UK.",
+        "source": {
+          "url": "https://www.timesandstar.co.uk/news/national/24378817.next-government-must-end-hostile-environment-refugees-argue-greens/",
+          "notes": "A key, immediate policy reaction to the Rwanda policy announcement in April 2022."
+        },
+        "raw_human_rights_score": 10,
+        "weight": 3,
+        "reasoning": "Ceasing the Rwanda deportation plan prevents severe human rights violations, including potential refoulement and inhumane treatment, directly upholding the right to life and freedom from torture."
+      },
+      {
+        "date_announced": "2022-01-01",
+        "policy_text": "Establish safe, legal, and timely routes to sanctuary for those fleeing war, persecution, or climate disaster, so they can avoid dangerous crossings.",
+        "source": {
+          "url": "https://www.local.gov.uk/about/campaigns/general-election-hub/green-party-manifesto",
+          "notes": "A consistent policy, heavily promoted in 2022 in response to the rise in English Channel crossings."
+        },
+        "raw_human_rights_score": 10,
+        "weight": 3,
+        "reasoning": "Establishing safe and legal routes directly protects the right to life by preventing dangerous journeys and upholds the right to seek asylum, a critical human right."
+      },
+      {
+        "date_announced": "2022-01-01",
+        "policy_text": "Dismantle the dysfunctional Home Office and create a new Department of Migration, separating migration and citizenship functions from the criminal justice system.",
+        "source": {
+          "url": "https://www.ein.org.uk/news/green-party-pledges-end-hostile-environment-reduce-immigration-fees-and-abolish-minimum-income",
+          "notes": "Policy reflecting the party's belief that migration is a civil, not a criminal, matter."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 2,
+        "reasoning": "Separating migration from the criminal justice system fundamentally shifts the approach to migrants, reducing stigma and the likelihood of arbitrary detention or criminalization, thus improving core civil rights and due process."
+      },
+      {
+        "date_announced": "2022-01-01",
+        "policy_text": "Grant asylum seekers the immediate right to work while their application is being decided, alongside a commitment to a fast and fair assessment process.",
+        "source": {
+          "url": "https://www.ein.org.uk/news/green-party-pledges-end-hostile-environment-reduce-immigration-fees-and-abolish-minimum-income",
+          "notes": "Policy aimed at reducing destitution and allowing contribution to the economy during the waiting period."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Granting the right to work prevents destitution, promotes dignity, and enables self-sufficiency for asylum seekers, addressing critical socio-economic rights. A fast and fair process ensures due process."
+      },
+      {
+        "date_announced": "2022-01-01",
+        "policy_text": "End the use of immigration detention for all migrants unless they are a proven danger to public safety, and close all institutional accommodation (barracks, barges, hotels) for asylum seekers.",
+        "source": {
+          "url": "https://www.ein.org.uk/news/green-party-pledges-end-hostile-environment-reduce-immigration-fees-and-abolish-minimum-income",
+          "notes": "Opposition to the use of carceral and large-scale accommodation for people seeking protection."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 2,
+        "reasoning": "Ending arbitrary immigration detention protects the right to liberty and security of person, a core civil right. Closing institutional accommodation improves living conditions and dignity."
+      },
+      {
+        "date_announced": "2022-01-01",
+        "policy_text": "Abolish the minimum income requirement for spouses of those holding work visas, to support family reunification and the right to a family life.",
+        "source": {
+          "url": "https://www.ein.org.uk/news/green-party-pledges-end-hostile-environment-reduce-immigration-fees-and-abolish-minimum-income",
+          "notes": "Commitment to remove financial barriers that prevent family members from settling together."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 2,
+        "reasoning": "Abolishing the minimum income requirement removes a significant barrier to family reunification, upholding the core civil right to family life."
+      },
+      {
+        "date_announced": "2022-01-01",
+        "policy_text": "Abolish the ten-year route to settlement, and simplify the visa application process to provide a fast and secure route to residency for all migrants who have established a life in the UK.",
+        "source": {
+          "url": "https://www.ein.org.uk/news/green-party-pledges-end-hostile-environment-reduce-immigration-fees-and-abolish-minimum-income",
+          "notes": "Policy to accelerate integration and reduce the stress of long, uncertain routes to settlement."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "Abolishing the ten-year route and simplifying the process reduces precarity and administrative burden, promoting integration and long-term stability, which are socio-economic improvements."
+      },
+      {
+        "date_announced": "2022-01-01",
+        "policy_text": "Extend voting rights in all elections and referendums to all lawfully resident visa-holders, promoting democratic inclusion and community integration.",
+        "source": {
+          "url": "https://bright-green.org/2023/03/26/what-is-the-green-partys-new-migration-policy/",
+          "notes": "A policy commitment aimed at empowering migrant communities politically."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 2,
+        "reasoning": "Extending voting rights to lawfully resident visa-holders significantly enhances democratic inclusion and political participation, upholding core civil/political rights."
+      },
+      {
+        "date_announced": "2023-01-01",
+        "policy_text": "Immediately abolish the 'Hostile Environment' regime and the 'No Recourse to Public Funds' (NRPF) condition, which traps people in poverty and impedes integration.",
+        "source": {
+          "url": "https://www.ein.org.uk/news/green-party-pledges-end-hostile-environment-reduce-immigration-fees-and-abolish-minimum-income",
+          "notes": "A core, long-standing policy central to the Green Party's 2023 political campaign and public statements."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Abolishing the Hostile Environment and NRPF would prevent destitution, improve access to essential services, and uphold the right to an adequate standard of living, which are critical human rights."
+      },
+      {
+        "date_announced": "2023-01-01",
+        "policy_text": "Establish safe and legal routes to sanctuary for those fleeing danger, persecution, war, or climate disaster, so they do not have to risk their lives on dangerous journeys.",
+        "source": {
+          "url": "https://www.local.gov.uk/about/campaigns/general-election-hub/green-party-manifesto",
+          "notes": "A key humanitarian policy, constantly highlighted in 2023 statements regarding small boat crossings and the government's migration proposals."
+        },
+        "raw_human_rights_score": 10,
+        "weight": 3,
+        "reasoning": "Establishing safe routes directly protects the right to life and ensures access to international protection, preventing severe harm and upholding non-refoulement principles."
+      },
+      {
+        "date_announced": "2023-01-01",
+        "policy_text": "Dismantle the current dysfunctional Home Office and create a new Department of Migration alongside a Department of Justice, separating migration and citizenship functions from the criminal justice system.",
+        "source": {
+          "url": "https://www.ein.org.uk/news/green-party-pledges-end-hostile-environment-reduce-immigration-fees-and-abolish-minimum-income",
+          "notes": "A policy aimed at reforming the migration system for a more humane, efficient, and non-criminalising approach, actively championed in 2023."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 2,
+        "reasoning": "Separating migration from the criminal justice system promotes a more humane approach, better due process, and reduces the risk of treating migrants as criminals, enhancing liberty and fair treatment."
+      },
+      {
+        "date_announced": "2023-01-01",
+        "policy_text": "Grant asylum seekers the immediate right to work while their application is being decided, alongside a commitment to a fast and fair assessment process.",
+        "source": {
+          "url": "https://www.ein.org.uk/news/green-party-pledges-end-hostile-environment-reduce-immigration-fees-and-abolish-minimum-income",
+          "notes": "A policy consistently advocated to prevent destitution and allow applicants to contribute to society."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 2,
+        "reasoning": "Granting the right to work prevents destitution, preserves dignity, and allows for self-sufficiency, while a fair assessment ensures timely access to protection and due process."
+      },
+      {
+        "date_announced": "2023-01-01",
+        "policy_text": "End the use of immigration detention for all migrants unless they pose a proven danger to public safety, as migration is not a criminal offence.",
+        "source": {
+          "url": "https://www.ein.org.uk/news/green-party-pledges-end-hostile-environment-reduce-immigration-fees-and-abolish-minimum-income",
+          "notes": "A policy focused on humanitarian treatment, opposing indefinite and administrative detention."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Ending administrative immigration detention significantly upholds the right to liberty and freedom from arbitrary detention, recognizing migration as a non-criminal matter."
+      },
+      {
+        "date_announced": "2023-03-26",
+        "policy_text": "Ensure all lawfully resident visa-holders in the UK are granted the right to vote in all local and national elections and referendums.",
+        "source": {
+          "url": "https://bright-green.org/2023/03/26/what-is-the-green-partys-new-migration-policy/",
+          "notes": "Specific policy commitment passed in March 2023, focused on democratic rights and inclusion."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 2,
+        "reasoning": "Granting the right to vote to lawfully resident visa-holders significantly extends political rights and enhances democratic inclusion and participation."
+      },
+      {
+        "date_announced": "2023-01-01",
+        "policy_text": "Remove the minimum income requirements for spouses of those holding work visas, to support the fundamental right to family life and reunification.",
+        "source": {
+          "url": "https://www.local.gov.uk/about/campaigns/general-election-hub/green-party-manifesto",
+          "notes": "A key policy championed to remove financial barriers to family settlement."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 2,
+        "reasoning": "Removing minimum income requirements directly supports the fundamental right to family life and reunification, preventing arbitrary separation based on financial status."
+      },
+      {
+        "date_announced": "2023-01-01",
+        "policy_text": "Abolish the punitive ten-year route to settlement which forces people into a prolonged state of insecurity and poverty, and simplify the visa application process.",
+        "source": {
+          "url": "https://www.ein.org.uk/news/green-party-pledges-end-hostile-environment-reduce-immigration-fees-and-abolish-minimum-income",
+          "notes": "A commitment to fair and timely paths to settlement and integration."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 2,
+        "reasoning": "Abolishing the punitive ten-year route provides a more secure and timely path to settlement, reducing prolonged insecurity and potential poverty, thus improving dignity and integration."
+      },
+      {
+        "date_announced": "2023-01-01",
+        "policy_text": "End the exploitation of overseas workers, particularly in the care sector, by establishing national pay, terms, and conditions that protect all workers regardless of migration status.",
+        "source": {
+          "url": "https://www.local.gov.uk/about/campaigns/general-election-hub/green-party-manifesto",
+          "notes": "Policy addressing systemic exploitation often tied to skilled worker visas."
+        },
+        "raw_human_rights_score": 10,
+        "weight": 3,
+        "reasoning": "Ending exploitation and ensuring national pay and conditions for all workers directly upholds the right to fair labor practices and freedom from exploitation, impacting dignity and economic rights."
+      },
+      {
+        "date_announced": "2023-01-01",
+        "policy_text": "Ensure access to the NHS is free and comprehensive for all migrants with visas, by removing the Immigration Health Surcharge and related charges.",
+        "source": {
+          "url": "https://www.ein.org.uk/news/green-party-pledges-end-hostile-environment-reduce-immigration-fees-and-abolish-minimum-income",
+          "notes": "A policy to ensure healthcare access is not a barrier or a source of debt for residents."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 2,
+        "reasoning": "Removing the Immigration Health Surcharge ensures equitable and unhindered access to healthcare for all lawfully resident migrants, upholding the fundamental right to health."
+      },
+      {
         "date_announced": "2024-06-12",
         "policy_text": "End the 'Hostile Environment' policy framework entirely, including abolishing the 'No Recourse to Public Funds' (NRPF) condition to prevent migrants from falling into poverty.",
         "source": {
@@ -1677,6 +2007,446 @@
     "color": "#FAA61A",
     "policies": [
       {
+        "date_announced": "2021-07-20",
+        "policy_text": "Oppose the Nationality and Borders Bill, specifically the clause that would create a **two-tier system for refugees** based on how they entered the UK (i.e., criminalising irregular arrival).",
+        "source": {
+          "url": "https://www.parliament.uk/business/news/2021/december-2021/lords-debates-nationality-and-borders-bill/",
+          "notes": "Core policy of opposition to the Bill introduced in July 2021. The party consistently voted against the Bill and tabled amendments to remove this clause."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Opposing a two-tier system prevents severe harm to asylum seekers, ensuring equal protection and preventing destitution, aligning with non-refoulement principles."
+      },
+      {
+        "date_announced": "2021-03-20",
+        "policy_text": "Establish **safe and legal routes** for refugees to reach the UK, including an expanded and properly funded resettlement scheme, to reduce dangerous Channel crossings.",
+        "source": {
+          "url": "https://www.libdems.org.uk/conference/motions/spring-2021/safe-and-legal-routes-to-save-lives",
+          "notes": "Passed as a policy motion (F27: Safe and Legal Routes to Save Lives) at the Liberal Democrat Spring Conference 2021."
+        },
+        "raw_human_rights_score": 10,
+        "weight": 3,
+        "reasoning": "Establishing safe and legal routes directly protects the right to life and seeks to prevent severe harm and loss of life associated with irregular crossings, a substantial improvement."
+      },
+      {
+        "date_announced": "2021-03-20",
+        "policy_text": "Lift the ban on **asylum seekers working** if they have waited for a decision on their claim for more than three months, allowing them to support themselves and fill labour shortages.",
+        "source": {
+          "url": "https://www.libdems.org.uk/conference/motions/spring-2021/safe-and-legal-routes-to-save-lives",
+          "notes": "Long-standing policy reaffirmed in the Spring Conference 2021 motion."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 3,
+        "reasoning": "Lifting the ban on asylum seekers working directly prevents destitution and allows them to maintain a dignified standard of living, addressing a critical need."
+      },
+      {
+        "date_announced": "2021-03-20",
+        "policy_text": "Reform the asylum system by significantly increasing the number of caseworkers to **clear the backlog** and ensure asylum claims are processed quickly and efficiently.",
+        "source": {
+          "url": "https://www.libdems.org.uk/conference/motions/spring-2021/safe-and-legal-routes-to-save-lives",
+          "notes": "Policy focus on system efficiency and fairness, reaffirmed at the Spring Conference 2021."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 2,
+        "reasoning": "Reforming the asylum system to clear backlogs improves due process and reduces the limbo for claimants, protecting their right to timely justice."
+      },
+      {
+        "date_announced": "2021-03-20",
+        "policy_text": "Expand refugee **family reunification rights**, particularly for unaccompanied child refugees, in line with the Dubs amendment.",
+        "source": {
+          "url": "https://www.libdems.org.uk/conference/motions/spring-2021/safe-and-legal-routes-to-save-lives",
+          "notes": "Reaffirmed policy on strengthening family life for refugees."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 2,
+        "reasoning": "Expanding family reunification rights, especially for children, significantly strengthens the right to family life."
+      },
+      {
+        "date_announced": "2021-09-18",
+        "policy_text": "Reverse the increase in visa fees and the Immigration Health Surcharge, which disproportionately affects key workers in the NHS and social care sectors.",
+        "source": {
+          "url": "https://www.libdems.org.uk/news/article/liberal-democrats-motion-to-oppose-hostile-environment-policies",
+          "notes": "Policy commitment often cited in opposition to the Conservative Government's 'Hostile Environment' fees."
+        },
+        "raw_human_rights_score": 6,
+        "weight": 1,
+        "reasoning": "Reversing increased fees alleviates financial burden, making access more equitable, which is an administrative improvement."
+      },
+      {
+        "date_announced": "2021-09-18",
+        "policy_text": "Repeal the 'Hostile Environment' policies, including the discriminatory 'Right to Rent' scheme, and establish a clear firewall between public services and immigration enforcement.",
+        "source": {
+          "url": "https://www.libdems.org.uk/news/article/liberal-democrats-motion-to-oppose-hostile-environment-policies",
+          "notes": "Core policy of dismantling the 'Hostile Environment', reaffirmed at the Autumn Conference 2021."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Repealing 'Hostile Environment' policies prevents severe harms like discrimination, destitution, and barriers to essential services (housing, healthcare), impacting critical rights."
+      },
+      {
+        "date_announced": "2021-03-20",
+        "policy_text": "Commit to a **flexible, merit-based work visa system** that addresses skills shortages by replacing the arbitrary salary threshold with an approach tailored to regional and sectoral needs.",
+        "source": {
+          "url": "https://www.libdems.org.uk/conference/motions/spring-2021/supporting-business-workers-and-the-self-employed",
+          "notes": "Policy related to economic migration and labour market flexibility, often framed in the context of post-Brexit economic adjustments."
+        },
+        "raw_human_rights_score": 6,
+        "weight": 1,
+        "reasoning": "Implementing a flexible work visa system primarily addresses economic and labor market needs, offering moderate socio-economic benefits."
+      },
+      {
+        "date_announced": "2021-09-18",
+        "policy_text": "Introduce an immediate end to the **detention of children** for immigration purposes and strictly limit the use and duration of detention for all adults.",
+        "source": {
+          "url": "https://www.libdems.org.uk/news/article/liberal-democrats-motion-to-oppose-hostile-environment-policies",
+          "notes": "Policy on humane treatment and detention limits, reaffirmed at the Autumn Conference 2021."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 2,
+        "reasoning": "Ending child detention and limiting adult detention significantly upholds the right to liberty and protects vulnerable individuals from severe harm associated with detention."
+      },
+      {
+        "date_announced": "2021-07-20",
+        "policy_text": "Vote against any measure in the Nationality and Borders Bill that would grant the Home Secretary power to **deprive British citizens of their citizenship without notice** (Clause 9 of the Bill).",
+        "source": {
+          "url": "https://lordslibrary.parliament.uk/research-briefings/lln-2021-0038/",
+          "notes": "Specific point of opposition in the Nationality and Borders Bill debates, seen as a threat to fundamental civil liberties."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 2,
+        "reasoning": "Opposing citizenship deprivation without notice protects due process and the right to nationality, preventing a severe civil liberties violation."
+      },
+      {
+        "date_announced": "2022-04-14",
+        "policy_text": "Immediately **scrap the Rwanda asylum plan** announced by the Conservative government, calling it 'shameful, ineffective, and expensive'.",
+        "source": {
+          "url": "https://www.libdems.org.uk/news/article/rwanda-asylum-plan-shameful-ineffective-and-expensive",
+          "notes": "Statement released by the party following the government's announcement of the Migration and Economic Development Partnership with Rwanda."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Prevents severe human rights violations associated with the Rwanda plan, particularly concerning non-refoulement and access to fair asylum processing. Addresses critical rights."
+      },
+      {
+        "date_announced": "2022-04-14",
+        "policy_text": "Establish **safe and legal routes** for refugees, including an expanded UK Resettlement Scheme and humanitarian visas, to end dangerous Channel crossings and take power away from criminal gangs.",
+        "source": {
+          "url": "https://www.libdems.org.uk/news/article/rwanda-asylum-plan-shameful-ineffective-and-expensive",
+          "notes": "Announced as the core alternative strategy to the Rwanda plan."
+        },
+        "raw_human_rights_score": 10,
+        "weight": 3,
+        "reasoning": "Creates vital safe pathways for refugees, preventing loss of life from dangerous journeys and upholding the right to seek asylum. Directly impacts critical rights."
+      },
+      {
+        "date_announced": "2022-03-20",
+        "policy_text": "Tackle the asylum backlog by appointing more caseworkers and establishing a **service standard** for asylum claims to be decided quickly (ideally within three months).",
+        "source": {
+          "url": "https://www.libdems.org.uk/conference/motions/spring-2022/immigration-and-asylum-policy",
+          "notes": "Reaffirmed policy motion at the Spring Conference 2022, focusing on efficiency."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 2,
+        "reasoning": "Addresses lengthy asylum waits, which severely impact applicants' mental health and ability to rebuild their lives. Improves due process and reduces the period of uncertainty and potential destitution."
+      },
+      {
+        "date_announced": "2022-03-20",
+        "policy_text": "Lift the ban on **asylum seekers working** if they have waited for a decision for more than three months, allowing them to support themselves and contribute to the economy.",
+        "source": {
+          "url": "https://www.libdems.org.uk/conference/motions/spring-2022/immigration-and-asylum-policy",
+          "notes": "Standing policy reaffirmed at the Spring Conference 2022."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 2,
+        "reasoning": "Enables asylum seekers to work and support themselves, alleviating destitution, promoting dignity, and reducing reliance on public funds. Improves socio-economic rights."
+      },
+      {
+        "date_announced": "2022-03-20",
+        "policy_text": "End the detention of children for immigration purposes and set a **28-day time limit** on all immigration detention for adults.",
+        "source": {
+          "url": "https://www.libdems.org.uk/conference/motions/spring-2022/immigration-and-asylum-policy",
+          "notes": "Policy on humane treatment and detention limits reaffirmed at the Spring Conference 2022."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Ends the harmful practice of child immigration detention and imposes a crucial time limit on adult detention, significantly upholding rights to liberty and humane treatment. Addresses critical rights."
+      },
+      {
+        "date_announced": "2022-03-20",
+        "policy_text": "Expand refugee **family reunification rights**, particularly for unaccompanied child refugees, to allow them to sponsor close family members to join them in the UK.",
+        "source": {
+          "url": "https://www.libdems.org.uk/conference/motions/spring-2022/immigration-and-asylum-policy",
+          "notes": "Policy aimed at strengthening family life, reaffirmed at the Spring Conference 2022."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 2,
+        "reasoning": "Strengthens the fundamental right to family life, particularly for vulnerable child refugees, allowing them to reunite with close family members."
+      },
+      {
+        "date_announced": "2022-03-20",
+        "policy_text": "Repeal the Conservative Government's **'Hostile Environment'** legislation, including the 'Right to Rent' policy, and establish a firewall between public services and immigration enforcement.",
+        "source": {
+          "url": "https://www.libdems.org.uk/conference/motions/spring-2022/immigration-and-asylum-policy",
+          "notes": "Long-standing policy reaffirmed at the Spring Conference 2022."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 2,
+        "reasoning": "Removes legislation that created systemic discrimination and barriers to public services, restoring dignity and ensuring access to essential provisions without fear of immigration enforcement. Affects multiple core civil rights."
+      },
+      {
+        "date_announced": "2022-03-20",
+        "policy_text": "Commit to a **flexible, merit-based work visa system** that replaces the arbitrary salary threshold with a points-based approach tailored to regional and sectoral needs.",
+        "source": {
+          "url": "https://www.libdems.org.uk/conference/motions/spring-2022/immigration-and-asylum-policy",
+          "notes": "Reaffirmed policy on legal migration, designed to address skills shortages in sectors like health and social care."
+        },
+        "raw_human_rights_score": 6,
+        "weight": 1,
+        "reasoning": "Improves flexibility for legal economic migration, which is generally a positive administrative adjustment, but doesn't directly address core or critical human rights violations."
+      },
+      {
+        "date_announced": "2022-05-18",
+        "policy_text": "Automatically grant **Settled Status** (Permanent Residence) to all EU citizens and their family members who currently hold Pre-Settled Status, removing the requirement to re-apply.",
+        "source": {
+          "url": "https://www.libdems.org.uk/news/article/grant-automatic-settled-status-to-eu-citizens",
+          "notes": "Announced as part of a campaign to ensure the rights of EU citizens are protected post-Brexit."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 2,
+        "reasoning": "Provides legal certainty and secures the rights of millions of EU citizens, preventing potential loss of status and associated rights due to bureaucratic hurdles. Upholds due process and right to residence."
+      },
+      {
+        "date_announced": "2022-03-20",
+        "policy_text": "Ensure **full and independent implementation of the Windrush Lessons Learned Review** recommendations, and make the Windrush Compensation Scheme independent of the Home Office.",
+        "source": {
+          "url": "https://www.libdems.org.uk/conference/motions/spring-2022/immigration-and-asylum-policy",
+          "notes": "Policy on addressing past injustices, reaffirmed at the Spring Conference 2022."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Seeks to rectify historical injustices of the Windrush scandal, ensuring accountability, fair compensation, and preventing future harm. Directly addresses severe rights violations."
+      },
+      {
+        "date_announced": "2023-03-19",
+        "policy_text": "Immediately scrap the Illegal Migration Bill (later Act) and the Rwanda scheme, which the party considers to be immoral, ineffective, and in breach of the UK's international legal obligations.",
+        "source": {
+          "url": "https://www.libdems.org.uk/news/article/a-better-alternative-on-small-boats",
+          "notes": "Passed as a key policy motion at the Liberal Democrat Spring Conference 2023, framing the party's main policy plank against the Conservative government."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Scrapping policies widely considered to violate international legal obligations and put asylum seekers at risk of severe harm (non-refoulement, inhumane treatment) represents a significant human rights improvement."
+      },
+      {
+        "date_announced": "2023-03-19",
+        "policy_text": "Fix the asylum backlog by taking powers from the Home Office and establishing a new, dedicated, properly resourced unit with a service standard to make initial asylum decisions quicker and more fairly (aiming for three months).",
+        "source": {
+          "url": "https://www.libdems.org.uk/news/article/a-better-alternative-on-small-boats",
+          "notes": "Passed as part of the 'A Better Alternative on Small Boats' motion at the Spring Conference 2023."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 2,
+        "reasoning": "Addressing the asylum backlog improves due process, reduces prolonged uncertainty, and potentially mitigates destitution for asylum seekers."
+      },
+      {
+        "date_announced": "2023-05-14",
+        "policy_text": "Lift the ban on employment for asylum seekers who have waited more than three months for an initial decision on their claim, to allow them to work and contribute to the economy.",
+        "source": {
+          "url": "https://www.libdems.org.uk/news/article/standing-up-to-divisive-politics",
+          "notes": "A policy they forced a vote on in the House of Commons in May 2023, following earlier policy commitments."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Lifting the ban on employment directly addresses the right to work and prevents destitution for asylum seekers, significantly improving their living conditions and dignity."
+      },
+      {
+        "date_announced": "2023-03-19",
+        "policy_text": "Provide safe and legal routes to sanctuary for refugees, including an expanded, properly funded resettlement scheme, and humanitarian visas to allow asylum seekers to travel to the UK to proceed with their claims safely.",
+        "source": {
+          "url": "https://www.libdems.org.uk/news/article/a-better-alternative-on-small-boats",
+          "notes": "Passed as part of the 'A Better Alternative on Small Boats' motion at the Spring Conference 2023."
+        },
+        "raw_human_rights_score": 10,
+        "weight": 3,
+        "reasoning": "Providing safe and legal routes is a fundamental improvement, aligning with the right to seek asylum and preventing severe risks associated with irregular migration."
+      },
+      {
+        "date_announced": "2023-03-19",
+        "policy_text": "Expand refugee family reunification rights, including introducing a new scheme for unaccompanied child refugees and specifically allowing unaccompanied children in Europe to be reunited with family in the UK.",
+        "source": {
+          "url": "https://www.libdems.org.uk/news/article/a-better-alternative-on-small-boats",
+          "notes": "Passed as part of the Spring Conference 2023 motion."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Expanding family reunification, particularly for child refugees, strengthens the right to family life and protects vulnerable individuals, a major rights extension."
+      },
+      {
+        "date_announced": "2023-06-10",
+        "policy_text": "Commitment to reforming the work visa system by replacing the arbitrary salary threshold with a more flexible, merit-based system tailored to the needs of different sectors and regions.",
+        "source": {
+          "url": "https://www.lauradevine.com/news/election-watch-liberal-democrats-manifesto-promises-for-a-fair-effective-immigration-system/",
+          "notes": "Standing policy reaffirmed throughout 2023, designed to support the NHS and tackle skills shortages."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "Reforming the work visa system to be more flexible, while primarily economic, can moderately improve access to work and reduce arbitrary barriers for migrants."
+      },
+      {
+        "date_announced": "2023-06-10",
+        "policy_text": "Commitment to reversing the increase in the minimum income requirement for family visas (announced by the Conservative Government in December 2023 for implementation in 2024).",
+        "source": {
+          "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-9920/",
+          "notes": "A key point of opposition in late 2023 following the government's announcement of drastic increases to the family visa income threshold."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 2,
+        "reasoning": "Reversing increased income requirements for family visas protects the right to family life, preventing a significant barrier to family reunification."
+      },
+      {
+        "date_announced": "2023-06-10",
+        "policy_text": "Reverse the Conservative Government's 'Hostile Environment' policies, including repealing the discriminatory 'Right to Rent' scheme.",
+        "source": {
+          "url": "https://www.lauradevine.com/news/election-watch-liberal-democrats-manifesto-promises-for-a-fair-effective-immigration-system/",
+          "notes": "Reiteration of a long-standing core commitment to dismantle the 'Hostile Environment'."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Reversing 'Hostile Environment' policies and repealing discriminatory schemes like 'Right to Rent' significantly improves rights to non-discrimination, housing, and access to services, reducing fear and potential destitution."
+      },
+      {
+        "date_announced": "2023-03-19",
+        "policy_text": "Enhance international cooperation, including working with Europol and French authorities, to tackle criminal gangs and disrupt small boat crossings, rather than punishing asylum seekers.",
+        "source": {
+          "url": "https://www.libdems.org.uk/news/article/a-better-alternative-on-small-boats",
+          "notes": "Passed as part of the Spring Conference 2023 motion."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 2,
+        "reasoning": "Prioritizing action against criminal gangs while explicitly avoiding punishment of asylum seekers is a positive shift towards protecting vulnerable individuals and their rights to seek asylum."
+      },
+      {
+        "date_announced": "2023-06-10",
+        "policy_text": "Introduce an immediate end to the detention of children for immigration purposes and place a 28-day time limit on immigration detention for adults, which should only be used as an absolute last resort.",
+        "source": {
+          "url": "https://www.lauradevine.com/news/election-watch-liberal-democrats-manifesto-promises-for-a-fair-effective-immigration-system/",
+          "notes": "Reaffirmed policy on humane treatment and detention limits."
+        },
+        "raw_human_rights_score": 10,
+        "weight": 3,
+        "reasoning": "Ending child detention and strictly limiting adult detention significantly upholds the right to liberty and ensures more humane treatment, particularly for vulnerable children."
+      },
+      {
+        "date_announced": "2024-06-10",
+        "policy_text": "Scrap the Conservative Government’s Illegal Migration Act 2023 and the Rwanda scheme, while upholding the Refugee Convention.",
+        "source": {
+          "url": "https://www.libdems.org.uk/manifesto",
+          "notes": "Key pledge in the 2024 General Election Manifesto, 'For a Fair Deal'."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Scrapping policies that facilitate refoulement and violate the Refugee Convention constitutes a major improvement in safeguarding critical human rights, including the right to seek asylum and protection from torture/inhumane treatment."
+      },
+      {
+        "date_announced": "2024-06-10",
+        "policy_text": "Tackle the asylum backlog by establishing a dedicated unit to improve the speed and quality of asylum decision-making, aiming for a service standard of three months for most claims to be processed.",
+        "source": {
+          "url": "https://www.libdems.org.uk/manifesto",
+          "notes": "Key pledge in the 2024 General Election Manifesto."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 2,
+        "reasoning": "Expediting asylum decisions significantly improves due process and reduces the period of uncertainty and hardship for asylum seekers, positively impacting their liberty and living conditions."
+      },
+      {
+        "date_announced": "2024-06-10",
+        "policy_text": "Lift the ban on asylum seekers working if they have been waiting for a decision for more than three months, enabling them to support themselves and contribute to the economy.",
+        "source": {
+          "url": "https://www.libdems.org.uk/manifesto",
+          "notes": "Key pledge in the 2024 General Election Manifesto."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 2,
+        "reasoning": "Allowing asylum seekers to work after three months directly addresses destitution, upholds their dignity, and improves their right to an adequate standard of living, moving from a severe restriction to enabling self-sufficiency."
+      },
+      {
+        "date_announced": "2024-06-10",
+        "policy_text": "Replace the arbitrary salary threshold for the Skilled Worker visa with a more flexible, merit-based system tailored to the specific needs of different sectors and regions.",
+        "source": {
+          "url": "https://www.libdems.org.uk/manifesto",
+          "notes": "Key pledge in the 2024 General Election Manifesto, in response to rising salary requirements imposed by the Conservatives."
+        },
+        "raw_human_rights_score": 6,
+        "weight": 1,
+        "reasoning": "Replacing an arbitrary salary threshold with a more flexible system makes legal migration routes more accessible for skilled workers, which is a moderate improvement in economic opportunity but not a core human right issue."
+      },
+      {
+        "date_announced": "2024-06-10",
+        "policy_text": "Exempt NHS and care staff from the £1,000-a-year Immigration Skills Charge and reverse the Conservatives' ban on care workers bringing their partners and children.",
+        "source": {
+          "url": "https://www.libdems.org.uk/manifesto",
+          "notes": "Specific measure in the 2024 General Election Manifesto aimed at addressing the health and social care workforce crisis."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 2,
+        "reasoning": "Reversing the ban on care workers bringing dependents is a significant improvement for the right to family life. Exempting them from the skills charge provides economic relief."
+      },
+      {
+        "date_announced": "2024-06-10",
+        "policy_text": "Reverse the increase to the minimum income requirement for family visas, which was significantly raised by the Conservatives, to ensure families are not torn apart.",
+        "source": {
+          "url": "https://www.libdems.org.uk/manifesto",
+          "notes": "Key pledge in the 2024 General Election Manifesto focused on family rights."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 2,
+        "reasoning": "Reversing the increased minimum income requirement directly protects the right to family life by making it easier for families to reunite and remain together, addressing a significant barrier imposed by previous policies."
+      },
+      {
+        "date_announced": "2024-06-10",
+        "policy_text": "Expand and properly fund the UK Resettlement Scheme and expand the scope of refugee family reunion, including enabling unaccompanied child refugees to sponsor close family members to join them.",
+        "source": {
+          "url": "https://www.libdems.org.uk/manifesto",
+          "notes": "Key pledge in the 2024 General Election Manifesto on creating safe and legal routes to sanctuary."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Expanding resettlement schemes and refugee family reunion, particularly for unaccompanied children, significantly enhances access to protection and upholds the right to family life for highly vulnerable individuals, addressing critical human rights."
+      },
+      {
+        "date_announced": "2024-06-10",
+        "policy_text": "End the Conservative Government's 'Hostile Environment' policies, including repealing the discriminatory 'Right to Rent' scheme and establishing a firewall to prevent public agencies from sharing personal information with the Home Office for immigration enforcement.",
+        "source": {
+          "url": "https://www.libdems.org.uk/manifesto",
+          "notes": "Key pledge in the 2024 General Election Manifesto on rights and dignity."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 2,
+        "reasoning": "Ending 'Hostile Environment' policies and the 'Right to Rent' scheme, along with establishing a firewall, is a significant improvement as it reduces discrimination, protects privacy, and ensures access to essential services for migrants, upholding their dignity and core rights."
+      },
+      {
+        "date_announced": "2024-06-10",
+        "policy_text": "Expand the Youth Mobility Scheme by negotiating with the EU to extend it on a reciprocal basis, increasing the age limit from 30 to 35, and extending the length of visas from two to three years.",
+        "source": {
+          "url": "https://www.libdems.org.uk/manifesto",
+          "notes": "Key pledge in the 2024 General Election Manifesto to boost short-term cultural and economic exchange."
+        },
+        "raw_human_rights_score": 6,
+        "weight": 1,
+        "reasoning": "Expanding the Youth Mobility Scheme increases opportunities for cultural and economic exchange, which is a moderate improvement for individual mobility and temporary work, falling into an administrative/socio-economic category."
+      },
+      {
+        "date_announced": "2024-06-10",
+        "policy_text": "Grant Settled Status (Permanent Residence) automatically to all EU citizens and their family members who currently hold Pre-Settled Status in the UK.",
+        "source": {
+          "url": "https://www.libdems.org.uk/manifesto",
+          "notes": "Specific pledge in the 2024 General Election Manifesto to protect the rights of EU citizens already living in the UK."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 2,
+        "reasoning": "Automatically granting Settled Status to EU citizens with Pre-Settled Status provides significant legal certainty and security of residence, removing precarity and protecting their private and family life, and access to rights."
+      },
+      {
         "date_announced": "2025-09-26",
         "policy_text": "Treat the asylum backlog as a national emergency and clear the existing backlog of cases within six months by setting up temporary 'Nightingale' processing centres and tripling the number of asylum caseworkers.",
         "source": {
@@ -1785,6 +2555,562 @@
         "raw_human_rights_score": 7,
         "weight": 1,
         "reasoning": "Reforming the work visa system to be more flexible and merit-based improves accessibility for skilled workers, facilitating economic migration and contributing to economic needs."
+      }
+    ]
+  },
+  {
+    "party_name": "Scottish National Party",
+    "color": "#000",
+    "policies": [
+      {
+        "date_announced": "2021-06-03",
+        "policy_text": "The Scottish Government published 'A Scotland for the Future: Opportunities and Challenges of Scotland's Changing Population' (The Population Strategy), identifying **migration as the sole driver of Scotland’s population growth** and essential for offsetting an ageing population and declining birth rate.",
+        "source": {
+          "url": "https://www.scotpho.org.uk/population-dynamics/population-estimates-and-projections/policy-context/",
+          "notes:": "This strategy, published in 2021, formed the official strategic basis for all subsequent migration policy proposals."
+        },
+        "raw_human_rights_score": 6,
+        "weight": 1,
+        "reasoning": "This policy identifies migration as crucial for demographic and economic reasons, setting a positive context for future pro-migration policies but not directly improving individual rights itself."
+      },
+      {
+        "date_announced": "2021-01-01",
+        "policy_text": "Immediate and sustained opposition to the UK's new **Points-Based Immigration System**, arguing it was a 'one-size-fits-all approach' that failed to meet Scotland's urgent need for workers across all skill levels, particularly in key sectors like health and social care.",
+        "source": {
+          "url": "https://migrationpolicyscotland.org.uk/wp-content/uploads/2021/10/Scotlands_Migration_Futures_Oct21-1.pdf",
+          "notes:": "The UK's new system became effective on this date, leading to immediate opposition from the SNP/Scottish Government."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 2,
+        "reasoning": "Opposing a restrictive immigration system that limits access for essential workers is a step towards protecting economic and social rights, and potentially family reunification."
+      },
+      {
+        "date_announced": "2021-09-21",
+        "policy_text": "Initial development and presentation of the **'Scottish Visa'** concept within a wider paper on migration needs, designed as a distinct route to attract and retain migrants for Scotland, with conditions tailored to Scottish wages and skills shortages.",
+        "source": {
+          "url": "https://www.gov.scot/publications/migration-meeting-scotlands-needs/pages/6/",
+          "notes:": "The Scottish Visa concept was first formally put forward in the latter half of 2021 in response to the new UK system."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "The development of a tailored 'Scottish Visa' aims to facilitate migration by better matching conditions to local needs, potentially easing access for migrants compared to a broader system."
+      },
+      {
+        "date_announced": "2021-09-21",
+        "policy_text": "Proposal for a **'Remote and Rural Visa Pilot' (RVP)**, focusing specifically on using tailored visa criteria (such as lower minimum salary thresholds) to encourage migration to depopulating communities, including the Islands and West of Scotland.",
+        "source": {
+          "url": "https://www.gov.scot/publications/migration-meeting-scotlands-needs/pages/6/",
+          "notes:": "This targeted visa was included in the initial concept papers on tailored migration routes for Scotland."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 1,
+        "reasoning": "Proposing lower salary thresholds for a specific visa pilot directly addresses financial barriers, improving access to work and residence for migrants in depopulating areas."
+      },
+      {
+        "date_announced": "2021-01-01",
+        "policy_text": "Strong condemnation of the UK system's **high salary and skill thresholds** being applied to EU citizens post-Brexit, arguing it prevented workers in essential lower-paid sectors from moving to Scotland.",
+        "source": {
+          "url": "https://migrationpolicyscotland.org.uk/wp-content/uploads/2021/10/Scotlands_Migration_Futures_Oct21-1.pdf",
+          "notes:": "A major criticism following the end of Free Movement, which previously supplied workers for these sectors."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "Condemning high salary/skill thresholds indicates a desire for more inclusive migration policies, particularly for essential workers in lower-paid sectors, promoting their right to work."
+      },
+      {
+        "date_announced": "2021-09-21",
+        "policy_text": "Advocating for a **Scottish Graduate Visa** (expanding upon the UK's Graduate route) to allow international students graduating from Scottish universities to remain in Scotland for an extended period, encouraging long-term retention of talent.",
+        "source": {
+          "url": "https://www.gov.scot/publications/migration-meeting-scotlands-needs/pages/6/",
+          "notes:": "A priority policy to ensure Scotland benefits economically from its world-class higher education sector."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 2,
+        "reasoning": "Advocating for an expanded graduate visa route directly improves the right to work and reside for international students, promoting their ability to integrate and contribute long-term."
+      },
+      {
+        "date_announced": "2021-09-21",
+        "policy_text": "The principle that any migration system for Scotland must ensure **migrants have an accessible and secure pathway to settlement (ILR)** after five years of residence, contrasting with more restrictive UK proposals.",
+        "source": {
+          "url": "https://www.gov.scot/publications/migration-meeting-scotlands-needs/pages/6/",
+          "notes:": "Encouraging migrants to view Scotland as a permanent home was a central theme."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 2,
+        "reasoning": "Establishing a principle of an accessible and secure pathway to Indefinite Leave to Remain after five years significantly enhances migrants' long-term security, stability, and integration."
+      },
+      {
+        "date_announced": "2021-06-03",
+        "policy_text": "Commitment to creating a fully devolved asylum and refugee system, founded on **human rights and equality principles**, including the right to work and access to public assistance for asylum seekers, to reduce destitution.",
+        "source": {
+          "url": "https://www.gov.scot/binaries/content/documents/govscot/publications/research-and-analysis/2023/11/building-new-scotland-migration-scotland-independence/documents/migration-scotland-independence-paper-6/migration-scotland-independence-paper-6/govscot%3Adocument/migration-scotland-independence-paper-6.pdf",
+          "notes:": "A core social policy goal, reaffirmed in policy papers throughout the year."
+        },
+        "raw_human_rights_score": 10,
+        "weight": 3,
+        "reasoning": "Committing to a human rights-based asylum system, including the right to work and public assistance for asylum seekers, is a major rights extension, directly tackling destitution and upholding fundamental protections."
+      },
+      {
+        "date_announced": "2021-10-27",
+        "policy_text": "The Scottish Government officially created the **'Population Programme'** as a structured framework to deliver the 2021 Population Strategy and address demographic challenges across four key ambitions: Attractive and Welcoming Country, Family Friendly Nation, Healthy Living Society, and More Balanced Population.",
+        "source": {
+          "url": "https://www.scotpho.org.uk/population-dynamics/population-estimates-and-projections/policy-context/",
+          "notes:": "The Population Programme was the implementation mechanism for the strategic goals set out in the 2021 Population Strategy."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "The creation of the 'Population Programme' with welcoming and family-friendly ambitions sets a positive strategic framework for migration policy, indirectly supporting human rights."
+      },
+      {
+        "date_announced": "2021-09-21",
+        "policy_text": "Calling for a **review and reduction of the costs and fees** associated with the UK immigration system, particularly the Immigration Health Surcharge (IHS) and visa application fees, arguing they create financial barriers for essential workers coming to Scotland.",
+        "source": {
+          "url": "https://www.gov.scot/publications/migration-meeting-scotlands-needs/pages/5/",
+          "notes:": "A point of consistent opposition, arguing high costs deter skilled migrants."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "Calling for a reduction in immigration costs and fees directly removes financial barriers, making migration more accessible and protecting the socio-economic rights of essential workers."
+      },
+      {
+        "date_announced": "2022-09-21",
+        "policy_text": "Publication of a major policy paper outlining the **urgent need for a tailored migration system for Scotland** to offset an ageing and projected declining working-age population, citing demographic divergence from the rest of the UK.",
+        "source": {
+          "url": "https://www.gov.scot/publications/migration-meeting-scotlands-needs/pages/1/",
+          "notes:": "This paper formed the evidence base for the formal proposals and was a key document released in late 2022."
+        },
+        "raw_human_rights_score": 6,
+        "weight": 1,
+        "reasoning": "Advocating for a tailored migration system is a foundational step that acknowledges unique needs, potentially leading to more human rights-centric policies in the future."
+      },
+      {
+        "date_announced": "2022-09-21",
+        "policy_text": "Introduction of the concept of a **'Scottish Visa'**—a distinct route within the UK immigration framework—to attract and retain international migrants specifically for Scotland's labour market and communities, with a clear path to settlement.",
+        "source": {
+          "url": "https://www.gov.scot/publications/migration-meeting-scotlands-needs/pages/6/",
+          "notes:": "The Scottish Visa was presented as the primary mechanism to address Scotland's labour market needs and population decline."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 2,
+        "reasoning": "Creating a distinct visa route with a clear path to settlement significantly improves migrants' long-term stability, integration, and ability to exercise rights like family life."
+      },
+      {
+        "date_announced": "2022-09-21",
+        "policy_text": "Proposal for a **'Remote and Rural Visa Pilot' (RVP)**, designed to allow employers in depopulating and remote Scottish communities to sponsor migrant workers with more flexible criteria, such as lower salary thresholds, than the standard UK Skilled Worker visa.",
+        "source": {
+          "url": "https://www.gov.scot/publications/migration-meeting-scotlands-needs/pages/6/",
+          "notes:": "A core, targeted proposal in the September 2022 paper aimed at addressing regional imbalances."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "The pilot scheme with flexible criteria, such as lower salary thresholds, increases accessibility to work and residency for migrants in specific communities, supporting socio-economic well-being."
+      },
+      {
+        "date_announced": "2022-09-21",
+        "policy_text": "Advocating that any Scottish-specific visa route, including the RVP, should **not require a mandatory minimum salary threshold** (like the UK's general threshold), to ensure that roles in sectors with lower pay, such as social care, can be filled.",
+        "source": {
+          "url": "https://www.gov.scot/publications/migration-meeting-scotlands-needs/pages/6/",
+          "notes:": "A key policy distinction from the UK's points-based system, aimed at addressing labour shortages in essential services."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 2,
+        "reasoning": "Removing mandatory minimum salary thresholds addresses a significant barrier to employment, particularly for essential workers in lower-paid sectors, directly impacting their ability to secure a livelihood and avoid destitution."
+      },
+      {
+        "date_announced": "2022-09-21",
+        "policy_text": "Proposal for a **Scottish Graduate Visa** extension for international students graduating from Scottish institutions, aiming to maximise the retention of skilled young people by giving them more time to secure sponsored employment.",
+        "source": {
+          "url": "https://www.gov.scot/publications/migration-meeting-scotlands-needs/pages/6/",
+          "notes:": "A policy mechanism to address the 'brain drain' of international students leaving the UK after graduation."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 1,
+        "reasoning": "Extending the graduate visa directly enhances opportunities for skilled young migrants to secure employment and integrate, thereby supporting their socio-economic rights and stability."
+      },
+      {
+        "date_announced": "2022-09-21",
+        "policy_text": "The principle that migration policy should be reformed to focus on **long-term settlement** and contribution, ensuring a clear and accessible pathway to Indefinite Leave to Remain (ILR) for migrants who choose to make Scotland their home.",
+        "source": {
+          "url": "https://www.gov.scot/publications/migration-meeting-scotlands-needs/",
+          "notes:": "One of the central guiding principles of the SNP's 2022 migration strategy."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 2,
+        "reasoning": "Focusing on long-term settlement and clear pathways to Indefinite Leave to Remain provides crucial security and stability for migrants, profoundly impacting their family life and ability to integrate."
+      },
+      {
+        "date_announced": "2022-02-08",
+        "policy_text": "Continued calls for the **full devolution of immigration powers** to the Scottish Parliament, asserting that only a fully devolved system can create rules that meet Scotland’s unique economic and social requirements.",
+        "source": {
+          "url": "https://www.snp.org/policies/pb-what-is-the-snp-s-policy-on-immigration/",
+          "notes:": "A standing long-term policy goal, referenced throughout the year in response to UK government policy."
+        },
+        "raw_human_rights_score": 6,
+        "weight": 1,
+        "reasoning": "While a call for administrative change, devolving immigration powers is intended to enable policies better suited to local needs, potentially leading to improved human rights outcomes."
+      },
+      {
+        "date_announced": "2022-09-21",
+        "policy_text": "Advocating for the **scrapping of the Immigration Health Surcharge (IHS)** and other high visa fees, arguing the UK's revenue-raising model makes Scotland a less competitive and attractive destination for skilled workers.",
+        "source": {
+          "url": "https://www.gov.scot/publications/migration-meeting-scotlands-needs/pages/5/",
+          "notes:": "A point of ongoing opposition to the financial barriers created by the UK system."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 1,
+        "reasoning": "Scrapping the Immigration Health Surcharge and high visa fees reduces significant financial barriers for migrants, making access to healthcare and legal status more equitable and preventing economic hardship."
+      },
+      {
+        "date_announced": "2022-09-21",
+        "policy_text": "Renewed commitment to support a **fair and humane asylum and refugee system**, including the long-standing call to lift the **'No Recourse to Public Funds' (NRPF)** condition for asylum seekers and those on family migration routes to allow them to work and contribute.",
+        "source": {
+          "url": "https://www.snp.org/policies/pb-what-is-the-snp-s-policy-on-immigration/",
+          "notes:": "A key social justice policy position reaffirmed in 2022 documents."
+        },
+        "raw_human_rights_score": 10,
+        "weight": 3,
+        "reasoning": "Lifting the 'No Recourse to Public Funds' condition directly prevents destitution for vulnerable asylum seekers and others, allowing them to work, contribute, and live with dignity, addressing a critical human right."
+      },
+      {
+        "date_announced": "2022-09-21",
+        "policy_text": "Proposal that the **Scottish Visa should permit migrants to be self-employed**—or have the option for self-employment—to encourage entrepreneurship and local business creation, particularly in remote areas.",
+        "source": {
+          "url": "https://www.gov.scot/publications/migration-meeting-scotlands-needs/pages/6/",
+          "notes:": "A specific feature of the Scottish Visa model proposed in the detailed September paper."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "Permitting self-employment expands economic opportunities and autonomy for migrants, fostering entrepreneurship and better integration into the economy, particularly in remote areas."
+      },
+      {
+        "date_announced": "2023-01-22",
+        "policy_text": "Publication of the paper 'Migration - Meeting Scotland's Needs,' setting out the vision and values for a migration system geared toward Scotland’s needs, which served as the foundation for the subsequent 'Tailored Migration Proposals.'",
+        "source": {
+          "url": "https://www.gov.scot/publications/migration-meeting-scotlands-needs/pages/1/",
+          "notes:": "This paper was the central policy document guiding the SNP's 2023 approach to migration."
+        },
+        "raw_human_rights_score": 6,
+        "weight": 1,
+        "reasoning": "Lays the groundwork for more tailored and potentially beneficial migration policies for Scotland, indicating a positive direction for human rights by aiming to meet needs."
+      },
+      {
+        "date_announced": "2023-01-22",
+        "policy_text": "Formal proposal for a 'Scottish Visa' as an additional route within the UK immigration system, designed to attract and retain migrants to live, work, and eventually settle in Scotland with a clear pathway to Indefinite Leave to Remain (ILR).",
+        "source": {
+          "url": "https://www.gov.scot/publications/migration-meeting-scotlands-needs/pages/6/",
+          "notes:": "This was the core proposal of the 2023 policy paper, aimed at tackling Scotland's demographic challenge."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 2,
+        "reasoning": "Creates a specific, clear pathway to settlement and ILR for migrants in Scotland, significantly enhancing their stability, security, and integration."
+      },
+      {
+        "date_announced": "2023-01-22",
+        "policy_text": "Proposal for a **Remote and Rural Visa Pilot (RVP)** tailored for depopulating Scottish areas, offering more relaxed visa criteria (e.g., lower salary thresholds) compared to the main UK routes to address acute local labour and skills shortages.",
+        "source": {
+          "url": "https://www.gov.scot/publications/migration-meeting-scotlands-needs/pages/6/",
+          "notes:": "A key part of the Tailored Migration Proposals designed to spread the benefits of migration beyond major cities."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "Offers more accessible visa criteria (e.g., lower salary thresholds) for specific areas, improving economic opportunities and addressing local needs, which indirectly supports migrants' socio-economic rights."
+      },
+      {
+        "date_announced": "2023-01-22",
+        "policy_text": "Proposal for a **Scottish Graduate Visa** extension (an additional two years beyond the standard UK Graduate Visa) for international students who graduate from a Scottish institution and agree to live and work in Scotland (linked to a Scottish tax code).",
+        "source": {
+          "url": "https://www.gov.scot/publications/migration-meeting-scotlands-needs/pages/6/",
+          "notes:": "A mechanism aimed at improving the retention of skilled international graduates."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "Extends post-study work opportunities, giving international graduates more time to secure employment and pathways to long-term settlement in Scotland, improving their economic and integration prospects."
+      },
+      {
+        "date_announced": "2023-12-04",
+        "policy_text": "Strong condemnation of the UK Government's December 2023 announcements to increase the Skilled Worker minimum salary threshold and restrict student dependent visas, arguing these changes were 'deeply damaging' to Scotland's economy and public services, particularly the NHS and care sector.",
+        "source": {
+          "url": "https://www.gov.scot/news/uk-government-migration-changes-deeply-damaging/",
+          "notes:": "Official Scottish Government reaction to the UK Home Secretary's significant policy tightening announcement."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 2,
+        "reasoning": "Expresses strong opposition to UK Government policies that restrict migration and family reunification, arguing these are \"deeply damaging,\" thereby advocating for the protection of migrants' socio-economic rights and family life."
+      },
+      {
+        "date_announced": "2023-06-05",
+        "policy_text": "Advocating for the **decentralisation or full devolution of immigration powers** to the Scottish Parliament, arguing that Westminster's 'one-size-fits-all approach' actively harms Scotland's distinct economic and demographic interests.",
+        "source": {
+          "url": "https://www.snp.org/policies/pb-what-is-the-snp-s-policy-on-immigration/",
+          "notes:": "A standing core principle, actively championed throughout 2023 as the only long-term solution to Scotland's migration needs."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "Advocates for a system that can better address Scotland's unique needs, potentially leading to more humane and effective migration policies that better protect migrants' rights."
+      },
+      {
+        "date_announced": "2023-01-22",
+        "policy_text": "The Scottish Visa route should have **no salary threshold** to allow migrants to work in jobs across all skill levels, ensuring essential roles in sectors like care and agriculture are filled, but with earnings being part of the selection criteria.",
+        "source": {
+          "url": "https://www.gov.scot/publications/migration-meeting-scotlands-needs/pages/6/",
+          "notes:": "A fundamental distinction from the UK's highly restrictive points-based system."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 1,
+        "reasoning": "Eliminating salary thresholds broadens access to migration for essential workers in various sectors, directly supporting socio-economic rights and facilitating economic integration."
+      },
+      {
+        "date_announced": "2023-01-22",
+        "policy_text": "Migration policy should support **long-term settlement** in Scotland, with all tailored routes offering a clear and attainable pathway to Indefinite Leave to Remain (ILR) within five years.",
+        "source": {
+          "url": "https://www.gov.scot/publications/migration-meeting-scotlands-needs/pages/6/",
+          "notes:": "A principle aimed at encouraging migrants to see Scotland as a permanent home, rather than a temporary stop."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 2,
+        "reasoning": "Explicitly supports long-term settlement and clear ILR pathways, significantly enhancing migrants' security, stability, and ability to plan their lives, fostering integration and family life."
+      },
+      {
+        "date_announced": "2023-04-12",
+        "policy_text": "Renewed calls for the UK Government to **scrap the Rwanda asylum scheme** and to adopt a fair, humane, and rights-based asylum system, including lifting the 'No Recourse to Public Funds' (NRPF) condition for asylum seekers.",
+        "source": {
+          "url": "https://www.snp.org/policies/pb-what-is-the-snp-s-policy-on-immigration/",
+          "notes:": "A consistent and vocal policy position regarding the treatment of asylum seekers."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Calls to end the highly controversial Rwanda scheme (preventing potential severe human rights violations) and to lift NRPF, directly addressing the critical right to avoid destitution for asylum seekers."
+      },
+      {
+        "date_announced": "2023-01-22",
+        "policy_text": "Calling for visa and immigration fees, including the Immigration Health Surcharge (IHS), to be significantly **lowered or scrapped**, arguing the UK's current revenue-raising model acts as a barrier to attracting essential workers to Scotland.",
+        "source": {
+          "url": "https://www.gov.scot/publications/migration-meeting-scotlands-needs/pages/5/",
+          "notes:": "A point of opposition that was amplified as the UK government announced further fee increases in 2023."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "Advocates for significantly lower or scrapped visa and IHS fees, directly reducing a major financial barrier to migration, thereby improving access to work and healthcare for essential workers."
+      },
+      {
+        "date_announced": "2024-03-01",
+        "policy_text": "Formal submission of the 'Tailored Migration Proposals' to the UK Government, advocating for the introduction of a **Scottish Visa** as an additional route within the UK immigration system to address Scotland's demographic and labour needs.",
+        "source": {
+          "url": "https://www.gov.scot/publications/uk-immigration-white-paper-2025-scottish-government-proposals/",
+          "notes:": "The proposals were submitted in March 2024 and formally published later. This is the foundation for the subsequent 2025 proposals."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "Advocating for a new migration route generally improves opportunities for individuals to live and work, offering an additional pathway. This addresses administrative and socio-economic needs."
+      },
+      {
+        "date_announced": "2024-03-01",
+        "policy_text": "Proposing a **Remote and Rural Visa Pilot (RVP)** within the Tailored Migration Proposals, allowing employers in designated Scottish communities to sponsor migrant workers under more flexible criteria (e.g., lower salary thresholds) to combat depopulation.",
+        "source": {
+          "url": "https://www.gov.scot/publications/uk-immigration-white-paper-2025-scottish-government-proposals/pages/6/",
+          "notes:": "Part of the formal March 2024 submission for consideration in the UK's migration review."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "Proposing a new visa pilot with flexible criteria, especially lower salary thresholds, reduces financial barriers and expands access to migration for a wider range of workers, addressing socio-economic and demographic needs."
+      },
+      {
+        "date_announced": "2024-05-13",
+        "policy_text": "First Minister John Swinney publicly called for **more immigration to Scotland** to stimulate economic growth and address the country's population challenges, stating the UK's 'one-size-fits-all approach is failing Scotland'.",
+        "source": {
+          "url": "https://migrationpolicyscotland.org.uk/publications/the-times-immigration-is-vital-if-scotland-is-to-flourish/",
+          "notes:": "Comment piece by the First Minister in The Times, aligning SNP policy with demographic necessity."
+        },
+        "raw_human_rights_score": 6,
+        "weight": 1,
+        "reasoning": "A public call for more immigration signals a positive stance towards more open migration policies, which can lead to future improvements in human rights by increasing opportunities, though it is not a direct policy action."
+      },
+      {
+        "date_announced": "2024-03-01",
+        "policy_text": "Advocating for the creation of a **Scottish Graduate Visa** (an extension of the UK Graduate Visa) allowing international students who graduate from Scottish institutions to remain and work in Scotland for an additional two years.",
+        "source": {
+          "url": "https://researchbriefings.files.parliament.uk/documents/CBP-10247/CBP-10247.pdf",
+          "notes:": "Contained within the detailed 2024 proposals for devolved/tailored migration routes."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 1,
+        "reasoning": "Extending the period international graduates can remain and work significantly improves their stability and socio-economic opportunities, providing a clearer path to integrate into the economy."
+      },
+      {
+        "date_announced": "2024-04-23",
+        "policy_text": "Support for and sponsoring of the **Devolution (Immigration) (Scotland) Bill 2024-25** in the UK Parliament, which explicitly sought to grant full legislative competence for immigration to the Scottish Parliament.",
+        "source": {
+          "url": "https://researchbriefings.files.parliament.uk/documents/CBP-10247/CBP-10247.pdf",
+          "notes:": "A primary legislative vehicle in 2024 for the SNP's long-term goal of devolution of full migration powers."
+        },
+        "raw_human_rights_score": 6,
+        "weight": 1,
+        "reasoning": "Seeking to grant legislative competence for immigration to the Scottish Parliament aims to allow for policies more tailored to Scotland's needs, which are often framed as more pro-immigration, potentially leading to improved human rights outcomes."
+      },
+      {
+        "date_announced": "2024-11-06",
+        "policy_text": "Condemnation of the UK Government's significant **increase to the Immigration Health Surcharge (IHS)** and visa fees, and a call for the IHS to be scrapped to avoid creating a financial barrier to essential workers and students coming to Scotland.",
+        "source": {
+          "url": "https://www.gov.scot/publications/uk-immigration-white-paper-2025-scottish-government-proposals/pages/5/",
+          "notes:": "This fee increase took effect in 2024 and was a major point of opposition for the SNP."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "Condemning increased fees and calling for their abolition aims to remove significant financial barriers, making migration more accessible for essential workers and students and protecting socio-economic rights."
+      },
+      {
+        "date_announced": "2024-03-01",
+        "policy_text": "The Scottish Visa proposal stipulated that the route should have **no mandatory minimum salary threshold**, aiming to attract a wider range of skilled and essential workers often excluded by the UK's standard Skilled Worker route.",
+        "source": {
+          "url": "https://www.gov.scot/publications/uk-immigration-white-paper-2025-scottish-government-proposals/pages/6/",
+          "notes:": "Key feature of the 'Scottish Visa' within the March 2024 proposals."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 1,
+        "reasoning": "Removing mandatory minimum salary thresholds significantly broadens access to migration for a wider range of skilled and essential workers, directly improving their socio-economic opportunities and right to work."
+      },
+      {
+        "date_announced": "2024-06-19",
+        "policy_text": "Reiterating a commitment to a **fair and humane asylum system**, including the long-standing call to lift the 'No Recourse to Public Funds' (NRPF) restriction for asylum seekers and to abandon the UK's Rwanda asylum scheme.",
+        "source": {
+          "url": "https://www.snp.org/policies/pb-what-is-the-snp-s-policy-on-immigration/",
+          "notes:": "A core, long-standing SNP policy principle reaffirmed during debates on the UK's asylum system in 2024."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Lifting the 'No Recourse to Public Funds' restriction directly addresses destitution (a critical right issue). Abandoning the Rwanda scheme protects against potential severe harm and upholds the principle of non-refoulement, both critical/absolute rights."
+      },
+      {
+        "date_announced": "2024-03-01",
+        "policy_text": "Migration policy should **support long-term settlement** in Scotland, with the Scottish Visa proposal ensuring a clear pathway to Indefinite Leave to Remain (ILR) after five years of residence.",
+        "source": {
+          "url": "https://www.gov.scot/publications/uk-immigration-white-paper-2025-scottish-government-proposals/",
+          "notes:": "One of the seven core principles underpinning the Scottish Government's proposals in 2024."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 2,
+        "reasoning": "Ensuring a clear pathway to Indefinite Leave to Remain after five years provides long-term security and stability for migrants, which significantly protects their right to family life and fosters full integration into society."
+      },
+      {
+        "date_announced": "2024-10-10",
+        "policy_text": "First Minister John Swinney supported the call for a **temporary pause on new asylum arrivals in Glasgow**, citing the city's overwhelmed system and a lack of support from the UK Home Office to manage the number of people transitioning to refugee status.",
+        "source": {
+          "url": "https://news.sky.com/story/scottish-first-minister-john-swinney-joins-call-for-pause-on-new-asylum-arrivals-13448188",
+          "notes:": "A specific, high-profile policy stance taken in late 2024 in response to a humanitarian/local authority crisis."
+        },
+        "raw_human_rights_score": 4,
+        "weight": 2,
+        "reasoning": "While framed by capacity issues, a temporary pause on new asylum arrivals restricts access to the asylum system. This represents a moderate restriction on the core civil right to seek asylum, even if not a permanent denial."
+      },
+      {
+        "date_announced": "2025-07-30",
+        "policy_text": "Proposal for a 'Scottish Visa' as an additional route within the UK immigration system, designed to allow migrants to live and work in Scotland with a clear pathway to Indefinite Leave to Remain (ILR) after five years of residence.",
+        "source": {
+          "url": "https://www.gov.scot/publications/uk-immigration-white-paper-2025-scottish-government-proposals/pages/6/",
+          "notes:": "Part of the Scottish Government's proposals to the UK Government's 2025 Immigration White Paper."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 2,
+        "reasoning": "Creates a new, more accessible pathway for migrants to live, work, and settle in Scotland, providing greater security and rights to residence and work."
+      },
+      {
+        "date_announced": "2025-07-30",
+        "policy_text": "The Scottish Visa route should have no mandatory minimum salary threshold to attract a broader range of skilled workers, though earnings could be part of the selection process.",
+        "source": {
+          "url": "https://www.gov.scot/publications/uk-immigration-white-paper-2025-scottish-government-proposals/pages/6/",
+          "notes:": "Part of the Scottish Government's proposals for the Scottish Visa, contrasting with the UK's higher salary thresholds."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "Eliminates a significant economic barrier, making the 'Scottish Visa' more accessible to a wider range of skilled workers and improving socio-economic rights."
+      },
+      {
+        "date_announced": "2025-04-23",
+        "policy_text": "Proposal for a 'Scottish Graduate Visa' extension of two years, available to students already on a UK Graduate visa who graduated from a Scottish institution and intend to live and work in Scotland (linked to a Scottish tax code).",
+        "source": {
+          "url": "https://researchbriefings.files.parliament.uk/documents/CBP-10247/CBP-10247.pdf",
+          "notes:": "Mentioned in the context of the Devolution (Immigration) (Scotland) Bill 2024-25 and Scottish Government policy paper from January 2025."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "Extends opportunities for international graduates to remain and work in Scotland, supporting their right to work and contribute economically."
+      },
+      {
+        "date_announced": "2025-07-30",
+        "policy_text": "Proposal for a 'Remote and Rural Visa Pilot' (RVP) to address depopulation and skills shortages, allowing employers in pilot communities to sponsor migrant workers with more relaxed criteria than the UK system.",
+        "source": {
+          "url": "https://www.gov.scot/publications/uk-immigration-white-paper-2025-scottish-government-proposals/pages/6/",
+          "notes:": "Part of the Scottish Government's proposals to the UK Government's 2025 Immigration White Paper."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "Provides a more relaxed and accessible route for migrant workers in remote and rural areas, facilitating work and residency and addressing economic needs."
+      },
+      {
+        "date_announced": "2025-04-25",
+        "policy_text": "Advocating for the full devolution of immigration powers to the Scottish Parliament to create a system geared to meet Scotland’s demographic and economic needs, as evidenced by the Devolution (Immigration) (Scotland) Bill 2024-25 (a Private Member's Bill sponsored by an SNP MP).",
+        "source": {
+          "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10247/",
+          "notes:": "Second reading scheduled for April 25, 2025. This is a primary long-term policy goal."
+        },
+        "raw_human_rights_score": 6,
+        "weight": 1,
+        "reasoning": "Seeks to enable a more tailored immigration system for Scotland, which is intended to be more accommodating and thus indirectly supportive of migrant rights, though it's an administrative change."
+      },
+      {
+        "date_announced": "2025-07-30",
+        "policy_text": "Migration policy should support fair work, protecting workers' rights, pay, and access to employment, while preventing exploitation and abuse of migrants.",
+        "source": {
+          "url": "https://www.gov.scot/publications/uk-immigration-white-paper-2025-scottish-government-proposals/",
+          "notes:": "One of the seven core principles underpinning the Scottish Government's approach to migration policy in 2025."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 2,
+        "reasoning": "Explicitly prioritizes the protection of migrants' fundamental workers' rights, fair pay, and prevention of exploitation, addressing core human rights and dignity."
+      },
+      {
+        "date_announced": "2025-01-06",
+        "policy_text": "Calling on the UK Government to reintroduce a 'Fresh Talent' style initiative, similar to the scheme run from 2004-2008, allowing international students to remain and work in Scotland for up to two years after graduation.",
+        "source": {
+          "url": "https://morningstaronline.co.uk/article/swinney-demands-migration-policy-scotland",
+          "notes:": "Demand made by First Minister John Swinney in January 2025."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "Advocates for reintroducing a scheme that would allow international graduates to remain and work, enhancing their post-study opportunities and contribution."
+      },
+      {
+        "date_announced": "2025-07-30",
+        "policy_text": "Migration policy should encourage and enable long-term settlement in Scotland, welcoming people with the range of skills needed to work, raise families, and make a positive contribution to society.",
+        "source": {
+          "url": "https://www.gov.scot/publications/uk-immigration-white-paper-2025-scottish-government-proposals/",
+          "notes:": "One of the seven core principles underpinning the Scottish Government's approach to migration policy in 2025."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 2,
+        "reasoning": "Promotes policies that foster long-term settlement, enabling stable residency, family life, and full participation in society, thus significantly extending rights."
+      },
+      {
+        "date_announced": "2025-07-30",
+        "policy_text": "The migration system should be easy to access and understand, and fees and charges should be proportionate, focusing on what a prospective migrant can contribute rather than their ability to pay.",
+        "source": {
+          "url": "https://www.gov.scot/publications/uk-immigration-white-paper-2025-scottish-government-proposals/",
+          "notes:": "One of the seven core principles underpinning the Scottish Government's approach to migration policy in 2025."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "Advocates for an accessible, transparent system with proportionate fees, reducing economic barriers and improving fair access to migration processes."
+      },
+      {
+        "date_announced": "2025-06-19",
+        "policy_text": "Calling on the UK Government to scrap the Rwanda asylum scheme and to support a fair and humane asylum and refugee system, including lifting the 'No Recourse to Public Funds' restriction.",
+        "source": {
+          "url": "https://www.nus.org.uk/snp-manifesto-ge24",
+          "notes:": "A core policy position reaffirmed in the SNP's 2025 General Election manifesto regarding the asylum system."
+        },
+        "raw_human_rights_score": 9,
+        "weight": 3,
+        "reasoning": "Directly addresses the prevention of severe harm by calling to scrap the Rwanda scheme (non-refoulement) and mitigate destitution by lifting NRPF, supporting a fundamental right to an adequate standard of living."
       }
     ]
   }

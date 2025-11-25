@@ -33,6 +33,7 @@
 		"@google/generative-ai": "^0.24.1",
 		"bits-ui": "^2.14.4",
 		"clsx": "^2.1.1",
+		"svelte-exmarkdown": "^5.0.2",
 		"svelteplot": "^0.7.0",
 		"tailwind-merge": "^3.4.0",
 		"tailwindcss-animate": "^1.0.7"
