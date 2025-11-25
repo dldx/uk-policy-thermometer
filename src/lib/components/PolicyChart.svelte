@@ -203,7 +203,7 @@
                         : 1}
                     onpointerenter={() => (hoveredParty = party.party_name)}
                     onpointerleave={() => (hoveredParty = null)}
-                    curve="basis"
+                    curve="monotone-x"
                 />
                 <!-- <RegressionY
                     data={party.policies.map((p) => ({

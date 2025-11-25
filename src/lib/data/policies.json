@@ -560,6 +560,105 @@
     "color": "#0087DC",
     "policies": [
       {
+        "date_announced": "2020-11-11",
+        "policy_text": "The **Immigration and Social Security Co-ordination (EU Withdrawal) Act 2020** received Royal Assent, legally ending the free movement of European Union (EU) citizens into the UK.",
+        "source": {
+          "url": "https://bills.parliament.uk/bills/2714",
+          "notes": "The foundational legislation that repealed the main retained EU law relating to free movement, paving the way for the new Points-Based Immigration System (PBIS)."
+        },
+        "raw_human_rights_score": 3,
+        "weight": 2,
+        "reasoning": "This policy ends the free movement of EU citizens, which is a significant restriction on a previously established right to movement and residence, impacting core civil liberties and socio-economic opportunities."
+      },
+      {
+        "date_announced": "2020-02-19",
+        "policy_text": "Publication of the **Policy Statement on the UK's Points-Based Immigration System**, detailing the core requirements for the new work and study routes.",
+        "source": {
+          "url": "https://www.gov.uk/government/publications/the-uks-points-based-immigration-system-policy-statement/the-uks-points-based-immigration-system-policy-statement",
+          "notes": "This document set out the new structure, confirming the shift from the previous cap-based system to one that assigns points for specific skills and job offers."
+        },
+        "raw_human_rights_score": 5,
+        "weight": 1,
+        "reasoning": "This is a procedural document detailing the new system. The publication itself has a neutral human rights impact, as the impact stems from the content of the policies, not their announcement."
+      },
+      {
+        "date_announced": "2020-02-19",
+        "policy_text": "Confirmed the lowering of the required skills threshold for sponsored work visas from RQF6 (degree level) to **RQF3** (A-level equivalent).",
+        "source": {
+          "url": "https://www.gov.uk/government/publications/the-uks-points-based-immigration-system-policy-statement/the-uks-points-based-immigration-system-policy-statement",
+          "notes": "A key liberalisation measure of the new system, expanding the Skilled Worker route to include medium-skilled occupations for the first time."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "Lowering the skills threshold expands eligibility for sponsored work visas, allowing more individuals to access work and contribute economically, thus moderately improving socio-economic rights."
+      },
+      {
+        "date_announced": "2020-02-19",
+        "policy_text": "Confirmed the reduction of the general minimum salary threshold for the Skilled Worker route from the previously proposed £30,000 to **£25,600**.",
+        "source": {
+          "url": "https://www.gov.uk/government/publications/the-uks-points-based-immigration-system-policy-statement/the-uks-points-based-immigration-system-policy-statement",
+          "notes": "Accepted the Migration Advisory Committee (MAC) recommendation, also allowing applicants to 'trade' a lower salary (down to £20,480) for points via a PhD or job in a shortage occupation."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "Reducing the minimum salary threshold makes the Skilled Worker route more accessible to a broader range of individuals, moderately improving their access to work and socio-economic opportunities."
+      },
+      {
+        "date_announced": "2020-02-19",
+        "policy_text": "A commitment not to introduce a **general low-skilled or temporary worker route** (other than the Seasonal Workers Pilot Scheme).",
+        "source": {
+          "url": "https://homeofficemedia.blog.gov.uk/2020/02/19/points-based-immigration-system-latest-information/",
+          "notes": "A policy designed to shift the UK economy's reliance away from 'cheap labour' and incentivise investment in technology and upskilling domestic workers."
+        },
+        "raw_human_rights_score": 3,
+        "weight": 1,
+        "reasoning": "The commitment not to introduce a general low-skilled route significantly restricts migration pathways for many individuals seeking economic opportunities, posing a moderate harm to socio-economic rights."
+      },
+      {
+        "date_announced": "2020-12-31",
+        "policy_text": "Confirmation that **Irish citizens** maintain the right to enter, live, and work in the UK without requiring permission, preserving the **Common Travel Area (CTA)** arrangements.",
+        "source": {
+          "url": "https://www.gov.uk/government/collections/immigration-and-social-security-co-ordination-eu-withdrawal-bill",
+          "notes": "A specific provision within the Immigration and Social Security Co-ordination (EU Withdrawal) Act 2020 to protect the unique status of Irish citizens in UK law."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 2,
+        "reasoning": "This policy protects the existing rights of Irish citizens to enter, live, and work in the UK, preventing a potential restriction on their core civil liberties and freedom of movement post-Brexit."
+      },
+      {
+        "date_announced": "2020-05-29",
+        "policy_text": "Introduction of the **Global Talent route** to EU citizens, removing the cap on numbers and creating a fast-track scheme for top scientists and researchers.",
+        "source": {
+          "url": "https://homeofficemedia.blog.gov.uk/2020/02/19/points-based-immigration-system-latest-information/",
+          "notes": "Opened up the route to all global talent equally, including EU citizens, to attract the 'brightest and best' without requiring a job offer first."
+        },
+        "raw_human_rights_score": 8,
+        "weight": 1,
+        "reasoning": "Extending the Global Talent route to EU citizens, removing caps, and fast-tracking applications significantly improves access for highly skilled individuals, promoting their right to work and international mobility."
+      },
+      {
+        "date_announced": "2020-12-10",
+        "policy_text": "Announced a **simplified structure of the Immigration Rules**, reducing their overall complexity and length, to coincide with the PBIS implementation.",
+        "source": {
+          "url": "https://assets.publishing.service.gov.uk/media/5f08a103e90e0712c5f221e0/UK_Points-Based_System_Further_Details_Web_Accessible.pdf",
+          "notes": "A government commitment to streamline the previously complex rules, making them clearer for both applicants and employers."
+        },
+        "raw_human_rights_score": 6,
+        "weight": 2,
+        "reasoning": "Simplifying immigration rules can enhance clarity, accessibility, and predictability, thus moderately improving due process and fair administration for applicants, which is a core civil right."
+      },
+      {
+        "date_announced": "2020-12-13",
+        "policy_text": "Expansion of the **Seasonal Workers Pilot scheme** for agriculture from 2,500 to 10,000 places to address labour needs in the farming sector.",
+        "source": {
+          "url": "https://homeofficemedia.blog.gov.uk/2020/02/19/points-based-immigration-system-latest-information/",
+          "notes": "An exception to the 'no low-skilled route' policy, recognising the specific and significant reliance of the agricultural sector on temporary low-skilled workers."
+        },
+        "raw_human_rights_score": 7,
+        "weight": 1,
+        "reasoning": "Expanding the Seasonal Workers Pilot scheme provides increased opportunities for temporary low-skilled workers, addressing specific economic needs and moderately improving socio-economic opportunities for this group."
+      },
+      {
         "date_announced": "2021-01-01",
         "policy_text": "Implementation of the **Points-Based Immigration System** for all non-UK citizens, ending EU freedom of movement and placing all migrants on the same criteria.",
         "source": {
