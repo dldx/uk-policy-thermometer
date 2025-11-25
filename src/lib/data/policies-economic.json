@@ -1,0 +1,32 @@
+[
+  {
+    "party_name": "Labour",
+    "color": "#E4003B",
+    "policies": []
+  },
+  {
+    "party_name": "Conservative",
+    "color": "#0087DC",
+    "policies": []
+  },
+  {
+    "party_name": "Reform UK",
+    "color": "#12B6CF",
+    "policies": []
+  },
+  {
+    "party_name": "Green Party",
+    "color": "#02A95B",
+    "policies": []
+  },
+  {
+    "party_name": "Lib Dems",
+    "color": "#FAA61A",
+    "policies": []
+  },
+  {
+    "party_name": "Scottish National Party",
+    "color": "#000",
+    "policies": []
+  }
+]

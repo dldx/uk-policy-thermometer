@@ -2,12 +2,18 @@
     import { Plot, Dot, Line, RegressionY, HTMLTooltip } from "svelteplot";
     import { weightedLoess } from "../utils";
 
+    interface Score {
+        score: number;
+        weight: number;
+        reasoning: string;
+    }
+
     interface Policy {
         date_announced: string;
-        raw_human_rights_score: number;
         policy_text: string;
-        weight: number;
-        reasoning?: string;
+        scores: {
+            [criterion: string]: Score;
+        };
         source?: {
             url?: string;
             notes?: string;
@@ -20,7 +26,10 @@
         policies: Policy[];
     }
 
-    let { data }: { data: Party[] } = $props();
+    let {
+        data,
+        criterion = "human_rights",
+    }: { data: Party[]; criterion?: string } = $props();
 
     // State for toggling parties
     let visibleParties = $state(new Set(data.map((d) => d.party_name)));
@@ -184,11 +193,13 @@
             <!-- Weighted LOESS Regression Lines for each party -->
             {#each data.filter( (p) => visibleParties.has(p.party_name), ) as party}
                 {@const loessData = weightedLoess(
-                    party.policies.map((p) => ({
-                        x: new Date(p.date_announced).getTime(),
-                        y: p.raw_human_rights_score,
-                        w: 2 ** p.weight, // Use exponential weight to make important policies count more
-                    })),
+                    party.policies
+                        .filter((p) => p.scores[criterion])
+                        .map((p) => ({
+                            x: new Date(p.date_announced).getTime(),
+                            y: p.scores[criterion].score,
+                            w: 2 ** p.scores[criterion].weight, // Use exponential weight to make important policies count more
+                        })),
                     0.2,
                 ).map((d) => ({ date: new Date(d.x), score: d.y }))}
                 <Line
@@ -227,10 +238,10 @@
 
                 <!-- Data Points -->
                 <Dot
-                    data={party.policies}
+                    data={party.policies.filter((p) => p.scores[criterion])}
                     x={(d: Policy) => new Date(d.date_announced)}
-                    y={(d: Policy) => d.raw_human_rights_score}
-                    r={(d: Policy) => 2 ** d.weight + 2}
+                    y={(d: Policy) => d.scores[criterion].score}
+                    r={(d: Policy) => 2 ** d.scores[criterion].weight + 2}
                     fill={party.color}
                     opacity={hoveredParty
                         ? hoveredParty === party.party_name
@@ -243,9 +254,9 @@
             <!-- Tooltips -->
             {#snippet overlay()}
                 <HTMLTooltip
-                    data={allPolicies}
+                    data={allPolicies.filter((p) => p.scores[criterion])}
                     x="date"
-                    y="raw_human_rights_score"
+                    y={(d) => d.scores[criterion]?.score ?? 0}
                 >
                     {#snippet children({ datum })}
                         <div
@@ -273,12 +284,14 @@
                                     <span class="text-sm text-gray-600"
                                         >{datum.date_announced}</span
                                     >
-                                    <span
-                                        class="px-2 py-0.5 rounded-full text-xs font-semibold text-white"
-                                        style:background-color={datum.party_color}
-                                    >
-                                        {datum.raw_human_rights_score}/10
-                                    </span>
+                                    {#if datum.scores?.[criterion]}
+                                        <span
+                                            class="px-2 py-0.5 rounded-full text-xs font-semibold text-white"
+                                            style:background-color={datum.party_color}
+                                        >
+                                            {datum.scores[criterion].score}/10
+                                        </span>
+                                    {/if}
                                 </div>
                             </div>
 
@@ -290,56 +303,69 @@
                             </p>
 
                             <!-- Weight indicator -->
-                            <div class="flex items-center gap-2 mb-3">
-                                <span
-                                    class="text-xs font-semibold text-gray-600"
-                                    >Impact Weight:</span
-                                >
-                                <div class="flex gap-1">
-                                    {#each Array(3) as _, i}
-                                        <div
-                                            class="w-2 h-2 rounded-full"
-                                            class:bg-gray-300={i >=
-                                                datum.weight}
-                                            style:background-color={i <
-                                            datum.weight
-                                                ? datum.party_color
-                                                : undefined}
-                                        ></div>
-                                    {/each}
-                                </div>
-                                <span class="text-xs text-gray-500"
-                                    >({datum.weight}/3)</span
-                                >
-                            </div>
-
-                            <!-- AI Analysis -->
-                            {#if datum.reasoning}
-                                <div
-                                    class="text-sm text-gray-700 bg-gray-50 p-3 rounded-lg border border-gray-200 mb-3"
-                                >
-                                    <div class="flex items-center gap-1 mb-1.5">
-                                        <svg
-                                            class="w-4 h-4 text-gray-600"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="2"
-                                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-                                            />
-                                        </svg>
-                                        <span
-                                            class="font-semibold text-gray-800"
-                                            >AI Analysis</span
-                                        >
+                            {#if datum.scores?.[criterion]}
+                                <div class="flex items-center gap-2 mb-3">
+                                    <span
+                                        class="text-xs font-semibold text-gray-600"
+                                        >Impact Weight:</span
+                                    >
+                                    <div class="flex gap-1">
+                                        {#each Array(3) as _, i}
+                                            <div
+                                                class="w-2 h-2 rounded-full"
+                                                class:bg-gray-300={i >=
+                                                    datum.scores[criterion]
+                                                        .weight}
+                                                style:background-color={i <
+                                                datum.scores[criterion].weight
+                                                    ? datum.party_color
+                                                    : undefined}
+                                            ></div>
+                                        {/each}
                                     </div>
-                                    <p class="text-xs leading-relaxed">
-                                        {datum.reasoning}
-                                    </p>
+                                    <span class="text-xs text-gray-500"
+                                        >({datum.scores[criterion]
+                                            .weight}/3)</span
+                                    >
+                                </div>
+                            {/if}
+
+                            <!-- Selected Criterion Score -->
+                            {#if datum.scores?.[criterion]}
+                                <div class="mb-3">
+                                    <div
+                                        class="text-sm p-3 rounded-lg border bg-blue-50 border-blue-200"
+                                    >
+                                        <div
+                                            class="flex items-center gap-1.5 mb-1.5"
+                                        >
+                                            <svg
+                                                class="w-4 h-4 text-blue-600"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                                                />
+                                            </svg>
+                                            <span
+                                                class="font-semibold capitalize text-blue-900"
+                                                >{criterion.replace(
+                                                    "_",
+                                                    " ",
+                                                )}</span
+                                            >
+                                        </div>
+                                        <p
+                                            class="text-xs leading-relaxed text-blue-800"
+                                        >
+                                            {datum.scores[criterion].reasoning}
+                                        </p>
+                                    </div>
                                 </div>
                             {/if}
 
