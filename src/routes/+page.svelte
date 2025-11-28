@@ -14,7 +14,11 @@
         migration: {
             data: migrationPolicies,
             title: "Migration Policy",
-            subtitle: "Human Rights & Economic Impact Tracker",
+            colors: {
+                bg: "bg-blue-600",
+                hover: "hover:bg-blue-50",
+                border: "border-blue-100",
+            },
             criteria: ["human_rights", "economic_impact"],
             criteriaLabels: {
                 human_rights: "Human Rights",
@@ -24,7 +28,11 @@
         environmental: {
             data: environmentalPolicies,
             title: "Environmental Policy",
-            subtitle: "Climate Impact & Biodiversity Tracker",
+            colors: {
+                bg: "bg-green-600",
+                hover: "hover:bg-green-50",
+                border: "border-green-100",
+            },
             criteria: ["climate_impact", "biodiversity", "financial_risk"],
             criteriaLabels: {
                 climate_impact: "Climate Impact",
@@ -35,7 +43,11 @@
         economic: {
             data: economicPolicies,
             title: "Economic Policy",
-            subtitle: "Inequality & Economic Democracy Tracker",
+            colors: {
+                bg: "bg-amber-600",
+                hover: "hover:bg-amber-50",
+                border: "border-amber-100",
+            },
             criteria: ["inequality", "economic_democracy"],
             criteriaLabels: {
                 inequality: "Inequality",
@@ -45,7 +57,11 @@
         housing: {
             data: housingPolicies,
             title: "Housing Policy",
-            subtitle: "House Price & Rent Impact Tracker",
+            colors: {
+                bg: "bg-pink-600",
+                hover: "hover:bg-pink-50",
+                border: "border-pink-100",
+            },
             criteria: ["affordability", "renters_rights"],
             criteriaLabels: {
                 affordability: "Affordability",
@@ -90,18 +106,18 @@
 </div>
 
 <div
-    class="p-8 min-h-screen overflow-hidden font-sans"
+    class="px-4 md:px-6 py-6 min-h-screen overflow-hidden font-sans"
     style="background: linear-gradient(to bottom, #fb923c 0%, #fdba74 15%, #93c5fd 150%, #60a5fa 100%);"
 >
-    <div class="z-10 relative space-y-8 mx-auto max-w-7xl">
-        <header class="space-y-4 text-center">
+    <div class="z-10 relative space-y-5 mx-auto max-w-7xl">
+        <header class="space-y-3 text-center">
             <h1
                 class="font-display font-bold text-gray-900 text-5xl tracking-tight"
             >
                 2025 UK Policy Tracker
             </h1>
             <p
-                class="mx-auto max-w-2xl font-light text-gray-600 text-xl leading-relaxed"
+                class="mx-auto max-w-2xl font-light text-gray-600 text-lg leading-relaxed"
             >
                 Tracking the impact of UK political party policies across
                 multiple dimensions. Scores range from <span
@@ -135,12 +151,9 @@
                 class="hidden md:inline-flex bg-white shadow-sm p-1 border border-gray-200 rounded-lg"
             >
                 {#each Object.entries(topics) as [topicKey, topicData]}
+                    {@const isActive = activeTopic === topicKey}
                     <button
-                        class="px-6 py-2 rounded-md font-medium text-sm transition-all duration-200"
-                        class:bg-blue-600={activeTopic === topicKey}
-                        class:text-white={activeTopic === topicKey}
-                        class:text-gray-700={activeTopic !== topicKey}
-                        class:hover:bg-gray-100={activeTopic !== topicKey}
+                        class="px-6 py-2 rounded-md font-medium text-sm transition-all duration-200 {isActive ? topicData.colors.bg + ' text-white' : 'text-gray-700 ' + topicData.colors.hover}"
                         onclick={() => (activeTopic = topicKey as Topic)}
                     >
                         {topicData.title}
@@ -151,28 +164,21 @@
 
         <main>
             <!-- Topic Header -->
-            <div class="mb-6 text-center">
+            <div class="mb-4 text-center">
                 <h2 class="mb-2 font-bold text-gray-900 text-3xl">
                     {topics[activeTopic].title}
                 </h2>
-                <p class="text-gray-600 text-lg italic">
-                    {topics[activeTopic].subtitle}
-                </p>
             </div>
 
             <!-- Criterion Selector -->
-            <div class="flex justify-center mb-6">
+            <div class="flex justify-center mb-4">
                 <div
-                    class="inline-flex bg-white shadow-sm p-1 border border-gray-200 rounded-lg"
+                    class="inline-flex bg-white shadow-sm p-1 border rounded-lg {topics[activeTopic].colors.border}"
                 >
                     {#each topics[activeTopic].criteria as criterion}
+                        {@const isActive = activeCriterion === criterion}
                         <button
-                            class="px-4 py-2 rounded-md font-medium text-sm transition-all duration-200"
-                            class:bg-indigo-600={activeCriterion === criterion}
-                            class:text-white={activeCriterion === criterion}
-                            class:text-gray-700={activeCriterion !== criterion}
-                            class:hover:bg-gray-100={activeCriterion !==
-                                criterion}
+                            class="px-4 py-2 rounded-md font-medium text-sm transition-all duration-200 {isActive ? topics[activeTopic].colors.bg + ' text-white' : 'text-gray-700 ' + topics[activeTopic].colors.hover}"
                             onclick={() => (activeCriterion = criterion)}
                         >
                             {topics[activeTopic].criteriaLabels[criterion]}
@@ -271,7 +277,7 @@
 
             <!-- Methodology Section (Collapsible) -->
             <div
-                class="z-10 relative bg-white shadow-sm mt-8 border border-gray-200 rounded-xl overflow-hidden"
+                class="z-10 relative bg-white shadow-sm mt-6 border border-gray-200 rounded-xl overflow-hidden"
             >
                 <button
                     class="flex justify-between items-center hover:bg-gray-50 px-6 py-4 w-full transition-colors"
@@ -451,7 +457,9 @@
         </main>
 
         <footer
-            class="z-10 relative pt-8 border-gray-200 border-t text-gray-500 text-sm text-center"
-        ></footer>
+            class="z-10 relative pt-8 border-gray-200 border-t text-white text-sm text-center"
+        >
+    An experimental project by <a href="https://github.com/dldx" class="hover:underline" target="_blank" >Durand D'souza</a>. Data and scores have not yet been verified. View the source on <a href="https://github.com/dldx/uk-policy-thermometer" target="_blank" class="hover:underline">GitHub</a>.
+    </footer>
     </div>
 </div>

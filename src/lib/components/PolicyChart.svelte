@@ -302,39 +302,38 @@
     }
 </script>
 
-<div class="flex flex-col gap-4 relative">
-    <!-- Legend -->
-    <div
-        class="flex flex-wrap gap-4 justify-center p-4 bg-gray-50 rounded-lg border border-gray-200"
-    >
-        {#each data as party}
-            <button
-                class="flex items-center gap-2 px-3 py-1 rounded-full transition-all duration-200 border"
-                style:background-color={visibleParties.has(party.party_name)
-                    ? party.color + "20"
-                    : "transparent"}
-                style:border-color={party.color}
-                style:opacity={visibleParties.has(party.party_name) ? 1 : 0.5}
-                onclick={() => handlePartyClick(party.party_name)}
-                ondblclick={() => handlePartyDoubleClick(party.party_name)}
-                onmouseenter={() => (hoveredParty = party.party_name)}
-                onmouseleave={() => (hoveredParty = null)}
-            >
-                <span
-                    class="w-3 h-3 rounded-full"
-                    style:background-color={party.color}
-                ></span>
-                <span class="font-medium text-sm text-gray-800"
-                    >{party.party_name}</span
-                >
-            </button>
-        {/each}
-    </div>
-
+<div class="relative flex flex-col">
     <!-- Chart Container -->
     <div
-        class="w-full bg-white rounded-xl shadow-sm border border-gray-100 p-4 relative chart-container"
+        class="relative bg-white shadow-sm p-4 border border-gray-100 rounded-xl w-full chart-container"
     >
+        <!-- Legend -->
+        <div
+            class="flex flex-wrap justify-center gap-3 mb-4 pb-4 border-gray-200 border-b"
+        >
+            {#each data as party}
+                <button
+                    class="flex items-center gap-2 px-3 py-1 border rounded-full transition-all duration-200"
+                    style:background-color={visibleParties.has(party.party_name)
+                        ? party.color + "20"
+                        : "transparent"}
+                    style:border-color={party.color}
+                    style:opacity={visibleParties.has(party.party_name) ? 1 : 0.5}
+                    onclick={() => handlePartyClick(party.party_name)}
+                    ondblclick={() => handlePartyDoubleClick(party.party_name)}
+                    onmouseenter={() => (hoveredParty = party.party_name)}
+                    onmouseleave={() => (hoveredParty = null)}
+                >
+                    <span
+                        class="rounded-full w-3 h-3"
+                        style:background-color={party.color}
+                    ></span>
+                    <span class="font-medium text-gray-800 text-sm"
+                        >{party.party_name}</span
+                    >
+                </button>
+            {/each}
+        </div>
         <Plot
             height={600}
             x={{
@@ -423,7 +422,7 @@
                 >
                     {#snippet children({ datum })}
                         <div
-                            class="tooltip-content max-w-md cursor-pointer"
+                            class="max-w-md cursor-pointer tooltip-content"
                             use:tooltipPosition={datum}
                             onclick={(e) => {
                                 e.stopPropagation();
@@ -432,11 +431,11 @@
                         >
                             <!-- Header with date and score -->
                             <div
-                                class="flex items-center justify-between gap-3 mb-3 pb-3 border-b border-gray-200"
+                                class="flex justify-between items-center gap-3 mb-3 pb-3 border-gray-200 border-b"
                             >
                                 <div class="flex items-center gap-2">
                                     <span
-                                        class="w-3 h-3 rounded-full"
+                                        class="rounded-full w-3 h-3"
                                         style:background-color={datum.party_color}
                                     ></span>
                                     <span class="font-semibold text-gray-900"
@@ -444,12 +443,12 @@
                                     >
                                 </div>
                                 <div class="flex items-center gap-2">
-                                    <span class="text-sm text-gray-600"
+                                    <span class="text-gray-600 text-sm"
                                         >{datum.date_announced}</span
                                     >
                                     {#if datum.scores?.[criterion]}
                                         <span
-                                            class="px-2 py-0.5 rounded-full text-xs font-semibold text-white"
+                                            class="px-2 py-0.5 rounded-full font-semibold text-white text-xs"
                                             style:background-color={datum.party_color}
                                         >
                                             {datum.scores[criterion].score}/10
@@ -460,7 +459,7 @@
 
                             <!-- Policy text -->
                             <p
-                                class="font-medium text-gray-900 mb-3 leading-relaxed"
+                                class="mb-3 font-medium text-gray-900 leading-relaxed"
                             >
                                 {datum.policy_text}
                             </p>
@@ -469,13 +468,13 @@
                             {#if datum.scores?.[criterion]}
                                 <div class="flex items-center gap-2 mb-3">
                                     <span
-                                        class="text-xs font-semibold text-gray-600"
+                                        class="font-semibold text-gray-600 text-xs"
                                         >Impact Weight:</span
                                     >
                                     <div class="flex gap-1">
                                         {#each Array(3) as _, i}
                                             <div
-                                                class="w-2 h-2 rounded-full"
+                                                class="rounded-full w-2 h-2"
                                                 class:bg-gray-300={i >=
                                                     datum.scores[criterion]
                                                         .weight}
@@ -486,7 +485,7 @@
                                             ></div>
                                         {/each}
                                     </div>
-                                    <span class="text-xs text-gray-500"
+                                    <span class="text-gray-500 text-xs"
                                         >({datum.scores[criterion]
                                             .weight}/3)</span
                                     >
@@ -497,7 +496,7 @@
                             {#if datum.scores?.[criterion]}
                                 <div class="mb-3">
                                     <div
-                                        class="text-sm p-3 rounded-lg border bg-blue-50 border-blue-200"
+                                        class="bg-blue-50 p-3 border border-blue-200 rounded-lg text-sm"
                                     >
                                         <div
                                             class="flex items-center gap-1.5 mb-1.5"
@@ -516,7 +515,7 @@
                                                 />
                                             </svg>
                                             <span
-                                                class="font-semibold capitalize text-blue-900"
+                                                class="font-semibold text-blue-900 capitalize"
                                                 >{criterion.replace(
                                                     "_",
                                                     " ",
@@ -524,7 +523,7 @@
                                             >
                                         </div>
                                         <p
-                                            class="text-xs leading-relaxed text-blue-800"
+                                            class="text-blue-800 text-xs leading-relaxed"
                                         >
                                             {datum.scores[criterion].reasoning}
                                         </p>
@@ -535,10 +534,10 @@
                             <!-- Source information -->
                             {#if datum.source}
                                 <div
-                                    class="text-xs bg-blue-50 p-2.5 rounded-lg border border-blue-100"
+                                    class="bg-blue-50 p-2.5 border border-blue-100 rounded-lg text-xs"
                                 >
                                     <div
-                                        class="font-semibold text-blue-900 mb-1"
+                                        class="mb-1 font-semibold text-blue-900"
                                     >
                                         Source
                                     </div>
@@ -547,7 +546,7 @@
                                             href={datum.source.url}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            class="text-blue-600 hover:text-blue-800 underline break-all block mb-1.5"
+                                            class="block mb-1.5 text-blue-600 hover:text-blue-800 underline break-all"
                                             onclick={(e) => e.stopPropagation()}
                                         >
                                             {datum.source.url}
