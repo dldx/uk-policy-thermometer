@@ -114,10 +114,25 @@
             </p>
         </header>
 
-        <!-- Topic Tabs -->
+        <!-- Topic Tabs (Desktop) / Dropdown (Mobile) -->
         <div class="flex justify-center">
+            <!-- Mobile Dropdown -->
+            <div class="md:hidden w-full max-w-xs">
+                <select
+                    class="bg-white shadow-sm px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 w-full font-medium text-gray-700 text-sm"
+                    bind:value={activeTopic}
+                >
+                    {#each Object.entries(topics) as [topicKey, topicData]}
+                        <option value={topicKey}>
+                            {topicData.title}
+                        </option>
+                    {/each}
+                </select>
+            </div>
+
+            <!-- Desktop Tabs -->
             <div
-                class="inline-flex bg-white shadow-sm p-1 border border-gray-200 rounded-lg"
+                class="hidden md:inline-flex bg-white shadow-sm p-1 border border-gray-200 rounded-lg"
             >
                 {#each Object.entries(topics) as [topicKey, topicData]}
                     <button
