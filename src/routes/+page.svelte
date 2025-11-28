@@ -66,9 +66,9 @@
 
 <SkyDecoration />
 
-<div class="bg-amber-50 border-b border-amber-200 px-4 py-3">
+<div class="bg-amber-50 px-4 py-3 border-amber-200 border-b">
     <div
-        class="max-w-5xl mx-auto flex items-center justify-center gap-3 text-amber-800"
+        class="flex justify-center items-center gap-3 mx-auto max-w-5xl text-amber-800"
     >
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +82,7 @@
                 clip-rule="evenodd"
             />
         </svg>
-        <p class="text-sm font-medium">
+        <p class="font-medium text-sm">
             Proof of Concept: Data is for demonstration purposes only and has
             not been verified.
         </p>
@@ -90,18 +90,18 @@
 </div>
 
 <div
-    class="min-h-screen p-8 font-sans overflow-hidden"
-    style="background: linear-gradient(to bottom, #fb923c 0%, #fdba74 15%, #93c5fd 40%, #60a5fa 100%);"
+    class="p-8 min-h-screen overflow-hidden font-sans"
+    style="background: linear-gradient(to bottom, #fb923c 0%, #fdba74 15%, #93c5fd 150%, #60a5fa 100%);"
 >
-    <div class="max-w-7xl mx-auto space-y-8 relative z-10">
-        <header class="text-center space-y-4">
+    <div class="z-10 relative space-y-8 mx-auto max-w-7xl">
+        <header class="space-y-4 text-center">
             <h1
-                class="text-5xl font-bold text-gray-900 tracking-tight font-display"
+                class="font-display font-bold text-gray-900 text-5xl tracking-tight"
             >
                 2025 UK Policy Tracker
             </h1>
             <p
-                class="text-xl text-gray-600 max-w-2xl mx-auto font-light leading-relaxed"
+                class="mx-auto max-w-2xl font-light text-gray-600 text-xl leading-relaxed"
             >
                 Tracking the impact of UK political party policies across
                 multiple dimensions. Scores range from <span
@@ -117,7 +117,7 @@
         <!-- Topic Tabs -->
         <div class="flex justify-center">
             <div
-                class="inline-flex bg-white rounded-lg shadow-sm border border-gray-200 p-1"
+                class="inline-flex bg-white shadow-sm p-1 border border-gray-200 rounded-lg"
             >
                 {#each Object.entries(topics) as [topicKey, topicData]}
                     <button
@@ -136,11 +136,11 @@
 
         <main>
             <!-- Topic Header -->
-            <div class="text-center mb-6">
-                <h2 class="text-3xl font-bold text-gray-900 mb-2">
+            <div class="mb-6 text-center">
+                <h2 class="mb-2 font-bold text-gray-900 text-3xl">
                     {topics[activeTopic].title}
                 </h2>
-                <p class="text-lg text-gray-600 italic">
+                <p class="text-gray-600 text-lg italic">
                     {topics[activeTopic].subtitle}
                 </p>
             </div>
@@ -148,7 +148,7 @@
             <!-- Criterion Selector -->
             <div class="flex justify-center mb-6">
                 <div
-                    class="inline-flex bg-white rounded-lg shadow-sm border border-gray-200 p-1"
+                    class="inline-flex bg-white shadow-sm p-1 border border-gray-200 rounded-lg"
                 >
                     {#each topics[activeTopic].criteria as criterion}
                         <button
@@ -186,10 +186,10 @@
                     />
                 {:else if hasData}
                     <div
-                        class="bg-white rounded-xl shadow-sm border border-gray-200 p-12 text-center"
+                        class="bg-white shadow-sm p-12 border border-gray-200 rounded-xl text-center"
                     >
                         <svg
-                            class="w-16 h-16 mx-auto text-amber-400 mb-4"
+                            class="mx-auto mb-4 w-16 h-16 text-amber-400"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -201,12 +201,12 @@
                                 d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
                             />
                         </svg>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                        <h3 class="mb-2 font-semibold text-gray-900 text-xl">
                             No Scores for "{topics[activeTopic].criteriaLabels[
                                 activeCriterion
                             ]}"
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="mb-4 text-gray-600">
                             Policies exist for {topics[
                                 activeTopic
                             ].title.toLowerCase()}, but they haven't been scored
@@ -215,10 +215,10 @@
                     </div>
                 {:else}
                     <div
-                        class="bg-white rounded-xl shadow-sm border border-gray-200 p-12 text-center"
+                        class="bg-white shadow-sm p-12 border border-gray-200 rounded-xl text-center"
                     >
                         <svg
-                            class="w-16 h-16 mx-auto text-gray-400 mb-4"
+                            class="mx-auto mb-4 w-16 h-16 text-gray-400"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -230,7 +230,7 @@
                                 d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                             />
                         </svg>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                        <h3 class="mb-2 font-semibold text-gray-900 text-xl">
                             No Data Available
                         </h3>
                         <p class="text-gray-600">
@@ -243,10 +243,10 @@
             {/snippet}
 
             <!-- Policy Chart with Ground Layer Background -->
-            <div class="relative isolate">
+            <div class="isolate relative">
                 <!-- Ground Layer (Breakout Background) -->
                 <div
-                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-screen h-[5000px] -z-10 pointer-events-none translate-y-[calc(100%-150px)]"
+                    class="bottom-0 left-1/2 -z-10 absolute w-screen h-[10000px] -translate-x-1/2 translate-y-[calc(100%-150px)] pointer-events-none"
                 >
                     <GroundLayer />
                 </div>
@@ -256,10 +256,10 @@
 
             <!-- Methodology Section (Collapsible) -->
             <div
-                class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mt-8 relative z-10"
+                class="z-10 relative bg-white shadow-sm mt-8 border border-gray-200 rounded-xl overflow-hidden"
             >
                 <button
-                    class="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                    class="flex justify-between items-center hover:bg-gray-50 px-6 py-4 w-full transition-colors"
                     onclick={() => (methodologyOpen = !methodologyOpen)}
                 >
                     <div class="flex items-center gap-3">
@@ -276,7 +276,7 @@
                                 d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                             />
                         </svg>
-                        <h3 class="text-lg font-semibold text-gray-900">
+                        <h3 class="font-semibold text-gray-900 text-lg">
                             Methodology & Scoring Framework
                         </h3>
                     </div>
@@ -297,17 +297,17 @@
                 </button>
 
                 {#if methodologyOpen}
-                    <div class="px-6 pb-6 space-y-6 text-gray-700">
+                    <div class="space-y-6 px-6 pb-6 text-gray-700">
                         <!-- Overview -->
                         <div>
-                            <h4 class="font-semibold text-gray-900 mb-2">
+                            <h4 class="mb-2 font-semibold text-gray-900">
                                 Overview
                             </h4>
                             <p class="text-sm leading-relaxed">
                                 This tracker uses AI-powered analysis to score
                                 UK political party policies across multiple
                                 dimensions. Each policy is evaluated by Google's
-                                Gemini 2.0 Flash model using structured prompts
+                                Gemini 2.5 Flash model using structured prompts
                                 grounded in international law, economic theory,
                                 and environmental science. Scores range from <strong
                                     class="text-red-600">1 (Severe Harm)</strong
@@ -322,7 +322,7 @@
 
                         <!-- Scoring Criteria for Active Topic -->
                         <div>
-                            <h4 class="font-semibold text-gray-900 mb-3">
+                            <h4 class="mb-3 font-semibold text-gray-900">
                                 Scoring Criteria for {topics[activeTopic].title}
                             </h4>
                             <div class="space-y-4">
@@ -362,7 +362,7 @@
                                             ]}
                                         </h5>
                                         <div
-                                            class="whitespace-pre-line font-mono text-xs leading-relaxed"
+                                            class="font-mono text-xs leading-relaxed whitespace-pre-line"
                                         >
                                             {TOPIC_CONFIGS[activeTopic].prompts[
                                                 criterion
@@ -375,14 +375,14 @@
 
                         <!-- AI Analysis -->
                         <div>
-                            <h4 class="font-semibold text-gray-900 mb-2">
+                            <h4 class="mb-2 font-semibold text-gray-900">
                                 AI-Powered Analysis
                             </h4>
                             <p class="text-sm leading-relaxed">
                                 Each policy is analyzed by Google's Gemini 2.5
                                 Flash model, which provides:
                             </p>
-                            <ul class="text-sm space-y-1 ml-4 list-disc mt-2">
+                            <ul class="space-y-1 mt-2 ml-4 text-sm list-disc">
                                 <li>
                                     <strong>Score (1-10)</strong>: Numerical
                                     rating of the policy's impact
@@ -403,10 +403,10 @@
 
                         <!-- Limitations -->
                         <div
-                            class="bg-amber-50 border border-amber-200 rounded-lg p-4"
+                            class="bg-amber-50 p-4 border border-amber-200 rounded-lg"
                         >
                             <h4
-                                class="font-semibold text-amber-900 mb-2 flex items-center gap-2"
+                                class="flex items-center gap-2 mb-2 font-semibold text-amber-900"
                             >
                                 <svg
                                     class="w-5 h-5"
@@ -436,7 +436,7 @@
         </main>
 
         <footer
-            class="text-center text-sm text-gray-500 pt-8 border-t border-gray-200 relative z-10"
+            class="z-10 relative pt-8 border-gray-200 border-t text-gray-500 text-sm text-center"
         ></footer>
     </div>
 </div>

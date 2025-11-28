@@ -1,5 +1,5 @@
 <div
-    class="relative w-full h-48 overflow-hidden"
+    class="relative w-full h-32 sm:h-40 md:h-48 overflow-hidden"
     style="background: linear-gradient(to bottom, #fb923c 0%, #fdba74 100%);"
 >
     <!-- Orange gradient background for sky -->
@@ -8,7 +8,7 @@
     <svg
         class="absolute inset-0 w-full h-full"
         viewBox="0 0 1200 200"
-        preserveAspectRatio="xMidYMid slice"
+        preserveAspectRatio="xMidYMid meet"
     >
         <defs>
             <!-- Sun Gradient -->

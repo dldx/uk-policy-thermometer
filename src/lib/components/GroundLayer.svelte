@@ -1,19 +1,18 @@
 <div
-    class="relative w-full h-full flex flex-col justify-end pointer-events-none"
+    class="relative flex flex-col justify-end w-full h-full pointer-events-none"
 >
     <!-- Tiled Ground Layer -->
     <div
-        class="w-full h-[800px] bg-repeat-x bg-bottom"
+        class="bg-repeat-x bg-bottom w-full h-[400px] sm:h-[600px] md:h-[800px]"
         style="background-image: url('/ground.svg'); background-size: auto 100%;"
     ></div>
 
     <!-- Extended bedrock -->
-    <div class="w-full grow relative -mt-20">
-        <div class="absolute inset-0 bg-[#4d4d47]" style="top: 10%"></div>
+    <div class="relative -mt-20 w-full grow">
+        <div class="top-10 absolute inset-0 bg-[#656760]"></div>
         <!-- Bedrock Pattern -->
         <div
-            class="absolute inset-0 bg-repeat bg-transparent"
-            style="background-image: url('/bedrock.svg'); background-position: -20% 0%;"
+            class="absolute inset-0 bg-[url('/bedrock.svg')] bg-position-[20%_0%] sm:bg-position-[-20%_0%] bg-repeat bg-size-[120%_auto] sm:bg-size-[auto_auto]"
         ></div>
     </div>
 </div>
