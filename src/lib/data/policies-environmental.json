@@ -2,12 +2,1612 @@
   {
     "party_name": "Labour",
     "color": "#E4003B",
-    "policies": []
+    "policies": [
+      {
+        "date_announced": "2022-09-26",
+        "policy_text": "Commit to the **Green Prosperity Plan** backed by a **£28 billion a year capital investment** throughout the rest of the decade, making the UK a Clean Energy Superpower and tackling the cost of living crisis.",
+        "source": {
+          "url": "https://labour.org.uk/wp-content/uploads/2024/03/Make-Britain-a-Clean-Energy-Superpower.pdf",
+          "notes:": "The £28bn annual investment figure was the headline commitment of the GPP throughout 2022 (later revised in early 2024). This figure was frequently reiterated at the 2022 Labour Party Conference."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 9,
+            "weight": 3,
+            "reasoning": "Large-scale, sustained capital investment in green industries significantly reduces transition risk, enhances investment certainty, and builds long-term economic resilience."
+          },
+          "climate_impact": {
+            "reasoning": "A massive annual capital investment (28 billion GBP) into a 'Green Prosperity Plan' is designed to transform the UK into a 'Clean Energy Superpower,' driving significant emissions reductions and a systemic shift towards a low-carbon economy. This is a large-scale green infrastructure program.",
+            "score": 9,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2022-09-26",
+        "policy_text": "Establish **Great British Energy (GB Energy)**, a new publicly-owned clean power company, to invest in and own a majority share of strategic renewable energy projects, particularly floating offshore wind and tidal.",
+        "source": {
+          "url": "https://labour.org.uk/updates/stories/labours-plan-for-gb-energy/",
+          "notes:": "GB Energy was announced by Keir Starmer at the 2022 party conference in Liverpool as a flagship policy to achieve energy independence."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 8,
+            "weight": 2,
+            "reasoning": "Establishes a public vehicle to de-risk and accelerate investment in strategic, high-potential renewable energy projects, significantly reducing transition risk and enhancing investment certainty in the energy sector."
+          },
+          "climate_impact": {
+            "reasoning": "Establishing a publicly-owned company specifically to invest in and own strategic renewable energy projects (like floating offshore wind and tidal) will significantly accelerate the deployment of clean power, directly contributing to emissions reductions and the energy transition.",
+            "score": 8,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2022-01-01",
+        "policy_text": "Set a goal of achieving a **zero-carbon electricity system by 2030** (later formalised as 100% clean power by 2030), five years ahead of the Conservative government's 2035 target, by quadrupling offshore wind, tripling solar, and doubling onshore wind.",
+        "source": {
+          "url": "https://labour.org.uk/wp-content/uploads/2024/03/Make-Britain-a-Clean-Energy-Superpower.pdf",
+          "notes:": "The 2030 decarbonisation target was a key point of difference and a central mission throughout the year."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 9,
+            "weight": 3,
+            "reasoning": "An ambitious and clearly defined target for a zero-carbon electricity system by 2030, with specific renewable expansion goals, provides strong investment certainty, reduces transition risk, and minimizes future stranded asset exposure in the power sector."
+          },
+          "climate_impact": {
+            "reasoning": "Setting an ambitious target for a zero-carbon electricity system by 2030, five years ahead of the previous target, and backing it with concrete plans to massively scale up offshore wind, solar, and onshore wind, represents transformative climate action and major emissions cuts.",
+            "score": 10,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2022-09-26",
+        "policy_text": "Implement a **National Wealth Fund** to invest alongside the private sector in green industries, including EV battery gigafactories, green hydrogen, clean steel, and carbon capture and storage (CCS).",
+        "source": {
+          "url": "https://labour.org.uk/wp-content/uploads/2024/03/Make-Britain-a-Clean-Energy-Superpower.pdf",
+          "notes:": "The NWF was introduced as a core mechanism of the Green Prosperity Plan to strategically invest public capital to 'crowd in' private finance."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 8,
+            "weight": 3,
+            "reasoning": "A National Wealth Fund investing in strategic green industries (e.g., EV batteries, green hydrogen) directly mitigates transition risk by de-risking new technologies and sectors, fostering economic growth, and providing investment certainty."
+          },
+          "climate_impact": {
+            "reasoning": "Investing a National Wealth Fund into crucial green industries like EV battery gigafactories, green hydrogen, and clean steel will drive innovation, scale up low-carbon technologies, and facilitate systemic decarbonization across industrial sectors. CCS is included, which is generally positive if genuine.",
+            "score": 8,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2022-01-01",
+        "policy_text": "Deliver a **Warm Homes Plan** to upgrade 19 million homes over the decade with insulation and other energy efficiency measures to cut bills and reduce UK energy demand.",
+        "source": {
+          "url": "https://labour.org.uk/wp-content/uploads/2024/03/Make-Britain-a-Clean-Energy-Superpower.pdf",
+          "notes:": "Retrofitting homes was consistently highlighted as a major public investment area within the Green Prosperity Plan to address fuel poverty."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 7,
+            "weight": 2,
+            "reasoning": "Upgrading homes with energy efficiency measures reduces national energy demand, lowers household exposure to energy price volatility (a physical risk), and supports the broader transition to a low-carbon economy."
+          },
+          "climate_impact": {
+            "reasoning": "Upgrading 19 million homes with insulation and energy efficiency measures is a massive program that will significantly reduce UK energy demand, directly leading to major emissions reductions from residential heating and contributing substantially to climate goals.",
+            "score": 8,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2022-05-30",
+        "policy_text": "Impose a **Windfall Tax on oil and gas profits** (expanding on the one introduced by the Conservative government) and closing tax loopholes to help fund the Green Prosperity Plan and reduce household energy bills.",
+        "source": {
+          "url": "https://labour.org.uk/updates/stories/labour-plan-to-cut-energy-bills-with-windfall-tax-on-oil-and-gas-giants/",
+          "notes:": "Labour was a strong proponent of the windfall tax in response to soaring energy prices throughout 2022, proposing a tougher version than the government's."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 7,
+            "weight": 2,
+            "reasoning": "A windfall tax on oil and gas profits helps fund green transition plans, redirecting capital and signaling a shift away from fossil fuels, thereby moderately reducing overall climate-related financial risk by internalizing costs and supporting green investment."
+          },
+          "climate_impact": {
+            "reasoning": "While not directly reducing emissions, this policy generates significant revenue from fossil fuel profits, which is explicitly earmarked to help fund the Green Prosperity Plan and accelerate the transition to clean energy, thereby enabling major climate action.",
+            "score": 7,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2022-09-26",
+        "policy_text": "Commit to **not issuing any new oil and gas exploration licences** in the North Sea, while managing existing fields for their full lifespan to ensure a 'just transition' for energy workers.",
+        "source": {
+          "url": "https://labourlist.org/2022/09/which-policy-motions-are-being-backed-by-groups-for-labour-conference-2022/",
+          "notes:": "This policy was a critical commitment in 2022, distinguishing Labour's climate stance by opposing new fossil fuel extraction."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 8,
+            "weight": 3,
+            "reasoning": "Halting new oil and gas exploration licenses directly prevents the creation of future stranded assets, significantly reducing transition risk. Managing existing fields with a just transition strategy ensures an orderly decline, further mitigating financial instability."
+          },
+          "climate_impact": {
+            "reasoning": "Committing to no new oil and gas exploration licences is a fundamental step in preventing future fossil fuel lock-in and signals a decisive move away from expanding fossil fuel dependency, making a critical contribution to long-term emissions reductions and climate targets.",
+            "score": 9,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2022-01-01",
+        "policy_text": "Reform the **planning system** to end delays for onshore wind and other clean energy infrastructure projects to accelerate the deployment of renewables necessary to meet the 2030 clean power target.",
+        "source": {
+          "url": "https://www.osborneclarke.com/insights/what-would-labour-do-green-prosperity-plan-intended-boost-uk-jobs-and-energy-security",
+          "notes:": "Planning reform was cited throughout the year as a necessary non-fiscal step to deliver the 'Clean Energy Superpower' mission."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 7,
+            "weight": 2,
+            "reasoning": "Reforming the planning system to accelerate clean energy projects reduces investment uncertainty, lowers project costs, and facilitates the timely deployment of renewables essential for meeting decarbonization targets, thereby reducing transition risk."
+          },
+          "climate_impact": {
+            "reasoning": "Reforming the planning system to eliminate delays for onshore wind and other clean energy infrastructure is crucial for accelerating renewable deployment, directly enabling the achievement of ambitious clean power targets and significant emissions reductions.",
+            "score": 8,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2022-01-01",
+        "policy_text": "Tackle the **water quality crisis** by putting water companies under special measures, establishing mandatory legally-binding targets to end sewage dumping, and increasing fines on polluters.",
+        "source": {
+          "url": "https://labour.org.uk/updates/stories/labour-will-put-water-companies-under-special-measures/",
+          "notes:": "Labour made the issue of sewage in rivers and seas a major environmental campaign focus throughout 2022."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 7,
+            "weight": 2,
+            "reasoning": "Addressing the water quality crisis through stricter regulation and fines compels water companies to invest in necessary infrastructure, reducing their long-term regulatory and reputational risks, and mitigating environmental liabilities."
+          },
+          "climate_impact": {
+            "reasoning": "This policy primarily addresses water quality and pollution, not direct greenhouse gas emissions or climate change mitigation. While improved ecosystem health can have minor indirect benefits, its core impact is not on climate goals.",
+            "score": 5,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2022-01-01",
+        "policy_text": "Invest in **nuclear power**, including new stations like Sizewell C and small modular reactors (SMRs), as part of a secure, diverse, and clean energy mix to complement renewables.",
+        "source": {
+          "url": "https://labour.org.uk/wp-content/uploads/2024/03/Make-Britain-a-Clean-Energy-Superpower.pdf",
+          "notes:": "Support for new nuclear power was included within the overall 'Clean Energy Superpower' strategy to ensure energy security."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 7,
+            "weight": 2,
+            "reasoning": "Investing in nuclear power contributes to a stable, diverse, and low-carbon energy mix, enhancing energy security and complementing renewables, thereby moderately reducing transition risk by ensuring grid stability during decarbonization."
+          },
+          "climate_impact": {
+            "reasoning": "Investing in nuclear power, including new large stations and SMRs, contributes to a secure and clean energy mix by providing baseload zero-carbon electricity, displacing fossil fuel generation and supporting emissions reductions, complementing renewable energy sources.",
+            "score": 7,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2023-01-26",
+        "policy_text": "Implement the **Green Prosperity Plan** backed by a **£28 billion a year capital investment** until 2030 (the commitment was scaled back in early 2024, but was the core policy throughout 2023), designed to invest in clean energy, create jobs, and decarbonise the economy.",
+        "source": {
+          "url": "https://labour.org.uk/wp-content/uploads/2024/03/Make-Britain-a-Clean-Energy-Superpower.pdf",
+          "notes:": "This investment pledge, first publicised in 2021, was the flagship figure defining the policy package throughout 2023. The 'Clean Energy Superpower' mission document frequently referenced the plan."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 9,
+            "weight": 3,
+            "reasoning": "This policy significantly reduces financial risk by committing substantial capital to clean energy and decarbonisation, providing long-term investment certainty for green industries and accelerating the transition away from high-risk fossil fuel assets."
+          },
+          "climate_impact": {
+            "reasoning": "A substantial annual capital investment specifically for clean energy and decarbonizing the economy, driving systemic change and significant emissions reductions.",
+            "score": 9,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2023-01-26",
+        "policy_text": "Achieve **100% clean, zero-carbon electricity by 2030** through a massive acceleration of renewable energy generation, including quadrupling offshore wind, tripling solar, and doubling onshore wind capacity.",
+        "source": {
+          "url": "https://labour.org.uk/wp-content/uploads/2024/03/Make-Britain-a-Clean-Energy-Superpower.pdf",
+          "notes:": "This 2030 target was a central mission in the 'Clean Energy Superpower' plan, consistently stated throughout the year."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 9,
+            "weight": 3,
+            "reasoning": "This policy significantly reduces financial risk by mandating a rapid, large-scale transition to zero-carbon electricity, thereby eliminating transition risks associated with fossil fuel power generation and providing strong investment signals for renewable energy."
+          },
+          "climate_impact": {
+            "reasoning": "An ambitious target to achieve 100% clean electricity by 2030 through massive renewable energy deployment, leading to transformative emissions reductions.",
+            "score": 10,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2023-01-26",
+        "policy_text": "Establish **Great British Energy (GB Energy)**, a new publicly-owned clean power company, to invest in and co-invest with the private sector in emerging renewable energy technologies like floating offshore wind and tidal power.",
+        "source": {
+          "url": "https://labour.org.uk/updates/stories/labours-plan-for-gb-energy/",
+          "notes:": "The GB Energy plan was launched in 2022 and was consistently promoted throughout 2023 as the vehicle for achieving the 2030 clean power mission."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 8,
+            "weight": 3,
+            "reasoning": "This policy significantly reduces financial risk by accelerating the development and deployment of emerging clean energy technologies through public and private investment, thereby reducing long-term transition risks and enhancing energy security."
+          },
+          "climate_impact": {
+            "reasoning": "Establishes a publicly-owned company to invest in and accelerate emerging renewable energy technologies, crucial for long-term decarbonization and energy transition.",
+            "score": 8,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2023-01-26",
+        "policy_text": "Create a **National Wealth Fund** (initially proposed with an £8 billion capital injection over the Parliament) to make strategic public investments in key green industries, such as gigafactories, clean steel, and green hydrogen, to create jobs in industrial heartlands.",
+        "source": {
+          "url": "https://labour.org.uk/wp-content/uploads/2024/03/Make-Britain-a-Clean-Energy-Superpower.pdf",
+          "notes:": "The National Wealth Fund was a foundational element of the Green Prosperity Plan in 2023, designed to crowd in private investment."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 9,
+            "weight": 3,
+            "reasoning": "This policy significantly reduces financial risk by directing substantial public investment into critical green industries, fostering economic resilience, creating new sustainable assets, and providing clear long-term signals for private sector involvement in the green transition."
+          },
+          "climate_impact": {
+            "reasoning": "Provides strategic public investment in critical green industries like clean steel and green hydrogen, crucial for decarbonizing industrial sectors and creating long-term systemic change.",
+            "score": 8,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2023-01-26",
+        "policy_text": "Implement the **Warm Homes Plan** to upgrade millions of homes with grants and low-interest loans for insulation and other energy efficiency measures to cut household bills and reduce fuel poverty.",
+        "source": {
+          "url": "https://labour.org.uk/wp-content/uploads/2024/03/Make-Britain-a-Clean-Energy-Superpower.pdf",
+          "notes:": "Allocating a significant portion of the £28bn annual investment to home upgrades was a core commitment within the plan throughout 2023."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 7,
+            "weight": 3,
+            "reasoning": "This policy moderately reduces financial risk by lowering household energy bills, alleviating fuel poverty, and reducing national energy demand, which supports the broader energy transition and improves financial resilience for many households."
+          },
+          "climate_impact": {
+            "reasoning": "Upgrading millions of homes with energy efficiency measures directly reduces energy consumption and associated emissions, contributing significantly to decarbonizing the residential sector.",
+            "score": 8,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2023-01-26",
+        "policy_text": "Introduce a **Windfall Tax on oil and gas giants** and close the tax loopholes to fund the Green Prosperity Plan, ensuring the profits of energy companies are used to secure the UK's energy future.",
+        "source": {
+          "url": "https://labour.org.uk/wp-content/uploads/2024/03/Make-Britain-a-Clean-Energy-Superpower.pdf",
+          "notes:": "The funding mechanism for the Green Prosperity Plan was consistently linked to expanding and closing loopholes in the Energy Profits Levy."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 8,
+            "weight": 3,
+            "reasoning": "This policy significantly reduces financial risk by re-directing capital from high-carbon to low-carbon investments through a windfall tax, thereby funding the green transition, reducing reliance on fossil fuels, and improving long-term energy security."
+          },
+          "climate_impact": {
+            "reasoning": "Provides a funding mechanism for the 'Green Prosperity Plan', thereby indirectly supporting significant investments in clean energy and decarbonization, which will lead to major emissions reductions.",
+            "score": 7,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2023-01-26",
+        "policy_text": "Ban the **issuing of new oil and gas exploration licences** in the North Sea, while supporting a just transition for existing workers and maintaining existing fields until the end of their lifespan.",
+        "source": {
+          "url": "https://labour.org.uk/wp-content/uploads/2024/03/Make-Britain-a-Clean-Energy-Superpower.pdf",
+          "notes:": "This policy on new licenses was a clear position set out by the party to accelerate the shift away from fossil fuels."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 9,
+            "weight": 3,
+            "reasoning": "This policy significantly reduces financial risk by preventing new investments in high-risk fossil fuel exploration, thereby avoiding future stranded assets and providing clear long-term signals for capital reallocation towards the green economy."
+          },
+          "climate_impact": {
+            "reasoning": "A critical policy that prevents new fossil fuel extraction, directly curbing future emissions and signaling a strong commitment to phasing out fossil fuels, aligning with net-zero targets.",
+            "score": 10,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2023-01-26",
+        "policy_text": "Accelerate the transition to Electric Vehicles (EVs) by **reaffirming the 2030 phase-out date for new petrol and diesel cars and vans** (reversing a later date indicated by the sitting government in late 2023).",
+        "source": {
+          "url": "https://researchbriefings.files.parliament.uk/documents/LLN-2024-0034/LLN-2024-0034.pdf",
+          "notes:": "Labour repeatedly stated their commitment to the 2030 phase-out date throughout 2023, particularly following the government's announcement of a delay in September 2023."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 9,
+            "weight": 3,
+            "reasoning": "This policy significantly reduces financial risk by reaffirming a clear phase-out date for petrol and diesel vehicles, providing crucial investment certainty for the automotive industry's transition to EVs and preventing further lock-in to high-carbon assets."
+          },
+          "climate_impact": {
+            "reasoning": "Reaffirming and accelerating the phase-out date for new petrol and diesel vehicles drives a significant reduction in transport emissions and accelerates the transition to electric vehicles.",
+            "score": 9,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2023-01-26",
+        "policy_text": "Introduce stronger regulation on **water companies** to stop sewage pollution, including new powers for regulators to block bonus payments to executives until environmental performance targets are met.",
+        "source": {
+          "url": "https://labour.org.uk/updates/stories/10-labour-policies-to-change-britain/",
+          "notes:": "The sewage crisis and the policy to hold water company executives accountable was a major focus area for Labour throughout 2023."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 8,
+            "weight": 3,
+            "reasoning": "This policy significantly reduces financial risk by mandating stronger environmental performance from water companies, compelling investment in critical infrastructure to mitigate sewage pollution and aligning executive incentives with the reduction of significant physical and reputational risks."
+          },
+          "climate_impact": {
+            "reasoning": "This policy primarily addresses water pollution and environmental quality, with no significant direct or measurable impact on greenhouse gas emissions or the energy transition.",
+            "score": 5,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2023-01-26",
+        "policy_text": "Reform the planning system to **streamline the building of clean energy infrastructure** (e.g., wind farms, solar, grid connections) and cut down approval times to accelerate the 2030 clean power goal.",
+        "source": {
+          "url": "https://www.osborneclarke.com/insights/what-would-labour-do-green-prosperity-plan-intended-boost-uk-jobs-and-energy-security",
+          "notes:": "Fixing the planning bottleneck was cited as a crucial non-fiscal barrier to achieving the 2030 clean energy mission throughout the year."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 9,
+            "weight": 3,
+            "reasoning": "This policy significantly reduces financial risk by streamlining planning for clean energy infrastructure, which will accelerate the transition, reduce project costs and delays, and provide crucial investment certainty for decarbonisation efforts."
+          },
+          "climate_impact": {
+            "reasoning": "Streamlining the planning system for clean energy infrastructure is critical to accelerate the deployment of renewables, directly contributing to major emissions reductions and achieving the 2030 clean power target.",
+            "score": 9,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-13",
+        "policy_text": "Establish **Great British Energy (GB Energy)**, a publicly-owned clean power company, to invest in and own clean energy projects, partnering with industry to cut bills and boost energy security. It will be funded by a windfall tax on oil and gas giants.",
+        "source": {
+          "url": "https://labour.org.uk/wp-content/uploads/2024/06/Labour-Party-manifesto-2024.pdf",
+          "notes:": "Key manifesto pledge, part of the 'Clean Energy Superpower' mission. Initial public funding of £8.3bn over the parliament."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 8,
+            "weight": 3,
+            "reasoning": "Accelerates transition to clean energy, boosts energy security, and provides investment certainty in green projects, reducing long-term financial exposure to volatile fossil fuel markets."
+          },
+          "climate_impact": {
+            "reasoning": "Establishes a publicly-owned entity to directly invest in and own clean energy projects, accelerating the energy transition, boosting renewable energy deployment, and significantly contributing to climate targets.",
+            "score": 8,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-13",
+        "policy_text": "Achieve a **zero-carbon electricity system by 2030**, which involves working with the private sector to double onshore wind, triple solar power, and quadruple offshore wind power production.",
+        "source": {
+          "url": "https://labour.org.uk/wp-content/uploads/2024/06/Labour-Party-manifesto-2024.pdf",
+          "notes:": "A core ambition of the 'Clean Energy Superpower' mission and a key step towards Net Zero by 2050."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 9,
+            "weight": 3,
+            "reasoning": "Provides a clear, ambitious transition roadmap for the electricity sector, significantly reducing transition risk and providing strong investment signals for renewables."
+          },
+          "climate_impact": {
+            "reasoning": "Sets an ambitious and transformative target to decarbonize the electricity system by 2030 through massive expansion of onshore wind, solar, and offshore wind, leading to major emissions reductions.",
+            "score": 9,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-13",
+        "policy_text": "Implement the **Warm Homes Plan** to upgrade millions of homes with grants and low-interest loans for insulation, solar panels, batteries, and low-carbon heating, aiming to cut bills and reduce fuel poverty.",
+        "source": {
+          "url": "https://labour.org.uk/wp-content/uploads/2024/06/Labour-Party-manifesto-2024.pdf",
+          "notes:": "This plan includes ensuring homes in the private rented sector meet minimum energy efficiency standards by 2030."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 8,
+            "weight": 3,
+            "reasoning": "Reduces energy demand and carbon emissions in homes, mitigating transition risk, enhancing physical resilience, and reducing financial burdens on households."
+          },
+          "climate_impact": {
+            "reasoning": "Aims to upgrade millions of homes with insulation, solar panels, and low-carbon heating, leading to significant energy efficiency improvements and emissions reductions in the residential sector.",
+            "score": 8,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-13",
+        "policy_text": "Create a **National Wealth Fund**, capitalised with £7.3bn over the Parliament, to invest alongside the private sector in green industries, including EV battery gigafactories, clean steel, carbon capture and storage (CCS), and green hydrogen manufacturing.",
+        "source": {
+          "url": "https://labour.org.uk/wp-content/uploads/2024/06/Labour-Party-manifesto-2024.pdf",
+          "notes:": "Designed to 'crowd in' private investment and support the 'Green Prosperity Plan'."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 9,
+            "weight": 3,
+            "reasoning": "Provides substantial capital and clear investment signals for strategic green industries, accelerating the transition to a low-carbon economy and creating new economic opportunities."
+          },
+          "climate_impact": {
+            "reasoning": "Provides substantial investment for critical green industries like EV battery production, clean steel, CCS, and green hydrogen, which are essential for systemic decarbonization across multiple major sectors.",
+            "score": 8,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-13",
+        "policy_text": "Commit to **not issuing any new oil and gas exploration licences** in the North Sea, while managing existing fields for the rest of their lifespan and supporting a 'just transition' for oil and gas workers into green jobs.",
+        "source": {
+          "url": "https://labour.org.uk/wp-content/uploads/2024/06/Labour-Party-manifesto-2024.pdf",
+          "notes:": "A significant policy shift away from continued fossil fuel expansion."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 8,
+            "weight": 3,
+            "reasoning": "Prevents the creation of new fossil fuel stranded assets and signals a firm commitment to a managed decline of oil and gas, reducing future financial exposure to carbon-intensive assets."
+          },
+          "climate_impact": {
+            "reasoning": "Stops new oil and gas exploration licences, directly preventing future fossil fuel extraction and associated emissions, and supporting a 'just transition' away from fossil fuels, aligning with a phase-out.",
+            "score": 9,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-13",
+        "policy_text": "Introduce an **Energy Independence Act** to establish the legislative framework for Labour's energy and climate policies and accelerate grid upgrades and planning reform to speed up the deployment of clean energy infrastructure.",
+        "source": {
+          "url": "https://labour.org.uk/wp-content/uploads/2024/06/Labour-Party-manifesto-2024.pdf",
+          "notes:": "A dedicated piece of legislation to deliver the clean energy mission."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 9,
+            "weight": 3,
+            "reasoning": "Establishes a stable legislative framework for energy and climate policies and accelerates critical infrastructure upgrades, significantly reducing investment uncertainty and speeding up the clean energy transition."
+          },
+          "climate_impact": {
+            "reasoning": "Establishes a legislative framework and accelerates grid upgrades and planning reform, directly removing major bottlenecks and speeding up the deployment of clean energy infrastructure, thereby driving systemic change towards climate goals.",
+            "score": 8,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-13",
+        "policy_text": "Tackle the **water quality crisis** by giving regulators new powers to block the payment of bonuses to water company executives until water bosses have cleaned up the environment and stop sewage pollution.",
+        "source": {
+          "url": "https://labour.org.uk/wp-content/uploads/2024/06/Labour-Party-manifesto-2024.pdf",
+          "notes:": "A direct response to the issue of sewage discharges into UK rivers and seas."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 7,
+            "weight": 2,
+            "reasoning": "Increases accountability for environmental damage, incentivizing water companies to invest in infrastructure and reduce pollution, thereby mitigating physical risks and reducing future financial liabilities."
+          },
+          "climate_impact": {
+            "reasoning": "This policy focuses on water quality and sewage pollution, which are important environmental issues. However, its direct impact on greenhouse gas emissions or the energy transition is not significant or measurable.",
+            "score": 5,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-13",
+        "policy_text": "Re-establish the **2030 deadline for phasing out the sale of new petrol and diesel cars and vans** (reversing a later date set by the previous government) and accelerate the roll-out of electric vehicle charging points.",
+        "source": {
+          "url": "https://labour.org.uk/wp-content/uploads/2024/06/Labour-Party-manifesto-2024.pdf",
+          "notes:": "A commitment to accelerating the transition to Electric Vehicles (EVs)."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 9,
+            "weight": 3,
+            "reasoning": "Provides a strong, accelerated policy signal for phasing out fossil fuel vehicles, reducing transition risk for the automotive sector and driving investment in EVs and charging infrastructure."
+          },
+          "climate_impact": {
+            "reasoning": "Re-establishes an ambitious 2030 deadline for phasing out new petrol and diesel cars and vans, significantly accelerating the decarbonization of road transport and promoting the adoption of electric vehicles, leading to major emissions cuts.",
+            "score": 9,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-13",
+        "policy_text": "Back new nuclear power stations, including **Sizewell C** and a fleet of **Small Modular Reactors (SMRs)**, alongside extending the life of existing plants, to contribute to energy security and clean power.",
+        "source": {
+          "url": "https://labour.org.uk/wp-content/uploads/2024/06/Labour-Party-manifesto-2024.pdf",
+          "notes:": "Part of a mix of technologies to ensure a secure zero-carbon grid by 2030."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 8,
+            "weight": 3,
+            "reasoning": "Diversifies the clean energy mix, enhancing energy security and reducing reliance on fossil fuels, thereby mitigating transition risk and ensuring stable power supply."
+          },
+          "climate_impact": {
+            "reasoning": "Supports new nuclear power stations and extends existing plant life, providing a significant source of low-carbon baseload electricity that contributes to energy security and the overall decarbonization of the power sector.",
+            "score": 7,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-13",
+        "policy_text": "Reform the planning system to **unlock the building of homes affected by nutrient neutrality rules** without weakening environmental protections, and ensure new-build homes are high-quality, well-designed, and sustainable.",
+        "source": {
+          "url": "https://labour.org.uk/wp-content/uploads/2024/06/Labour-Party-manifesto-2024.pdf",
+          "notes:": "A policy to balance housing targets with the need for nature protection and environmental standards."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 7,
+            "weight": 2,
+            "reasoning": "Unlocks stalled housing development, reducing financial risks for the construction sector, while aiming to integrate sustainability, which can mitigate future physical and transition risks in new builds."
+          },
+          "climate_impact": {
+            "reasoning": "Aims to ensure new-build homes are sustainable, which likely includes energy efficiency and potentially low-carbon design, leading to incremental emissions reductions from new housing stock, while also addressing planning and environmental protection issues.",
+            "score": 6,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The government will not continue the funding of the Energy Company Obligation (ECO) on energy bills after March 2026.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 4: Policy Decisions, Section 4.3"
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 3,
+            "weight": 2,
+            "reasoning": "Removing funding for energy efficiency schemes increases reliance on current energy sources and hinders the transition to a low-carbon economy, potentially increasing future energy costs and carbon footprint."
+          },
+          "climate_impact": {
+            "reasoning": "Ending funding for a key energy efficiency scheme (ECO) will likely lead to higher domestic energy consumption and associated emissions than if the scheme continued, weakening efforts to reduce household carbon footprints.",
+            "score": 4,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The government will fund 75% of the domestic cost of the legacy Renewables Obligation for three years (2026-27, 2027-28, and 2028-29) to help reduce household energy bills.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 4: Policy Decisions, Section 4.3"
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 6,
+            "weight": 2,
+            "reasoning": "Funding a significant portion of legacy renewable costs reduces household energy bills, supporting financial stability for consumers and ensuring continued support for existing green energy assets, but doesn't significantly accelerate new transition efforts."
+          },
+          "climate_impact": {
+            "reasoning": "This policy is a financial measure to reduce household energy bills by government funding existing renewable energy obligations. It does not directly impact new renewable deployment or alter current emissions levels.",
+            "score": 5,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "Additional Electric Car Grant funding will be provided and extended to 2029-30, along with investment in EV charging infrastructure.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 4: Policy Decisions, Table 5.1, Item 72"
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 9,
+            "weight": 3,
+            "reasoning": "Extending EV grants and investing in charging infrastructure significantly accelerates the transition to electric vehicles, reducing fossil fuel dependence and related transition risks across the transport sector."
+          },
+          "climate_impact": {
+            "reasoning": "Extending electric car grants and investing in charging infrastructure will accelerate the adoption of electric vehicles, leading to significant emissions reductions in the transport sector.",
+            "score": 9,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "A modest self-reported per-mile levy (eVED) will be introduced for electric cars to ensure all cars contribute to road wear and tear and to address the long-term decline in fuel duty receipts.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Executive Summary (Modernisation) and Chapter 1: Economic and fiscal outlook, Section 1.28"
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 4,
+            "weight": 2,
+            "reasoning": "Introducing a per-mile levy on electric cars could slow down EV adoption by increasing the cost of ownership, thereby delaying the transition away from fossil fuels and increasing associated long-term climate transition risks."
+          },
+          "climate_impact": {
+            "reasoning": "Introducing a new per-mile levy for electric cars, even if modest, could slightly disincentivize EV adoption, potentially slowing down the decarbonization of the transport sector.",
+            "score": 4,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The Vehicle Excise Duty (VED) Expensive Car Supplement threshold will be increased to £50,000 for zero-emission vehicles only, effective from 1 April 2026 (for ZEVs registered from 1 April 2025 onwards).",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 4: Policy Decisions, Section 4.242"
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 7,
+            "weight": 1,
+            "reasoning": "Raising the VED threshold for expensive zero-emission vehicles incentivizes their purchase, supporting the transition to EVs and signalling continued government backing for decarbonizing transport."
+          },
+          "climate_impact": {
+            "reasoning": "Increasing the VED Expensive Car Supplement threshold specifically for zero-emission vehicles provides a financial incentive, encouraging the purchase of higher-value EVs over comparable internal combustion engine vehicles and supporting transport decarbonization.",
+            "score": 7,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The temporary Energy Profits Levy (EPL) will be replaced by the permanent Oil and Gas Profits Mechanism (OGPM) which operates in times of high prices at a rate of 35% with high-price thresholds of $90/barrel (oil) and 90p/therm (gas).",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 4: Policy Decisions, Section 4.174"
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 4,
+            "weight": 3,
+            "reasoning": "Replacing a temporary levy with a permanent Oil and Gas Profits Mechanism, even with a high-price threshold, provides a framework for the long-term financial viability of the oil and gas sector, which could slow the transition away from fossil fuels and prolong associated transition risks."
+          },
+          "climate_impact": {
+            "reasoning": "This is a fiscal policy designed to tax oil and gas profits, not to reduce fossil fuel production or consumption. It doesn't directly contribute to emissions reductions or accelerate the energy transition.",
+            "score": 5,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The government has committed to implementing the recommendations of the Nuclear Regulatory Taskforce final report within two years, to strengthen the UK's nuclear capacities and increase energy security.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Executive Summary and Chapter 4: Policy Decisions, Section 4.51"
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 8,
+            "weight": 3,
+            "reasoning": "Strengthening nuclear capacities reduces reliance on fossil fuels, enhances energy security, and contributes to decarbonization, thereby significantly reducing climate-related transition risks."
+          },
+          "climate_impact": {
+            "reasoning": "Strengthening regulatory frameworks for nuclear power can facilitate the expansion of low-carbon electricity generation, reducing reliance on fossil fuels and supporting decarbonization and energy security.",
+            "score": 7,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The government will consult in early 2026 on introducing mandatory certification for mechanically recycled plastic packaging for businesses to claim an exemption from the Plastic Packaging Tax.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 4: Policy Decisions, Section 4.173"
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 7,
+            "weight": 2,
+            "reasoning": "Introducing mandatory certification for recycled plastic packaging enhances transparency and strengthens the Plastic Packaging Tax's effectiveness, incentivizing genuine recycling and reducing environmental financial risks from plastic waste."
+          },
+          "climate_impact": {
+            "reasoning": "Introducing mandatory certification for recycled plastic packaging strengthens the Plastic Packaging Tax, making it more effective at incentivizing the use of recycled materials and reducing demand for virgin plastics, thereby lowering associated emissions.",
+            "score": 7,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "Funding will be provided to the Department for Environment, Food and Rural Affairs (Defra) for a Land Remediation Grant scheme to help public bodies remediate land where Landfill Tax presents an unaffordable blocker.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 4: Policy Decisions, Section 4.52"
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 5,
+            "weight": 1,
+            "reasoning": "The policy facilitates land remediation by addressing a financial barrier, which is positive for local environmental quality but has no significant direct net impact on climate-related financial risks (transition or physical)."
+          },
+          "climate_impact": {
+            "reasoning": "This policy is focused on land remediation and addressing financial barriers posed by the Landfill Tax. Its direct impact on greenhouse gas emissions or the energy transition is negligible.",
+            "score": 5,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The Plastic Packaging Tax (PPT) rate for 2026-27 will be increased in line with CPI inflation to incentivise businesses to use recycled instead of new plastic in packaging.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 4: Policy Decisions, Section 4.172"
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 7,
+            "weight": 2,
+            "reasoning": "Increasing the Plastic Packaging Tax rate in line with inflation maintains its effectiveness in incentivizing recycled plastic use, supporting the circular economy and reducing reliance on virgin plastics, thereby moderately reducing transition risks associated with resource consumption and waste."
+          },
+          "climate_impact": {
+            "reasoning": "Increasing the Plastic Packaging Tax rate in line with inflation maintains its effectiveness in incentivizing businesses to use recycled plastic, thereby reducing demand for virgin plastics and associated emissions.",
+            "score": 6,
+            "weight": 2
+          }
+        }
+      }
+    ]
   },
   {
     "party_name": "Conservative",
     "color": "#0087DC",
-    "policies": []
+    "policies": [
+      {
+        "date_announced": "2022-04-07",
+        "policy_text": "Launch the **British Energy Security Strategy**, significantly increasing ambition for domestic renewable energy. This includes a new goal to deliver up to 50GW of offshore wind by 2030 (including up to 5GW of floating offshore wind) and a simplified planning system for offshore wind.",
+        "source": {
+          "url": "https://www.gov.uk/government/publications/british-energy-security-strategy",
+          "notes:": "Major energy policy document focused on independence and clean power, significantly raising the offshore wind target."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 9,
+            "weight": 3,
+            "reasoning": "Accelerates the transition to renewable energy, reducing reliance on fossil fuels and mitigating long-term transition risks while providing investment certainty for green infrastructure."
+          },
+          "climate_impact": {
+            "reasoning": "This policy sets an ambitious goal for offshore wind development (50GW by 2030), a major renewable energy source. It will significantly reduce greenhouse gas emissions by displacing fossil fuel generation and directly contributes to the energy transition and net-zero targets.",
+            "score": 9,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2022-04-07",
+        "policy_text": "Announce plans for up to **eight new nuclear reactors** (Large Scale and Small Modular Reactors - SMRs) to be built, with the goal of nuclear power supplying up to 24% of the UK's expected electricity demand by 2050.",
+        "source": {
+          "url": "https://www.gov.uk/government/publications/british-energy-security-strategy",
+          "notes:": "Key pillar of the Energy Security Strategy to accelerate nuclear power as a clean, reliable base load."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 8,
+            "weight": 3,
+            "reasoning": "Diversifies the low-carbon energy mix, enhancing energy security and reducing long-term transition risk from fossil fuel dependence, despite high initial investment costs."
+          },
+          "climate_impact": {
+            "reasoning": "Plans for up to eight new nuclear reactors aim to provide low-carbon baseload electricity, supplying a significant portion of the UK's demand by 2050. This displaces fossil fuel generation, contributing to emissions reduction and the energy transition, though nuclear power can be slower and more costly than renewables.",
+            "score": 7,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2022-04-07",
+        "policy_text": "Announce a licensing round for new North Sea oil and gas projects, combined with the creation of the **North Sea Transition Authority (NSTA)** to support the transition to Net Zero while ensuring energy security.",
+        "source": {
+          "url": "https://www.gov.uk/government/publications/british-energy-security-strategy",
+          "notes:": "A move to increase domestic fossil fuel production in the short-term, presented alongside clean energy goals."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 3,
+            "weight": 2,
+            "reasoning": "Increases exposure to transition risks by expanding fossil fuel extraction, potentially leading to stranded assets in a decarbonizing economy, despite the NSTA's stated role."
+          },
+          "climate_impact": {
+            "reasoning": "A new licensing round for North Sea oil and gas projects directly encourages further fossil fuel extraction and consumption. This locks in fossil fuel dependency, increases greenhouse gas emissions, and actively undermines climate targets and the energy transition, despite the NSTA's broader goal.",
+            "score": 1,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2022-05-26",
+        "policy_text": "Announce a **windfall tax (Energy Profits Levy)** on the profits of oil and gas companies operating in the UK and on the UK Continental Shelf to help fund support for household energy bills, while providing an investment allowance for firms that invest in new domestic oil and gas extraction.",
+        "source": {
+          "url": "https://www.gov.uk/government/news/rishi-sunak-announces-new-cost-of-living-support",
+          "notes:": "Primarily a cost-of-living policy, but with a direct tax and investment link to the fossil fuel industry."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 4,
+            "weight": 2,
+            "reasoning": "The investment allowance for new oil and gas extraction prolongs fossil fuel dependence, increasing future transition and stranded asset risks, despite the levy on existing profits."
+          },
+          "climate_impact": {
+            "reasoning": "While the windfall tax itself is revenue-generating, the policy includes an investment allowance that incentivizes new domestic oil and gas extraction. This encourages continued fossil fuel production, leading to increased emissions and hindering the transition away from fossil fuels.",
+            "score": 3,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2022-01-20",
+        "policy_text": "Confirm the final tranche of **legally binding environmental targets** under the Environment Act 2021, including targets for species abundance, air quality (PM2.5), water quality (clean and plentiful water), waste reduction, and resource efficiency.",
+        "source": {
+          "url": "https://www.gov.uk/government/news/government-sets-long-term-legally-binding-environmental-targets",
+          "notes:": "Delivery on the flagship Environment Act 2021, defining the long-term goals for nature and pollution."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 7,
+            "weight": 3,
+            "reasoning": "Provides strong policy signals for environmental protection, improving investment certainty in sustainable practices and mitigating physical risks from environmental degradation across sectors."
+          },
+          "climate_impact": {
+            "reasoning": "Legally binding environmental targets for species abundance, air quality, water quality, waste, and resource efficiency provide a robust framework. While not direct climate actions, they indirectly support climate goals by protecting ecosystems (carbon sinks), reducing pollution, and promoting resource efficiency, which can lower emissions.",
+            "score": 6,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2022-09-07",
+        "policy_text": "Liz Truss's government (briefly in power) announced the end of the moratorium on **fracking** for shale gas in England to boost domestic gas supply, although this decision was reversed later in the year by Rishi Sunak's government.",
+        "source": {
+          "url": "https://www.gov.uk/government/news/liz-truss-lifts-fracking-ban-in-england",
+          "notes:": "A short-lived but highly significant policy shift that highlighted the tension between energy security and climate goals."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 6,
+            "weight": 2,
+            "reasoning": "The reversal of the fracking moratorium prevented the escalation of transition risks by avoiding new fossil fuel extraction, thereby preventing potential stranded assets and localized environmental impacts."
+          },
+          "climate_impact": {
+            "reasoning": "The initial policy to end the moratorium on fracking would have caused severe harm by increasing fossil fuel extraction and emissions. However, its subsequent reversal by a later government effectively neutralized this negative impact, preventing new fracking activities from proceeding.",
+            "score": 5,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2022-03-30",
+        "policy_text": "Launch the **Great British Insulation Scheme** (later rebranded as ECO+), aiming to help hundreds of thousands of homes across the country save money on energy bills, particularly those in the least energy-efficient homes (EPC band D or below).",
+        "source": {
+          "url": "https://www.gov.uk/government/news/new-government-support-to-help-families-with-bills-as-energy-price-guarantee-announced",
+          "notes:": "Part of wider support package, specifically targeting energy efficiency in homes."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 8,
+            "weight": 3,
+            "reasoning": "Significantly reduces household energy consumption, mitigating transition risks by decreasing fossil fuel demand and enhancing financial stability against energy price shocks, supporting a green transition."
+          },
+          "climate_impact": {
+            "reasoning": "This scheme aims to improve the energy efficiency of hundreds of thousands of homes, particularly less efficient ones. By reducing energy demand for heating, it directly lowers greenhouse gas emissions from residential buildings and contributes significantly to climate targets and household energy savings.",
+            "score": 7,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2022-12-19",
+        "policy_text": "Commit to the **Kunming-Montreal Global Biodiversity Framework (COP15)**, which includes the global target to halt and reverse nature loss by 2030 and to protect 30% of the world’s land and sea by 2030 (30x30).",
+        "source": {
+          "url": "https://www.gov.uk/government/news/uk-government-welcomes-historic-global-agreement-to-protect-nature-at-cop15",
+          "notes:": "International commitment made at the UN Biodiversity Conference to safeguard nature."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 8,
+            "weight": 3,
+            "reasoning": "Mitigates long-term physical risks by committing to halt nature loss, safeguarding essential ecosystem services crucial for economic stability and signaling positive investment certainty in nature-based solutions."
+          },
+          "climate_impact": {
+            "reasoning": "Committing to the Kunming-Montreal Global Biodiversity Framework, including targets to halt and reverse nature loss and protect 30% of land and sea, is crucial for climate. Healthy ecosystems enhance carbon sequestration and storage, build resilience, and are integral to nature-based climate solutions.",
+            "score": 7,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2022-11-17",
+        "policy_text": "Commit **£6 billion of new government funding for energy efficiency** and heat pump schemes for 2025 to 2028 (announced in the Autumn Statement) to support the transition away from gas boilers and make homes cheaper to heat.",
+        "source": {
+          "url": "https://www.gov.uk/government/news/chancellor-sets-out-plan-for-stability-growth-and-public-services",
+          "notes:": "Long-term spending commitment to domestic heat and energy efficiency, a key Net Zero delivery area."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 9,
+            "weight": 3,
+            "reasoning": "Provides significant funding to accelerate the transition away from gas boilers, substantially reducing transition risk, improving energy security, and making homes cheaper to heat, enhancing financial stability."
+          },
+          "climate_impact": {
+            "reasoning": "This significant £6 billion funding commitment directly supports the transition away from gas boilers to heat pumps and improves energy efficiency in homes. This will lead to major reductions in greenhouse gas emissions from heating and is critical for achieving net-zero targets in the building sector.",
+            "score": 9,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2022-07-26",
+        "policy_text": "Publish the **Government's 'Plan for Water'** with the long-term objective of achieving clean and plentiful water, addressing issues like storm overflow pollution and agricultural run-off through new investment and regulation.",
+        "source": {
+          "url": "https://www.gov.uk/government/publications/plan-for-water",
+          "notes:": "Response to public and political concern over sewage in rivers and coastal waters."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 8,
+            "weight": 3,
+            "reasoning": "Directly mitigates significant physical risks associated with water scarcity and pollution, safeguarding a vital national resource and reducing potential long-term economic damage from water system failures."
+          },
+          "climate_impact": {
+            "reasoning": "The 'Plan for Water' aims to achieve clean and plentiful water by addressing pollution. While primarily an environmental policy, improving water quality and management (e.g., reducing agricultural run-off) can have indirect climate benefits, such as reduced emissions from water bodies and increased ecosystem resilience, albeit with a minor direct impact on GHG emissions.",
+            "score": 6,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2023-09-20",
+        "policy_text": "Delay the ban on the sale of new petrol and diesel cars and vans from 2030 to 2035, maintaining the commitment to Net Zero by 2050 while adopting a 'more pragmatic, proportionate and realistic' approach.",
+        "source": {
+          "url": "https://www.gov.uk/government/news/pm-rishi-sunaks-speech-on-net-zero-20-september-2023",
+          "notes:": "Prime Minister Rishi Sunak's speech detailing the 'new approach' to Net Zero."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 3,
+            "weight": 3,
+            "reasoning": "Delays the transition away from fossil fuel vehicles, increasing future transition costs and creating uncertainty for automotive and related industries, potentially increasing stranded asset risk for petrol-diesel infrastructure."
+          },
+          "climate_impact": {
+            "reasoning": "Delaying the ban on petrol and diesel cars directly prolongs the use of fossil fuel vehicles, increasing emissions from road transport and slowing down the transition to cleaner transportation.",
+            "score": 3,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2023-09-20",
+        "policy_text": "Scrap the proposed requirement for landlords to upgrade energy efficiency of rental homes (EPC band C) by 2028, stating the government will instead provide 'new support' but not force upgrades.",
+        "source": {
+          "url": "https://www.gov.uk/government/news/pm-rishi-sunaks-speech-on-net-zero-20-september-2023",
+          "notes:": "Part of the Net Zero 'reset' to ease burdens on working people."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 3,
+            "weight": 3,
+            "reasoning": "Removes a key regulatory driver for improving energy efficiency in a significant portion of the housing stock, slowing decarbonization and increasing household energy costs, thus increasing transition risk and physical risk (vulnerability to energy price shocks)."
+          },
+          "climate_impact": {
+            "reasoning": "Scrapping mandatory energy efficiency upgrades for rental homes removes a key driver for reducing energy consumption and associated emissions in the building sector, hindering progress towards climate goals.",
+            "score": 3,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2023-09-20",
+        "policy_text": "Increase the maximum grant for the Boiler Upgrade Scheme by 50% to £7,500 for air source and ground source heat pumps to encourage voluntary uptake, while confirming the date for phasing out new oil and gas boilers will remain 2035.",
+        "source": {
+          "url": "https://www.gov.uk/government/news/pm-rishi-sunaks-speech-on-net-zero-20-september-2023",
+          "notes:": "Meant to replace mandatory requirements with financial incentives."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 7,
+            "weight": 2,
+            "reasoning": "Increases financial incentives for adopting low-carbon heating solutions (heat pumps), which helps to accelerate the transition away from fossil fuels in homes and reduces future transition risk, while the 2035 phase-out date provides some certainty."
+          },
+          "climate_impact": {
+            "reasoning": "Increasing grants for heat pumps incentivizes the adoption of low-carbon heating solutions, directly reducing reliance on fossil fuel boilers and supporting the energy transition in homes.",
+            "score": 7,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2023-07-31",
+        "policy_text": "Announce hundreds of new oil and gas licences for the North Sea, with the aim of boosting the UK's energy security and reducing reliance on international regimes for energy supply.",
+        "source": {
+          "url": "https://www.gov.uk/government/news/pm-and-secretary-of-state-for-energy-security-and-net-zero-to-announce-hundreds-of-new-oil-and-gas-licences",
+          "notes:": "Part of the strategy to 'max out' domestic fossil fuel production during the transition."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 1,
+            "weight": 3,
+            "reasoning": "Actively encourages and extends investment in fossil fuel extraction, significantly increasing the UK's exposure to transition risk and potential stranded assets as the global economy shifts to low-carbon energy."
+          },
+          "climate_impact": {
+            "reasoning": "Granting new oil and gas licences directly encourages continued fossil fuel extraction and combustion, significantly increasing greenhouse gas emissions and undermining net zero commitments.",
+            "score": 1,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2023-03-30",
+        "policy_text": "Publish the 'Powering Up Britain' plan, comprising the 'Energy Security Plan' and the 'Net Zero Growth Plan,' to detail a path to meet the Net Zero target, including scaling up Carbon Capture, Usage, and Storage (CCUS), hydrogen, and nuclear power.",
+        "source": {
+          "url": "https://www.gov.uk/government/publications/powering-up-britain",
+          "notes:": "A major policy package responding to the independent Skidmore Review."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 7,
+            "weight": 3,
+            "reasoning": "Provides a detailed strategic plan for achieving Net Zero and energy security, which can improve investment certainty, offer clearer policy signals for green technologies, and help manage transition risks by outlining decarbonization pathways."
+          },
+          "climate_impact": {
+            "reasoning": "Publishing a comprehensive plan detailing a path to Net Zero, including investments in CCUS, hydrogen, and nuclear power, sets a strategic framework for emissions reduction and energy transition, despite requiring effective implementation.",
+            "score": 6,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2023-01-31",
+        "policy_text": "Publish the **Environmental Improvement Plan 2023 (EIP23)**, setting out a blueprint to halt the decline of nature by 2030 and detailing statutory targets for water, air quality, biodiversity, and waste under the Environment Act 2021.",
+        "source": {
+          "url": "https://www.gov.uk/government/publications/environmental-improvement-plan/environmental-improvement-plan-2023-executive-summary",
+          "notes:": "A key response to the legal requirement to revise the 25 Year Environment Plan."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 6,
+            "weight": 2,
+            "reasoning": "Sets statutory targets for key environmental indicators, which, if met, can reduce physical risks associated with nature degradation (e.g., water scarcity, pollution costs) and provide regulatory certainty for related industries."
+          },
+          "climate_impact": {
+            "reasoning": "Setting statutory targets for nature, water, air quality, and biodiversity helps protect and restore ecosystems, which can enhance natural carbon sinks and improve climate resilience, indirectly supporting climate goals.",
+            "score": 7,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2023-01-31",
+        "policy_text": "Commit to protecting **30% of UK land and sea for nature by 2030** and launch a new **Species Survival Fund** to protect the UK's rarest species, as part of the EIP23's 'apex goal' of improving nature.",
+        "source": {
+          "url": "https://www.gov.uk/government/publications/environmental-improvement-plan/environmental-improvement-plan-2023-executive-summary",
+          "notes:": "Detail from the Environmental Improvement Plan 2023."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 7,
+            "weight": 2,
+            "reasoning": "Committing to protecting natural habitats and species helps to reduce physical risks by safeguarding vital ecosystem services (e.g., flood protection, water purification), which underpins long-term financial stability and provides investment signals for nature-based solutions."
+          },
+          "climate_impact": {
+            "reasoning": "Committing to protect 30% of UK land and sea for nature is a significant nature-based solution that enhances biodiversity, ecosystem health, and natural carbon sequestration, contributing to climate adaptation and mitigation.",
+            "score": 8,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2023-01-31",
+        "policy_text": "Set a new target to **reduce nitrogen, phosphorus, and sediment pollution from agriculture** into the water environment by at least 40% by 2038, including a £13 million investment in slurry storage infrastructure.",
+        "source": {
+          "url": "https://www.gov.uk/government/publications/environmental-improvement-plan/environmental-improvement-plan-2023-executive-summary",
+          "notes:": "Detail from the Environmental Improvement Plan 2023 on water quality."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 7,
+            "weight": 2,
+            "reasoning": "Targets a significant source of water pollution and provides investment to support agricultural transition, directly reducing physical risks to water resources and indirectly lowering costs associated with water treatment and ecological damage."
+          },
+          "climate_impact": {
+            "reasoning": "Reducing agricultural pollution through targets and investment in slurry storage can decrease greenhouse gas emissions (e.g., N2O, methane) and promote more sustainable farming practices with potential soil carbon benefits.",
+            "score": 7,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2023-10-01",
+        "policy_text": "Ban the supply of several single-use plastic items in England, including **plastic plates, cutlery, bowls, balloon sticks, and certain types of polystyrene cups/food containers**.",
+        "source": {
+          "url": "https://www.gov.uk/government/news/crackdown-on-single-use-plastics-comes-into-force-in-england",
+          "notes:": "Implementation of a policy consulted on previously, coming into effect in October 2023."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 6,
+            "weight": 1,
+            "reasoning": "Reduces environmental pollution from single-use plastics, which mitigates physical risks associated with waste and ecosystem damage, providing clear signals for affected industries to innovate and transition to sustainable alternatives."
+          },
+          "climate_impact": {
+            "reasoning": "Banning single-use plastic items reduces plastic production and waste, which has indirect climate benefits by lowering energy consumption associated with manufacturing and reducing landfill/incineration emissions.",
+            "score": 6,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2023-03-30",
+        "policy_text": "Commit up to **£20 billion in funding** for the early development of Carbon Capture, Usage, and Storage (CCUS) clusters, including the announcement of the first two clusters, the East Coast Cluster and the HyNet North West cluster.",
+        "source": {
+          "url": "https://www.gov.uk/government/publications/powering-up-britain/powering-up-britain-net-zero-growth-plan",
+          "notes:": "Funding commitment as part of the 'Net Zero Growth Plan' to scale up CCUS."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 9,
+            "weight": 3,
+            "reasoning": "Commits substantial funding to critical decarbonization infrastructure (CCUS), significantly reducing transition risk for heavy industries and enhancing investment certainty in a key technology necessary for achieving Net Zero."
+          },
+          "climate_impact": {
+            "reasoning": "Committing substantial funding for CCUS clusters aims to capture and store carbon emissions from industrial processes, which is critical for decarbonizing hard-to-abate sectors and achieving net zero targets.",
+            "score": 8,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Adopt a pragmatic and proportionate approach to Net Zero by 2050, guaranteeing no new green levies or charges on energy bills and accelerating the rollout of renewables, without forcing people to rip out their existing boiler and replace it with a heat pump.",
+        "source": {
+          "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+          "notes": "From 'The Conservative and Unionist Party Manifesto 2024', page on 'Our plan for an affordable and pragmatic transition to net zero'."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 4,
+            "weight": 3,
+            "reasoning": "While promoting renewables, the policy's stance on 'no new green levies' and 'no forced boiler replacement' could slow the crucial decarbonisation of heat and create funding gaps for the transition, potentially increasing future transition risks and costs for households and the energy system as a whole. It prioritizes short-term cost avoidance over long-term risk mitigation."
+          },
+          "climate_impact": {
+            "reasoning": "The policy's commitment to accelerating renewables is positive. However, guaranteeing no new green levies removes a key funding mechanism for climate initiatives and the explicit statement against 'forcing' heat pump adoption significantly slows down the decarbonization of domestic heating, a major emissions source.",
+            "score": 4,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Boost energy independence and increase domestic energy supply, including by issuing new annual oil and gas licensing rounds for the North Sea and supporting the building of new gas power stations to back up renewables.",
+        "source": {
+          "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+          "notes": "From 'The Conservative and Unionist Party Manifesto 2024', page on 'Our plan for an affordable and pragmatic transition to net zero'."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 1,
+            "weight": 3,
+            "reasoning": "Issuing new oil and gas licenses and supporting new gas power stations significantly increases transition risk by extending reliance on fossil fuel infrastructure. These assets are highly susceptible to becoming stranded as the economy decarbonises, leading to potential write-downs and increased long-term financial instability. It also exacerbates physical risk by locking in higher emissions."
+          },
+          "climate_impact": {
+            "reasoning": "This policy directly promotes and expands fossil fuel infrastructure by issuing new oil and gas licenses and supporting new gas power stations, which will lead to significant increases in greenhouse gas emissions and lock in carbon-intensive pathways.",
+            "score": 2,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Treble offshore wind capacity and deliver the first two carbon capture and storage (CCS) clusters.",
+        "source": {
+          "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+          "notes": "From 'The Conservative and Unionist Party Manifesto 2024', page on 'Our plan for an affordable and pragmatic transition to net zero'."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 9,
+            "weight": 3,
+            "reasoning": "Trebling offshore wind capacity significantly reduces transition risk by accelerating the shift to renewable energy and enhancing energy security. Delivering CCS clusters helps decarbonise heavy industries, further mitigating transition risks and supporting the pathway to net zero. This provides strong positive signals for green investment and reduces long-term exposure to fossil fuel price volatility."
+          },
+          "climate_impact": {
+            "reasoning": "Trebling offshore wind capacity represents a major step in renewable energy deployment, leading to significant emissions reductions. Delivering CCS clusters is also a positive step for decarbonizing hard-to-abate industrial emissions.",
+            "score": 9,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Cut the time it takes for new nuclear reactors to be approved by half and scale up nuclear power, including Small Modular Reactors (SMRs).",
+        "source": {
+          "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+          "notes": "From 'The Conservative and Unionist Party Manifesto 2024', page on 'Our plan for an affordable and pragmatic transition to net zero'."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 8,
+            "weight": 3,
+            "reasoning": "Scaling up nuclear power, including SMRs, significantly reduces transition risk by providing a stable, low-carbon baseload electricity source. Accelerating approvals supports this decarbonisation pathway, enhancing energy security and reducing reliance on fossil fuels, thereby contributing to long-term financial stability in the energy sector."
+          },
+          "climate_impact": {
+            "reasoning": "Scaling up nuclear power, including SMRs, provides a low-carbon, dispatchable energy source that can displace fossil fuels, contributing significantly to decarbonization and energy security.",
+            "score": 7,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Reform the Climate Change Committee (CCC) mandate to include a requirement to consider costs to households and UK energy security in its future advice.",
+        "source": {
+          "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+          "notes": "From 'The Conservative and Unionist Party Manifesto 2024', page on 'Our plan for an affordable and pragmatic transition to net zero'."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 4,
+            "weight": 2,
+            "reasoning": "While aiming for a more holistic approach, reforming the CCC's mandate to explicitly consider costs to households and energy security in its core advice risks diluting the committee's primary focus on emissions reduction. This could lead to slower or less ambitious climate policies, thereby increasing long-term transition and physical risks by delaying necessary decarbonisation and adaptation measures."
+          },
+          "climate_impact": {
+            "reasoning": "Reforming the CCC mandate to explicitly include costs to households and energy security risks diluting its primary focus on carbon targets, potentially leading to less ambitious climate advice and slower progress towards emissions reduction.",
+            "score": 4,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Invest £6 billion in energy efficiency over the next three years to make around a million homes warmer, and look to fund an energy efficiency voucher scheme for households.",
+        "source": {
+          "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+          "notes": "From 'The Conservative and Unionist Party Manifesto 2024', related to energy efficiency/buildings."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 7,
+            "weight": 2,
+            "reasoning": "Investing in energy efficiency for homes directly reduces financial risk by lowering energy consumption and household bills, enhancing financial stability for consumers. It also contributes to reduced emissions, mitigating transition risk in the residential sector and making homes more resilient to energy price volatility."
+          },
+          "climate_impact": {
+            "reasoning": "Investing in energy efficiency directly reduces energy consumption in homes, leading to measurable greenhouse gas emissions reductions from heating and cooling, and contributes to warmer homes.",
+            "score": 7,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Abolish 'Legacy EU Nutrient Neutrality' rules to unlock the construction of 100,000 new homes, while legislating to ensure mitigation is delivered via an expanded, properly funded mitigation scheme.",
+        "source": {
+          "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+          "notes": "From 'The Conservative and Unionist Party Manifesto 2024', page on 'Our plan to build more houses in the right places'."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 3,
+            "weight": 2,
+            "reasoning": "Abolishing 'Legacy EU Nutrient Neutrality' rules, despite promising a new mitigation scheme, introduces significant uncertainty and risk of increased physical environmental degradation (water pollution). This could lead to higher costs for water treatment, damage to ecosystems, and negative impacts on related economic sectors, potentially increasing future financial liabilities if the replacement mitigation scheme proves insufficient in practice."
+          },
+          "climate_impact": {
+            "reasoning": "Abolishing nutrient neutrality rules, even with a proposed mitigation scheme, carries a high risk of increased environmental degradation, particularly water pollution, which can indirectly impact ecosystems' ability to sequester carbon and contribute to overall environmental decline.",
+            "score": 4,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Introduce a legal target and additional investment to boost food security and protect the UK’s best agricultural land from solar farms.",
+        "source": {
+          "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+          "notes": "From 'The Conservative and Unionist Party Manifesto 2024', pages on 'Our plan to back farmers and fisheries' and 'Our plan to support our rural way of life and enhance our environment'."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 4,
+            "weight": 2,
+            "reasoning": "While boosting food security is a positive, the policy's specific aim to protect agricultural land from solar farms actively hinders the expansion of renewable energy. This slows the transition to a low-carbon economy, potentially increasing overall transition risk by delaying decarbonisation and maintaining a higher reliance on fossil fuels or more expensive alternatives."
+          },
+          "climate_impact": {
+            "reasoning": "Protecting agricultural land from solar farms directly obstructs the deployment of renewable energy infrastructure, slowing down the critical energy transition away from fossil fuels.",
+            "score": 3,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Introduce a new carbon border adjustment mechanism (CBAM) by 2027 on imports of iron, steel, aluminium, ceramics and cement from countries with a lower or no carbon price.",
+        "source": {
+          "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+          "notes": "From 'The Conservative and Unionist Party Manifesto 2024', related to 'Our plan for an affordable and pragmatic transition to net zero'."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 8,
+            "weight": 3,
+            "reasoning": "Introducing a Carbon Border Adjustment Mechanism (CBAM) significantly reduces transition risk by ensuring a level playing field for domestic industries investing in decarbonisation and preventing carbon leakage. This policy incentivizes global climate action, provides greater investment certainty for low-carbon production, and supports the financial stability of key industrial sectors."
+          },
+          "climate_impact": {
+            "reasoning": "A Carbon Border Adjustment Mechanism (CBAM) incentivizes decarbonization in trade partners and prevents carbon leakage, thereby supporting global emissions reductions and encouraging greener industrial practices.",
+            "score": 7,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2024-06-11",
+        "policy_text": "Quickly put the Global Ocean Treaty into UK law and designate an eleventh National Park in England.",
+        "source": {
+          "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+          "notes": "From 'The Conservative and Unionist Party Manifesto 2024', pages on international and domestic environment."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 7,
+            "weight": 2,
+            "reasoning": "Putting the Global Ocean Treaty into law and designating a new National Park moderately reduces physical risk by enhancing biodiversity protection and ecosystem resilience. Healthy ecosystems provide crucial services that reduce the financial impacts of climate change, such as carbon sequestration and natural flood defenses, supporting long-term environmental and economic stability."
+          },
+          "climate_impact": {
+            "reasoning": "Putting the Global Ocean Treaty into law and designating a new National Park both support the protection and restoration of critical ecosystems, which serve as natural carbon sinks and enhance climate resilience, contributing positively but indirectly to climate goals.",
+            "score": 6,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2025-10-10",
+        "policy_text": "Repeal the Climate Change Act 2008 and replace it with a new strategy prioritising cheap, reliable, and abundant energy over statutory emissions targets.",
+        "source": {
+          "url": "https://www.ice.org.uk/news-views-insights/inside-infrastructure/takeaways-2025-conservative-party-conference",
+          "notes:": "Pledged by Conservative leader Kemi Badenoch at the 2025 Conservative Party Conference. This removes the legal underpinning for the UK's net zero target."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 1,
+            "weight": 3,
+            "reasoning": "Repealing the foundational Climate Change Act significantly increases transition risk by removing statutory emissions targets, eroding investment certainty for green industries, and potentially locking in high-carbon assets, thereby exacerbating long-term physical risks."
+          },
+          "climate_impact": {
+            "reasoning": "Repealing the Climate Change Act 2008 removes the statutory framework for net-zero emissions targets, leading to a significant increase in emissions and a severe impediment to climate action.",
+            "score": 1,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2025-03-18",
+        "policy_text": "End Labour's ban on new oil and gas licenses and maximise extraction from the North Sea to strengthen energy security and domestic supply.",
+        "source": {
+          "url": "https://www.conservatives.com/our-plan-for-britain",
+          "notes:": "Part of the 'Our Plan to get Britain back on Track' and 'Policy Renewal Programme' documents, framed as a measure to reduce energy costs and dependence on foreign energy."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 1,
+            "weight": 3,
+            "reasoning": "Maximizing new oil and gas extraction significantly increases transition risk by extending reliance on fossil fuels, creating potential for stranded assets, and diverting investment from cleaner energy sources."
+          },
+          "climate_impact": {
+            "reasoning": "Ending the ban and maximising North Sea oil and gas extraction directly supports increased fossil fuel production, leading to higher greenhouse gas emissions and locking in carbon-intensive energy sources.",
+            "score": 2,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2025-03-18",
+        "policy_text": "Scrap costly and ineffective 'green subsidies' to save public spending and reduce energy costs.",
+        "source": {
+          "url": "https://www.conservatives.com/our-plan-for-britain",
+          "notes:": "This measure is intended to save £1.6 billion and is part of a broader 'Savings Plan' to reduce the deficit."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 3,
+            "weight": 2,
+            "reasoning": "Scrapping green subsidies moderately increases transition risk by slowing down the adoption of low-carbon technologies, making decarbonisation more costly in the long run, and reducing investment certainty for green industries."
+          },
+          "climate_impact": {
+            "reasoning": "Scrapping 'green subsidies' would likely reduce investment in renewable energy and energy efficiency, slowing down the transition to a low-carbon economy and potentially leading to higher emissions.",
+            "score": 3,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2025-02-07",
+        "policy_text": "Amend the National Planning Policy Framework (NPPF) to support the future repowering and life extension of existing energy sites.",
+        "source": {
+          "url": "https://www.gov.uk/government/publications/national-planning-policy-framework--2",
+          "notes:": "An amendment to paragraph 155 of the NPPF to give weight to recognizing the value of existing energy generation sites."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 3,
+            "weight": 2,
+            "reasoning": "Supporting life extension for 'existing energy sites' moderately increases transition risk, particularly if these are fossil fuel plants, by prolonging the life of carbon-intensive infrastructure and increasing future stranded asset potential."
+          },
+          "climate_impact": {
+            "reasoning": "Amending the NPPF to support life extension of 'existing energy sites' could lead to prolonged operation of fossil fuel infrastructure, delaying the transition to renewable energy sources and maintaining higher emissions.",
+            "score": 4,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2025-03-18",
+        "policy_text": "Repeal the Energy Profits Levy (Windfall Tax) on oil and gas companies to back the energy industry and encourage job creation and growth.",
+        "source": {
+          "url": "https://www.conservatives.com/our-plan-for-britain",
+          "notes:": "Policy proposal to stimulate investment in the North Sea energy sector."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 3,
+            "weight": 2,
+            "reasoning": "Repealing the Energy Profits Levy moderately increases transition risk by incentivizing further investment in high-carbon oil and gas extraction, slowing the shift to renewables, and maintaining financial system exposure to a declining sector."
+          },
+          "climate_impact": {
+            "reasoning": "Repealing the windfall tax on oil and gas companies incentivizes further fossil fuel extraction and investment, potentially increasing emissions and hindering the transition to cleaner energy.",
+            "score": 3,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2024-12-12",
+        "policy_text": "Reform the National Planning Policy Framework to cut regulations holding back growth, allowing for faster development and freeing businesses from 'unnecessary red tape'.",
+        "source": "https://www.conservatives.com/our-plan-for-britain",
+        "notes:": "General policy of deregulation, applied to the planning system, which has environmental implications for land use and development.",
+        "scores": {
+          "financial_risk": {
+            "score": 3,
+            "weight": 2,
+            "reasoning": "Reforming planning to cut 'red tape' moderately increases financial risk if it weakens environmental safeguards or climate resilience requirements, potentially leading to less sustainable or more vulnerable infrastructure development."
+          },
+          "climate_impact": {
+            "reasoning": "Reforming the NPPF to cut regulations for faster development risks weakening environmental protections, potentially leading to unsustainable land use, habitat destruction, and increased emissions from unchecked growth.",
+            "score": 4,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2024-07-01",
+        "policy_text": "Quickly put the Global Ocean Treaty (High Seas Treaty) into UK law.",
+        "source": {
+          "url": "https://www.greenpeace.org.uk/take-action/project-climate-vote/ranking/",
+          "notes:": "A commitment mentioned in policy analysis documents regarding ocean protection."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 6,
+            "weight": 1,
+            "reasoning": "Implementing the Global Ocean Treaty moderately reduces physical risk by protecting marine ecosystems, which play a vital role in climate regulation and provide essential services that enhance climate resilience."
+          },
+          "climate_impact": {
+            "reasoning": "Incorporating the Global Ocean Treaty into UK law helps protect marine biodiversity and ecosystems, which are vital for carbon sequestration and overall climate resilience.",
+            "score": 7,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2024-07-01",
+        "policy_text": "Ban new incinerators.",
+        "source": {
+          "url": "https://www.greenpeace.org.uk/take-action/project-climate-vote/ranking/",
+          "notes:": "A commitment mentioned in policy analysis documents related to waste management and air quality."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 6,
+            "weight": 1,
+            "reasoning": "Banning new incinerators moderately reduces transition risk by preventing the lock-in of potentially carbon-intensive waste management infrastructure, encouraging more sustainable alternatives."
+          },
+          "climate_impact": {
+            "reasoning": "Banning new incinerators would reduce future greenhouse gas emissions from waste combustion and encourage more sustainable waste management practices like recycling and reuse.",
+            "score": 6,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2025-03-18",
+        "policy_text": "Oppose Labour's plan to ban the sale of all new petrol and diesel cars by the end of the decade, favouring a slower transition for the transport sector.",
+        "source": {
+          "url": "https://www.ice.org.uk/news-views-insights/inside-infrastructure/takeaways-2025-conservative-party-conference",
+          "notes:": "Stated position by the Shadow Transport Secretary, reflecting a broader preference for lower-cost energy policies over rapid decarbonisation targets."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 3,
+            "weight": 2,
+            "reasoning": "Favouring a slower transition for the transport sector moderately increases transition risk by delaying the shift to electric vehicles, prolonging reliance on fossil fuels, and risking stranded assets in ICE vehicles and infrastructure."
+          },
+          "climate_impact": {
+            "reasoning": "Opposing a ban on new petrol and diesel cars by the end of the decade delays the decarbonization of the transport sector, leading to prolonged emissions from fossil fuel vehicles.",
+            "score": 3,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2024-07-01",
+        "policy_text": "Maintain a focus on restoring 75% of one million hectares of terrestrial and freshwater protected sites to a favourable condition for wildlife by 2042.",
+        "source": {
+          "url": "https://www.gov.uk/government/publications/25-year-environment-plan/25-year-environment-plan-our-targets-at-a-glance",
+          "notes:": "Continuation of key target from the 25 Year Environment Plan, focusing on nature recovery and biodiversity."
+        },
+        "scores": {
+          "financial_risk": {
+            "score": 6,
+            "weight": 1,
+            "reasoning": "Maintaining focus on restoring protected sites moderately reduces physical risk by enhancing natural capital and ecosystem services, which contribute to climate resilience (e.g., flood regulation, carbon sequestration)."
+          },
+          "climate_impact": {
+            "reasoning": "Restoring protected terrestrial and freshwater sites enhances biodiversity and ecosystem health, contributing to natural carbon sequestration and strengthening climate resilience.",
+            "score": 7,
+            "weight": 2
+          }
+        }
+      }
+    ]
   },
   {
     "party_name": "Reform UK",

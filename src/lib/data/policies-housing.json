@@ -16,7 +16,7 @@
           "notes:": "Key piece of government legislation for planning reform, passed in October 2023."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 5,
             "weight": 2,
             "reasoning": "The Levelling Up and Regeneration Act introduces NDMPs for standardized planning and Infrastructure Levy. NDMPs could streamline development, increasing supply, but the Infrastructure Levy, replacing Section 106, may increase costs if not implemented carefully. These could offset each other resulting in neutral price impact."
@@ -36,7 +36,7 @@
           "notes:": "Revised NPPF was published in December 2023, following consultation on planning reforms."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 3,
             "weight": 2,
             "reasoning": "Revising the NPPF to make the 300,000 homes target a guide, not a requirement, weakens incentives for local authorities to meet housing need. Allowing councils to prioritize Green Belt protection over housing increases limits supply, pushing prices higher. Likely a moderate price increase."
@@ -56,7 +56,7 @@
           "notes:": "The government's new strategy, announced by Michael Gove, for increasing housing supply."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 6,
             "weight": 2,
             "reasoning": "The Long-Term Plan focuses on regeneration and inner-city densification on brownfield sites. Building on brownfield land in high-demand areas increases supply where it is needed most, helping to relieve price pressure. This should lead to a moderate price decrease."
@@ -76,7 +76,7 @@
           "notes:": "The Bill was introduced in May 2023 and progressed through Parliament during the year."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 5,
             "weight": 2,
             "reasoning": "The Renters (Reform) Bill, banning Section 21 evictions, provides more security for tenants. While beneficial for renters, it may slightly reduce the attractiveness of buy-to-let investments, but this is likely to have negligible impact on prices. Strengthening grounds for landlords to take back possession somewhat balances this. Overall, neutral impact."
@@ -96,7 +96,7 @@
           "notes:": "Funding commitment as part of the wider plan to boost housing supply in urban areas."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 6,
             "weight": 1,
             "reasoning": "£110 million for building on brownfield land can deliver new homes, increasing supply. While the sum is not huge relative to overall housing need, it is a positive step that will likely contribute to a moderate price decrease in localized areas. The weight is low because of the scale of the investment."
@@ -116,7 +116,7 @@
           "notes:": "The Bill was introduced to the House of Commons in late 2023."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 5,
             "weight": 1,
             "reasoning": "The Leasehold and Freehold Reform Bill, abolishing leasehold for new houses and capping ground rents, primarily impacts existing leaseholders and new house construction, not the broader housing market. Although it may make homeownership more attractive, the overall impact on prices will be minor."
@@ -136,7 +136,7 @@
           "notes:": "Part of the Long-Term Plan for Housing, signalling a willingness to bypass slow local planning processes."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 4,
             "weight": 2,
             "reasoning": "Government intervention to create development corporations can help to accelerate housing delivery in areas where local councils are failing. This intervention will encourage more building. If councils are not delivering local plans this suggests that there are constraints and that there will be difficulties delivering houses, it is therefore hard to see how government intervention will improve things and prices may rise as a result."
@@ -156,7 +156,7 @@
           "notes:": "Measures announced as part of the July 2023 Long-Term Plan, designed to simplify and speed up planning."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 5,
             "weight": 1,
             "reasoning": "Mandating pattern book development and allowing homeowners to add new floors could modestly increase housing supply and affordability. However, consultation on permitted development rights limits the potential impact. The impact on prices is ambiguous as some areas would be more restrictive than others and so there would be a neutral impact."
@@ -176,7 +176,7 @@
           "notes:": "Implementation of a temporary measure announced in late 2022 to assist tenants with the cost of living."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 5,
             "weight": 1,
             "reasoning": "Limiting social rent increases to 7% protects existing social housing tenants from high inflation. This does not directly affect market prices for non-social housing. The effect is neutral since market rents are unaffected."
@@ -196,7 +196,7 @@
           "notes:": "A policy change to the Building Regulations to enhance safety for high-rise residents."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 4,
             "weight": 1,
             "reasoning": "Requiring a second staircase in new buildings over 18 meters adds to construction costs. While important for safety, this increases building costs, potentially leading to modest increases in prices of new developments. However the cost would not be sufficient to move the score lower than 4."
@@ -216,7 +216,7 @@
           "notes:": "Legislation passed by the Conservative Government during the 'wash-up' period before the General Election. This was a long-term commitment."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 5,
             "weight": 1,
             "reasoning": "This act primarily strengthens leaseholders' rights and reduces costs associated with extending leases or buying freeholds. While it may have a slight impact on individual property values for leasehold properties, it is unlikely to significantly affect overall housing prices or rents across the market. The impact on supply and demand is minimal. Therefore, a neutral score is appropriate."
@@ -236,7 +236,7 @@
           "notes:": "Key target from the 2024 General Election Manifesto."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 7,
             "weight": 3,
             "reasoning": "A commitment to deliver 1.6 million new homes should increase housing supply, especially with the focus on brownfield land. Increased supply typically puts downward pressure on prices and rents, improving affordability. The scale of the commitment (1.6 million homes) warrants a high weight. Prioritizing brownfield helps with deliverability."
@@ -256,7 +256,7 @@
           "notes:": "This was an extension of a September 2022 measure due to end in March 2025, and a key Manifesto pledge."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 4,
             "weight": 2,
             "reasoning": "Making the increased Stamp Duty Land Tax threshold permanent for first-time buyers increases demand without a guaranteed increase in supply. This leads to a moderate increase in prices as more first-time buyers compete for the same properties. This mainly impacts the lower end of the market, and the weight reflects this sectoral effect."
@@ -276,7 +276,7 @@
           "notes:": "A new scheme to replace the previous Help to Buy equity loan scheme which closed to new applications in 2023."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 3,
             "weight": 2,
             "reasoning": "The Help to Buy scheme increases demand, particularly for new-build homes. This is likely to lead to a moderate price increase as developers can capitalize on the increased purchasing power. The weight reflects the fact that this is a sectoral scheme affecting primarily new-builds and first time buyers."
@@ -296,7 +296,7 @@
           "notes:": "A measure to speed up development in urban centres, included in the Manifesto."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 7,
             "weight": 2,
             "reasoning": "A fast-track planning route for new homes, especially on brownfield land with strong design codes, should increase supply, leading to a moderate decrease in prices. The focus on the 20 largest cities means this is a regional rather than national effect, thus the weight of 2. Brownfield focus increases deliverability likelihood."
@@ -316,7 +316,7 @@
           "notes:": "Long-standing policy reaffirmed in the Manifesto."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 3,
             "weight": 2,
             "reasoning": "Protecting the Green Belt restricts housing supply, putting upward pressure on prices. While prioritizing brownfield development mitigates this somewhat, the overall effect of Green Belt protection is to limit the land available for development, leading to moderate price increases. Weight reflects the continuing significant size of the Green Belt."
@@ -336,7 +336,7 @@
           "notes:": "Continuation of a major piece of legislation that was underway before the election was called."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 5,
             "weight": 2,
             "reasoning": "Passing the Renters Reform Bill to abolish Section 21 evictions and strengthen grounds for eviction of anti-social tenants has mixed effects. Abolishing Section 21 could slightly decrease rental supply if landlords become more cautious. Strengthening grounds for eviction might slightly increase supply. On balance, the impact is likely neutral. Weight reflects the significant size of the rental market."
@@ -356,7 +356,7 @@
           "notes:": "A policy aimed at easing planning constraints, previously proposed in 2023."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 3,
             "weight": 2,
             "reasoning": "Scrapping nutrient neutrality rules is intended to unblock housing development, increasing supply. However, the environmental concerns related to nutrient pollution might lead to other restrictions or increased costs in the future. Unblocking supply should reduce prices somewhat, however, the removal of this protection may have other longer term negative impacts that counteract any increase in housing. Also only affects a segment of the market. Net impact is a slight price increase overall due to reduced environmental protection that may reduce supply long term."
@@ -376,7 +376,7 @@
           "notes:": "A tax incentive from the Manifesto aimed at increasing the rate of tenants buying their rented homes."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 6,
             "weight": 1,
             "reasoning": "A two-year temporary Capital Gains Tax relief for landlords who sell to existing tenants might slightly increase owner-occupation rates and potentially free up some rental properties. This could moderately decrease prices, especially in the rental market, but the effect is likely small and temporary. The time limit and specific target group reduces the impact. Landlords are likely to only sell to tenants if the price is similar to what they could get on the open market."
@@ -396,7 +396,7 @@
           "notes:": "Reaffirmation of the commitment to the Building Safety Act's principles to protect leaseholders from cladding costs."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 5,
             "weight": 2,
             "reasoning": "Supporting leaseholders affected by building safety problems by continuing developer-funded remediation programs mainly addresses building safety issues and reduces costs for existing leaseholders. It has minimal impact on overall housing prices or rents, mainly affecting properties already impacted by safety concerns. The overall effect should be neutral. It may have a minor positive impact as it removes uncertainty which had depressed values."
@@ -416,7 +416,7 @@
           "notes:": "Mentioned in 'Our Plan to get Britain back on Track - Conservatives' and referenced in a housing policy round-up following the Conservative Party conference."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 4,
             "weight": 2,
             "reasoning": "Scrapping stamp duty increases demand, especially for first-time buyers, without directly increasing supply. This incentivizes purchasing, leading to higher prices due to increased competition.  The effect is moderately inflationary, as it reduces transaction costs and makes home buying more accessible."
@@ -436,7 +436,7 @@
           "notes:": "Mentioned in 'Our Plan to get Britain back on Track - Conservatives' and an October 2025 speech on 'Building Homes and Communities'."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 7,
             "weight": 2,
             "reasoning": "Prioritizing brownfield development increases housing supply, particularly in urban areas like London. Rewriting the London Plan to allow more housing directly increases supply, putting downward pressure on prices. The policy has a regional impact (London) and is moderately certain to increase supply."
@@ -456,7 +456,7 @@
           "notes:": "Mentioned in 'Our Plan to get Britain back on Track - Conservatives'."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 3,
             "weight": 2,
             "reasoning": "The 'First Jobs Bonus' increases the purchasing power of young people, incentivizing saving for homeownership. This boosts demand without a corresponding supply increase, leading to higher prices. Similar to Help-to-Buy, this subsidy is likely capitalized into higher prices."
@@ -476,7 +476,7 @@
           "notes:": "Stated by the Shadow Housing Secretary James Cleverly at the Conservative Party conference."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 4,
             "weight": 2,
             "reasoning": "Reducing regulation, including affordable housing targets, could decrease housing supply if it disincentivizes development, especially if it leads to fewer affordable units being built overall. Lowering affordable housing targets also means potentially more market-rate units with higher selling price than without the regulations."
@@ -496,7 +496,7 @@
           "notes:": "Mentioned in a speech by James Cleverly on 'Building Homes and Communities'."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 6,
             "weight": 1,
             "reasoning": "Encouraging downsizing by easing property tax burdens can increase the supply of larger family homes. However, the scale of impact is uncertain, as it depends on the take-up rate among older couples. This could free up larger homes, but it's not guaranteed to significantly impact overall prices."
@@ -516,7 +516,7 @@
           "notes:": "A policy from the 2024 Conservative General Election Manifesto, which is referenced in subsequent 2025 policy discussions."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 5,
             "weight": 2,
             "reasoning": "Protecting the Green Belt limits outward expansion and could constrain supply, while building in inner cities increases supply locally. The net effect is likely neutral nationally, as the Green Belt restriction partially offsets the inner-city building boost. The overall effect balances each other out. "
@@ -536,7 +536,7 @@
           "notes:": "A policy from the 2024 Conservative General Election Manifesto, consistent with ongoing commitments to building safety."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 5,
             "weight": 1,
             "reasoning": "Continuing support for leaseholders with building safety issues primarily addresses safety concerns and liability. It has minimal direct impact on overall house prices or rents, focusing instead on consumer protection and risk mitigation. The supply and demand remain unchanged."
@@ -556,7 +556,7 @@
           "notes:": "A policy from the 2024 Conservative General Election Manifesto, reflecting the continuation of the reform agenda."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 6,
             "weight": 1,
             "reasoning": "Leasehold reform, including capping ground rents and ending forfeiture, mainly affects the rights and costs of leaseholders. While it improves affordability for leaseholders, the impact on overall house prices is minor. The primary impact is on the financial terms of leasehold agreements, not the broad housing market."
@@ -576,7 +576,7 @@
           "notes:": "A commitment from the 2024 Conservative General Election Manifesto, though its ultimate fate in 2025 is subject to current parliamentary activity."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 5,
             "weight": 2,
             "reasoning": "The Renters Reform Bill aims to balance landlord and renter rights. Abolishing Section 21 evictions provides more security for renters, but this could potentially reduce supply of rental properties if landlords become more cautious, offset by strenghtening eviction grounds. The net impact on rents and prices is uncertain, making it mostly neutral."
@@ -596,7 +596,7 @@
           "notes:": "A commitment from the 2024 Conservative General Election Manifesto to support first-time buyers."
         },
         "scores": {
-          "price_impact": {
+          "affordability": {
             "score": 3,
             "weight": 2,
             "reasoning": "A new Help to Buy scheme increases demand for new build homes by providing equity loans to first-time buyers. This increases purchasing power, inflating prices of new builds due to higher demand relative to supply. It is similar to previous Help-to-Buy schemes and will have a similar inflationary effect."

@@ -228,8 +228,10 @@
     let tweenedPolicies = $derived.by(() => {
         const policies: TweenedPolicy[] = [];
 
-        for (const party of data.filter((party) =>
-            visibleParties.has(party.party_name),
+        for (const party of data.filter(
+            (party) =>
+                visibleParties.has(party.party_name) ||
+                hoveredParty === party.party_name,
         )) {
             for (const policy of party.policies) {
                 const policyKey = `${party.party_name}-${policy.date_announced}-${policy.policy_text.substring(0, 50)}`;
@@ -315,6 +317,8 @@
                 style:opacity={visibleParties.has(party.party_name) ? 1 : 0.5}
                 onclick={() => handlePartyClick(party.party_name)}
                 ondblclick={() => handlePartyDoubleClick(party.party_name)}
+                onmouseenter={() => (hoveredParty = party.party_name)}
+                onmouseleave={() => (hoveredParty = null)}
             >
                 <span
                     class="w-3 h-3 rounded-full"
@@ -347,7 +351,7 @@
             marginBottom={40}
         >
             <!-- Weighted LOESS Regression Lines for each party -->
-            {#each data.filter( (p) => visibleParties.has(p.party_name), ) as party}
+            {#each data.filter((p) => visibleParties.has(p.party_name) || hoveredParty === p.party_name) as party}
                 {@const partyTweenedPolicies = tweenedPolicies.filter(
                     (p) =>
                         p.party_name === party.party_name &&
