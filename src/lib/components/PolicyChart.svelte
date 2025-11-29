@@ -1,7 +1,7 @@
 <script lang="ts">
-    import { Plot, Dot, Line, RegressionY, HTMLTooltip } from "svelteplot";
+    import { Plot, Dot, Line, RegressionY } from "svelteplot";
     import { weightedLoess } from "../utils";
-    import Markdown from "./Markdown.svelte";
+    import PolicyTooltip from "./PolicyTooltip.svelte";
 
     interface Score {
         score: number;
@@ -48,10 +48,20 @@
     // State for locked tooltip (for click-to-persist behavior)
     let lockedTooltip = $state<TweenedPolicy | null>(null);
 
+    // State for hovered tooltip
+    let hoveredTooltip = $state<TweenedPolicy | null>(null);
+
     // State for hovered party
     let hoveredParty = $state<string | null>(null);
 
+    // Tooltip position
+    let tooltipPosition = $state<{ x: number; y: number; transform: string; margin: string } | null>(null);
+
+    // Track if mouse is over tooltip
+    let isMouseOverTooltip = $state(false);
+
     let clickTimeout: ReturnType<typeof setTimeout> | null = null;
+    let hoverTimeout: ReturnType<typeof setTimeout> | null = null;
 
     // Store tweened values for each policy
     interface TweenState {
@@ -257,58 +267,119 @@
         return policies;
     });
 
-    function handlePolicyClick(policy: TweenedPolicy) {
+    function calculateTooltipPosition(clientX: number, clientY: number): { x: number; y: number; transform: string; margin: string } {
+        // Estimate tooltip size (can be adjusted based on actual content)
+        const tooltipWidth = 450; // max-width is 28rem ~ 448px
+        const tooltipHeight = 400; // estimated height
+        const padding = 20; // padding from edges
+
+        let x = clientX;
+        let y = clientY;
+        let translateX = "-100%";
+        let translateY = "-100%";
+        let marginLeft = "-10px";
+        let marginTop = "-10px";
+
+        // Check if tooltip would overflow right edge
+        if (x + padding > window.innerWidth - tooltipWidth) {
+            // Position to the left of cursor
+            translateX = "-100%";
+            marginLeft = "-10px";
+        } else if (x - tooltipWidth - padding < 0) {
+            // Position to the right of cursor
+            translateX = "0%";
+            marginLeft = "10px";
+        }
+
+        // Check if tooltip would overflow bottom edge
+        if (y + padding > window.innerHeight - tooltipHeight) {
+            // Position above cursor
+            translateY = "-100%";
+            marginTop = "-10px";
+        } else if (y - tooltipHeight - padding < 0) {
+            // Position below cursor
+            translateY = "0%";
+            marginTop = "10px";
+        }
+
+        return {
+            x,
+            y,
+            transform: `translate(${translateX}, ${translateY})`,
+            margin: `${marginTop} 0 0 ${marginLeft}`
+        };
+    }
+
+    function handlePolicyClick(policy: TweenedPolicy, event: MouseEvent) {
+        event.stopPropagation();
         if (lockedTooltip === policy) {
             lockedTooltip = null;
+            tooltipPosition = null;
         } else {
             lockedTooltip = policy;
+            hoveredTooltip = null;
+            tooltipPosition = calculateTooltipPosition(event.clientX, event.clientY);
         }
     }
 
-    function tooltipPosition(node: HTMLElement, _datum: any) {
-        const updatePosition = () => {
-            const parentRect = node.parentElement?.getBoundingClientRect();
-            if (!parentRect) return;
-
-            const { width, height } = node.getBoundingClientRect();
-            const { top: anchorY, left: anchorX } = parentRect;
-
-            let translateX = "-100%";
-            let translateY = "-100%";
-            let marginTop = "-10px";
-            let marginLeft = "-10px";
-
-            // Check top overflow
-            if (anchorY - height - 20 < 0) {
-                translateY = "0%";
-                marginTop = "10px";
+    function handlePolicyMouseOver(policy: TweenedPolicy, event: MouseEvent) {
+        if (!lockedTooltip) {
+            if (hoverTimeout) {
+                clearTimeout(hoverTimeout);
+                hoverTimeout = null;
             }
-
-            // Check left overflow
-            if (anchorX - width - 20 < 0) {
-                translateX = "0%";
-                marginLeft = "10px";
-            }
-
-            node.style.transform = `translate(${translateX}, ${translateY})`;
-            node.style.marginTop = marginTop;
-            node.style.marginLeft = marginLeft;
-        };
-
-        updatePosition();
-
-        return {
-            update() {
-                updatePosition();
-            },
-        };
+            hoveredTooltip = policy;
+            tooltipPosition = calculateTooltipPosition(event.clientX, event.clientY);
+        }
     }
+
+    function handlePolicyMouseLeave() {
+        if (!lockedTooltip) {
+            // Delay clearing to allow mouse to move to tooltip
+            hoverTimeout = setTimeout(() => {
+                if (!isMouseOverTooltip) {
+                    hoveredTooltip = null;
+                    tooltipPosition = null;
+                }
+            }, 100);
+        }
+    }
+
+    function handleTooltipMouseEnter() {
+        isMouseOverTooltip = true;
+        if (hoverTimeout) {
+            clearTimeout(hoverTimeout);
+            hoverTimeout = null;
+        }
+    }
+
+    function handleTooltipMouseLeave() {
+        isMouseOverTooltip = false;
+        if (!lockedTooltip) {
+            hoveredTooltip = null;
+            tooltipPosition = null;
+        }
+    }
+
+    // Close locked tooltip when clicking outside
+    function handleChartClick() {
+        if (lockedTooltip) {
+            lockedTooltip = null;
+            tooltipPosition = null;
+        }
+    }
+
+    // Derived state for active tooltip
+    let activeTooltip = $derived(lockedTooltip || hoveredTooltip);
 </script>
 
 <div class="relative flex flex-col">
     <!-- Chart Container -->
+    <!-- svelte-ignore a11y_no_static_element_interactions -->
+    <!-- svelte-ignore a11y_click_events_have_key_events -->
     <div
         class="relative bg-white shadow-sm p-4 border border-gray-100 rounded-xl w-full chart-container"
+        onclick={handleChartClick}
     >
         <!-- Legend -->
         <div
@@ -406,7 +477,7 @@
 
                 <!-- Data Points -->
                 <Dot
-                    data={partyTweenedPolicies}
+                    data={partyTweenedPolicies as any}
                     x={(d: TweenedPolicy) => d.date}
                     y={(d: TweenedPolicy) => d.tweenedScore}
                     r={(d: TweenedPolicy) => 2 ** d.tweenedWeight + 2}
@@ -416,186 +487,42 @@
                             ? 0.5 // hover opacity of selected party
                             : 0.05 // hover opacity of other parties
                         : 0.2}
+                    cursor="pointer"
+                    onclick={(event: MouseEvent, d: TweenedPolicy) => handlePolicyClick(d, event)}
+                    onmouseover={(event: MouseEvent, d: TweenedPolicy) => handlePolicyMouseOver(d, event)}
+                    onmouseleave={handlePolicyMouseLeave}
                 />
             {/each}
-
-            <!-- Tooltips -->
-            {#snippet overlay()}
-                <HTMLTooltip
-                    data={tweenedPolicies}
-                    x="date"
-                    y={(d: TweenedPolicy) => d.tweenedScore}
-                >
-                    {#snippet children({ datum })}
-                        <!-- svelte-ignore a11y_no_static_element_interactions -->
-                        <!-- svelte-ignore a11y_click_events_have_key_events -->
-                        <div
-                            class="max-w-lg cursor-pointer tooltip-content"
-                            use:tooltipPosition={datum}
-                            onclick={(e) => {
-                                e.stopPropagation();
-                                handlePolicyClick(datum);
-                            }}
-                        >
-                            <!-- Header: Party and Date -->
-                            <div class="flex justify-between items-start gap-3 mb-3">
-                                <div class="flex items-center gap-2">
-                                    <span
-                                        class="flex-shrink-0 rounded-full w-3 h-3"
-                                        style:background-color={datum.party_color}
-                                    ></span>
-                                    <span class="font-bold text-gray-900 text-base"
-                                        >{datum.party_name}</span
-                                    >
-                                </div>
-                                <span class="text-gray-500 text-sm whitespace-nowrap"
-                                    >{new Date(datum.date_announced).toLocaleDateString("en-GB",
-                                        {
-                                            day: "numeric",
-                                            month: "short",
-                                            year: "numeric",
-                                        }
-                                    )}</span
-                                >
-                            </div>
-
-                            <!-- Policy text -->
-                            <div
-                                class="bg-gray-50 mb-4 p-3 border border-gray-200 rounded-lg"
-                            >
-                                <p
-                                    class="font-medium text-gray-900 text-sm leading-relaxed"
-                                >
-                                    <Markdown content={datum.policy_text}></Markdown>
-                                </p>
-                            </div>
-
-                            <!-- Score and Weight Card -->
-                            {#if datum.scores?.[criterion]}
-                                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 mb-4 p-4 border border-blue-200 rounded-lg">
-                                    <div class="flex justify-between items-center mb-3">
-                                        <div class="flex items-center gap-2">
-                                            <svg
-                                                class="flex-shrink-0 w-5 h-5 text-blue-600"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                viewBox="0 0 24 24"
-                                            >
-                                                <path
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    stroke-width="2"
-                                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                                                />
-                                            </svg>
-                                            <span
-                                                class="font-bold text-blue-900 text-sm uppercase tracking-wide"
-                                                >Score justification</span
-                                            >
-                                        </div>
-                                        <div class="flex items-center gap-3">
-                                            <!-- Weight indicator -->
-                                            <div class="flex items-center gap-1.5">
-                                                <span class="font-medium text-gray-600 text-xs">Weight:</span>
-                                                <div class="flex gap-1">
-                                                    {#each Array(3) as _, i}
-                                                        <div
-                                                            class="rounded-full w-2.5 h-2.5"
-                                                            class:bg-gray-300={i >= datum.scores[criterion].weight}
-                                                            style:background-color={i < datum.scores[criterion].weight
-                                                                ? datum.party_color
-                                                                : undefined}
-                                                        ></div>
-                                                    {/each}
-                                                </div>
-                                            </div>
-                                            <!-- Score badge -->
-                                            <div
-                                                class="shadow-md px-3 py-1.5 rounded-full font-bold text-white text-lg"
-                                                style:background-color={datum.party_color}
-                                            >
-                                                {datum.scores[criterion].score}<span class="opacity-90 text-sm">/10</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Reasoning -->
-                                    <div class="pt-3 border-gray-300 border-t">
-                                        <p class="text-blue-900 text-xs leading-relaxed">
-                                            {datum.scores[criterion].reasoning}
-                                        </p>
-                                    </div>
-                                </div>
-                            {/if}
-
-                            <!-- Source information -->
-                            {#if datum.source && (datum.source.url || datum.source.notes)}
-                                <details class="group">
-                                    <summary class="flex items-center gap-2 bg-gray-100 hover:bg-gray-150 px-3 py-2 border border-gray-200 rounded-lg font-semibold text-gray-700 text-xs transition-colors cursor-pointer">
-                                        <svg
-                                            class="w-4 h-4 text-gray-500 group-open:rotate-90 transition-transform"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="2"
-                                                d="M9 5l7 7-7 7"
-                                            />
-                                        </svg>
-                                        View Source
-                                    </summary>
-                                    <div class="bg-gray-50 mt-2 p-3 border border-gray-200 rounded-lg text-xs">
-                                        {#if datum.source.url}
-                                            <a
-                                                href={datum.source.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                class="flex items-center gap-1.5 mb-2 font-medium text-blue-600 hover:text-blue-800 underline break-all"
-                                                onclick={(e) => e.stopPropagation()}
-                                            >
-                                                <svg class="flex-shrink-0 w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                                </svg>
-                                                {datum.source.url}
-                                            </a>
-                                        {/if}
-                                        {#if datum.source.notes}
-                                            <p class="text-gray-700 leading-relaxed">
-                                                {datum.source.notes}
-                                            </p>
-                                        {/if}
-                                    </div>
-                                </details>
-                            {/if}
-                        </div>
-                    {/snippet}
-                </HTMLTooltip>
-            {/snippet}
         </Plot>
     </div>
+
+    <!-- Custom Tooltip -->
+    {#if activeTooltip && tooltipPosition}
+        <!-- svelte-ignore a11y_no_static_element_interactions -->
+        <!-- svelte-ignore a11y_click_events_have_key_events -->
+        <div
+            class="z-50 fixed pointer-events-auto"
+            style:left="{tooltipPosition.x}px"
+            style:top="{tooltipPosition.y}px"
+            style:transform={tooltipPosition.transform}
+            style:margin={tooltipPosition.margin}
+            onmouseenter={handleTooltipMouseEnter}
+            onmouseleave={handleTooltipMouseLeave}
+            onclick={(e) => e.stopPropagation()}
+        >
+            <PolicyTooltip
+                datum={activeTooltip}
+                {criterion}
+                onPolicyClick={(policy) => {
+                    lockedTooltip = null;
+                    tooltipPosition = null;
+                }}
+            />
+        </div>
+    {/if}
 </div>
 
 <style>
-    :global(.tooltip-content) {
-        background: white;
-        border: 1px solid #e5e7eb;
-        font-size: 14px;
-        padding: 16px;
-        border-radius: 12px;
-        line-height: 1.5;
-        box-shadow:
-            0 10px 15px -3px rgba(0, 0, 0, 0.1),
-            0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        max-width: 28rem;
-        pointer-events: auto;
-    }
-
-    :global(.tooltip-content a) {
-        word-break: break-word;
-    }
-
     /* Smooth transitions for chart elements */
     :global(.chart-container path),
     :global(.chart-container circle) {

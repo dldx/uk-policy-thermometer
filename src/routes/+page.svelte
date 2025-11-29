@@ -339,9 +339,6 @@
 
                         <!-- Scoring Criteria for Active Criterion -->
                         <div>
-                            <h4 class="mb-3 font-semibold text-gray-900">
-                                Scoring Criteria: {topics[activeTopic].criteriaLabels[activeCriterion]}
-                            </h4>
                             <div class="space-y-4">
                                 {#each [activeCriterion] as criterion}
                                     {@const colors = [
@@ -366,25 +363,27 @@
                                             text: "text-purple-900",
                                         },
                                     ]}
-                                    {@const index = TOPIC_CONFIGS[activeTopic].criteria.indexOf(criterion)}
+                                    {@const index = Math.max(0, TOPIC_CONFIGS[activeTopic].criteria.indexOf(criterion))}
                                     {@const color = colors[index % colors.length]}
-                                    <div
-                                        class="{color.bg} border {color.border} rounded-lg p-4"
-                                    >
-                                        <h5
-                                            class="font-semibold {color.text} mb-2"
+                                    {#if color && topics[activeTopic].criteriaLabels[criterion] && TOPIC_CONFIGS[activeTopic].prompts[criterion]}
+                                        <div
+                                            class="{color.bg} border {color.border} rounded-lg p-4"
                                         >
-                                            {topics[activeTopic].criteriaLabels[
-                                                criterion
-                                            ]}
-                                        </h5>
-                                        <Markdown
-                                            content={TOPIC_CONFIGS[activeTopic].prompts[
-                                                criterion
-                                            ]}
-                                            class="text-xs leading-relaxed {color.text.replace('text-', 'prose-')}"
-                                        />
-                                    </div>
+                                            <h5
+                                                class="font-semibold {color.text} mb-2"
+                                            >
+                                                {topics[activeTopic].criteriaLabels[
+                                                    criterion
+                                                ]}
+                                            </h5>
+                                            <Markdown
+                                                content={TOPIC_CONFIGS[activeTopic].prompts[
+                                                    criterion
+                                                ]}
+                                                class="text-xs leading-relaxed {color.text.replace('text-', 'prose-')}"
+                                            />
+                                        </div>
+                                    {/if}
                                 {/each}
                             </div>
                         </div>
