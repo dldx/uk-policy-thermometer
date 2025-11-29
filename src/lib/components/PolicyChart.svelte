@@ -1,6 +1,7 @@
 <script lang="ts">
     import { Plot, Dot, Line, RegressionY, HTMLTooltip } from "svelteplot";
     import { weightedLoess } from "../utils";
+    import Markdown from "./Markdown.svelte";
 
     interface Score {
         score: number;
@@ -37,7 +38,9 @@
     let {
         data,
         criterion = "human_rights",
-    }: { data: Party[]; criterion?: string } = $props();
+        title = "Policy Impact",
+        criterionLabel = "",
+    }: { data: Party[]; criterion?: string; title?: string; criterionLabel?: string } = $props();
 
     // State for toggling parties
     let visibleParties = $state(new Set(data.map((d) => d.party_name)));
@@ -348,6 +351,9 @@
             marginRight={30}
             marginTop={20}
             marginBottom={40}
+            class="font-[Inter] [&_h3]:text-xl [&_h2]:text-center [&_h3]:text-center"
+            title={title}
+            subtitle={criterionLabel}
         >
             <!-- Weighted LOESS Regression Lines for each party -->
             {#each data.filter((p) => visibleParties.has(p.party_name) || hoveredParty === p.party_name) as party}
@@ -421,88 +427,56 @@
                     y={(d: TweenedPolicy) => d.tweenedScore}
                 >
                     {#snippet children({ datum })}
+                        <!-- svelte-ignore a11y_no_static_element_interactions -->
+                        <!-- svelte-ignore a11y_click_events_have_key_events -->
                         <div
-                            class="max-w-md cursor-pointer tooltip-content"
+                            class="max-w-lg cursor-pointer tooltip-content"
                             use:tooltipPosition={datum}
                             onclick={(e) => {
                                 e.stopPropagation();
                                 handlePolicyClick(datum);
                             }}
                         >
-                            <!-- Header with date and score -->
-                            <div
-                                class="flex justify-between items-center gap-3 mb-3 pb-3 border-gray-200 border-b"
-                            >
+                            <!-- Header: Party and Date -->
+                            <div class="flex justify-between items-start gap-3 mb-3">
                                 <div class="flex items-center gap-2">
                                     <span
-                                        class="rounded-full w-3 h-3"
+                                        class="flex-shrink-0 rounded-full w-3 h-3"
                                         style:background-color={datum.party_color}
                                     ></span>
-                                    <span class="font-semibold text-gray-900"
+                                    <span class="font-bold text-gray-900 text-base"
                                         >{datum.party_name}</span
                                     >
                                 </div>
-                                <div class="flex items-center gap-2">
-                                    <span class="text-gray-600 text-sm"
-                                        >{datum.date_announced}</span
-                                    >
-                                    {#if datum.scores?.[criterion]}
-                                        <span
-                                            class="px-2 py-0.5 rounded-full font-semibold text-white text-xs"
-                                            style:background-color={datum.party_color}
-                                        >
-                                            {datum.scores[criterion].score}/10
-                                        </span>
-                                    {/if}
-                                </div>
+                                <span class="text-gray-500 text-sm whitespace-nowrap"
+                                    >{new Date(datum.date_announced).toLocaleDateString("en-GB",
+                                        {
+                                            day: "numeric",
+                                            month: "short",
+                                            year: "numeric",
+                                        }
+                                    )}</span
+                                >
                             </div>
 
                             <!-- Policy text -->
-                            <p
-                                class="mb-3 font-medium text-gray-900 leading-relaxed"
+                            <div
+                                class="bg-gray-50 mb-4 p-3 border border-gray-200 rounded-lg"
                             >
-                                {datum.policy_text}
-                            </p>
+                                <p
+                                    class="font-medium text-gray-900 text-sm leading-relaxed"
+                                >
+                                    <Markdown content={datum.policy_text}></Markdown>
+                                </p>
+                            </div>
 
-                            <!-- Weight indicator -->
+                            <!-- Score and Weight Card -->
                             {#if datum.scores?.[criterion]}
-                                <div class="flex items-center gap-2 mb-3">
-                                    <span
-                                        class="font-semibold text-gray-600 text-xs"
-                                        >Impact Weight:</span
-                                    >
-                                    <div class="flex gap-1">
-                                        {#each Array(3) as _, i}
-                                            <div
-                                                class="rounded-full w-2 h-2"
-                                                class:bg-gray-300={i >=
-                                                    datum.scores[criterion]
-                                                        .weight}
-                                                style:background-color={i <
-                                                datum.scores[criterion].weight
-                                                    ? datum.party_color
-                                                    : undefined}
-                                            ></div>
-                                        {/each}
-                                    </div>
-                                    <span class="text-gray-500 text-xs"
-                                        >({datum.scores[criterion]
-                                            .weight}/3)</span
-                                    >
-                                </div>
-                            {/if}
-
-                            <!-- Selected Criterion Score -->
-                            {#if datum.scores?.[criterion]}
-                                <div class="mb-3">
-                                    <div
-                                        class="bg-blue-50 p-3 border border-blue-200 rounded-lg text-sm"
-                                    >
-                                        <div
-                                            class="flex items-center gap-1.5 mb-1.5"
-                                        >
+                                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 mb-4 p-4 border border-blue-200 rounded-lg">
+                                    <div class="flex justify-between items-center mb-3">
+                                        <div class="flex items-center gap-2">
                                             <svg
-                                                class="w-4 h-4 text-blue-600"
+                                                class="flex-shrink-0 w-5 h-5 text-blue-600"
                                                 fill="none"
                                                 stroke="currentColor"
                                                 viewBox="0 0 24 24"
@@ -511,20 +485,42 @@
                                                     stroke-linecap="round"
                                                     stroke-linejoin="round"
                                                     stroke-width="2"
-                                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
                                                 />
                                             </svg>
                                             <span
-                                                class="font-semibold text-blue-900 capitalize"
-                                                >{criterion.replace(
-                                                    "_",
-                                                    " ",
-                                                )}</span
+                                                class="font-bold text-blue-900 text-sm uppercase tracking-wide"
+                                                >Score justification</span
                                             >
                                         </div>
-                                        <p
-                                            class="text-blue-800 text-xs leading-relaxed"
-                                        >
+                                        <div class="flex items-center gap-3">
+                                            <!-- Weight indicator -->
+                                            <div class="flex items-center gap-1.5">
+                                                <span class="font-medium text-gray-600 text-xs">Weight:</span>
+                                                <div class="flex gap-1">
+                                                    {#each Array(3) as _, i}
+                                                        <div
+                                                            class="rounded-full w-2.5 h-2.5"
+                                                            class:bg-gray-300={i >= datum.scores[criterion].weight}
+                                                            style:background-color={i < datum.scores[criterion].weight
+                                                                ? datum.party_color
+                                                                : undefined}
+                                                        ></div>
+                                                    {/each}
+                                                </div>
+                                            </div>
+                                            <!-- Score badge -->
+                                            <div
+                                                class="shadow-md px-3 py-1.5 rounded-full font-bold text-white text-lg"
+                                                style:background-color={datum.party_color}
+                                            >
+                                                {datum.scores[criterion].score}<span class="opacity-90 text-sm">/10</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Reasoning -->
+                                    <div class="pt-3 border-gray-300 border-t">
+                                        <p class="text-blue-900 text-xs leading-relaxed">
                                             {datum.scores[criterion].reasoning}
                                         </p>
                                     </div>
@@ -532,34 +528,46 @@
                             {/if}
 
                             <!-- Source information -->
-                            {#if datum.source}
-                                <div
-                                    class="bg-blue-50 p-2.5 border border-blue-100 rounded-lg text-xs"
-                                >
-                                    <div
-                                        class="mb-1 font-semibold text-blue-900"
-                                    >
-                                        Source
+                            {#if datum.source && (datum.source.url || datum.source.notes)}
+                                <details class="group">
+                                    <summary class="flex items-center gap-2 bg-gray-100 hover:bg-gray-150 px-3 py-2 border border-gray-200 rounded-lg font-semibold text-gray-700 text-xs transition-colors cursor-pointer">
+                                        <svg
+                                            class="w-4 h-4 text-gray-500 group-open:rotate-90 transition-transform"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M9 5l7 7-7 7"
+                                            />
+                                        </svg>
+                                        View Source
+                                    </summary>
+                                    <div class="bg-gray-50 mt-2 p-3 border border-gray-200 rounded-lg text-xs">
+                                        {#if datum.source.url}
+                                            <a
+                                                href={datum.source.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="flex items-center gap-1.5 mb-2 font-medium text-blue-600 hover:text-blue-800 underline break-all"
+                                                onclick={(e) => e.stopPropagation()}
+                                            >
+                                                <svg class="flex-shrink-0 w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                                </svg>
+                                                {datum.source.url}
+                                            </a>
+                                        {/if}
+                                        {#if datum.source.notes}
+                                            <p class="text-gray-700 leading-relaxed">
+                                                {datum.source.notes}
+                                            </p>
+                                        {/if}
                                     </div>
-                                    {#if datum.source.url}
-                                        <a
-                                            href={datum.source.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            class="block mb-1.5 text-blue-600 hover:text-blue-800 underline break-all"
-                                            onclick={(e) => e.stopPropagation()}
-                                        >
-                                            {datum.source.url}
-                                        </a>
-                                    {/if}
-                                    {#if datum.source.notes}
-                                        <p
-                                            class="text-gray-700 leading-relaxed"
-                                        >
-                                            {datum.source.notes}
-                                        </p>
-                                    {/if}
-                                </div>
+                                </details>
                             {/if}
                         </div>
                     {/snippet}

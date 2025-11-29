@@ -2,6 +2,7 @@
     import PolicyChart from "$lib/components/PolicyChart.svelte";
     import SkyDecoration from "$lib/components/SkyDecoration.svelte";
     import GroundLayer from "$lib/components/GroundLayer.svelte";
+    import Markdown from "$lib/components/Markdown.svelte";
     import migrationPolicies from "$lib/data/policies-migration.json";
     import environmentalPolicies from "$lib/data/policies-environmental.json";
     import economicPolicies from "$lib/data/policies-economic.json";
@@ -163,13 +164,6 @@
         </div>
 
         <main>
-            <!-- Topic Header -->
-            <div class="mb-4 text-center">
-                <h2 class="mb-2 font-bold text-gray-900 text-3xl">
-                    {topics[activeTopic].title}
-                </h2>
-            </div>
-
             <!-- Criterion Selector -->
             <div class="flex justify-center mb-4">
                 <div
@@ -204,6 +198,8 @@
                     <PolicyChart
                         data={topics[activeTopic].data}
                         criterion={activeCriterion}
+                        title={topics[activeTopic].title}
+                        criterionLabel={topics[activeTopic].criteriaLabels[activeCriterion]}
                     />
                 {:else if hasData}
                     <div
@@ -341,13 +337,13 @@
                             </p>
                         </div>
 
-                        <!-- Scoring Criteria for Active Topic -->
+                        <!-- Scoring Criteria for Active Criterion -->
                         <div>
                             <h4 class="mb-3 font-semibold text-gray-900">
-                                Scoring Criteria for {topics[activeTopic].title}
+                                Scoring Criteria: {topics[activeTopic].criteriaLabels[activeCriterion]}
                             </h4>
                             <div class="space-y-4">
-                                {#each TOPIC_CONFIGS[activeTopic].criteria as criterion, index}
+                                {#each [activeCriterion] as criterion}
                                     {@const colors = [
                                         {
                                             bg: "bg-blue-50",
@@ -370,8 +366,8 @@
                                             text: "text-purple-900",
                                         },
                                     ]}
-                                    {@const color =
-                                        colors[index % colors.length]}
+                                    {@const index = TOPIC_CONFIGS[activeTopic].criteria.indexOf(criterion)}
+                                    {@const color = colors[index % colors.length]}
                                     <div
                                         class="{color.bg} border {color.border} rounded-lg p-4"
                                     >
@@ -382,13 +378,12 @@
                                                 criterion
                                             ]}
                                         </h5>
-                                        <div
-                                            class="font-mono text-xs leading-relaxed whitespace-pre-line"
-                                        >
-                                            {TOPIC_CONFIGS[activeTopic].prompts[
+                                        <Markdown
+                                            content={TOPIC_CONFIGS[activeTopic].prompts[
                                                 criterion
                                             ]}
-                                        </div>
+                                            class="text-xs leading-relaxed {color.text.replace('text-', 'prose-')}"
+                                        />
                                     </div>
                                 {/each}
                             </div>
