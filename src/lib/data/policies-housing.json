@@ -2,7 +2,158 @@
   {
     "party_name": "Labour",
     "color": "#E4003B",
-    "policies": []
+    "policies": [
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The Renters’ Rights Act 2025 will abolish ‘Section 21’ evictions, giving renters greater security and stability. The Act will also empower tenants to challenge excessive above-market rents which are purely designed to force them out.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 2: Strong foundations, Section 2.13"
+        },
+        "scores": {
+          "renters_rights": {
+            "reasoning": "Abolishing Section 21 evictions fundamentally increases security of tenure for all renters, protecting them from arbitrary evictions. Empowering tenants to challenge excessive rents further enhances affordability protections.",
+            "score": 9,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "A High Value Council Tax Surcharge (HVCTS) will be introduced on owners of residential property in England worth £2 million or more, starting in 2028-29.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 4: Policy Decisions, Section 4.121"
+        },
+        "scores": {
+          "renters_rights": {
+            "reasoning": "This policy introduces a tax surcharge on owners of high-value residential property, which does not directly impact renters' security of tenure, eviction protections, affordability, or other core renters' rights.",
+            "score": 5,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The government is committed to implementing Social Rent convergence, allowing rents for Social Rent properties that are currently below ‘formula rent’ to increase until they converge. A decision on the implementation will be announced in January 2026.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 3: Secure Future, Section 3.28"
+        },
+        "scores": {
+          "renters_rights": {
+            "reasoning": "This policy allows for increases in social housing rents for properties currently below formula rent, which will negatively impact affordability for affected social housing tenants.",
+            "score": 3,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The government remains committed to the 10-year rent settlement for 2026-36, which will permit social housing rents to increase by the Consumer Prices Index (CPI) plus 1% per annum.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 3: Secure Future, Section 3.28"
+        },
+        "scores": {
+          "renters_rights": {
+            "reasoning": "This commitment allows social housing rents to increase above inflation (CPI + 1%) annually, which will moderately harm affordability for social housing tenants over a prolonged period.",
+            "score": 4,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The government will shortly consult on the reform of VAT rules to incentivise the development of land intended for social housing.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 4: Policy Decisions, Section 4.183"
+        },
+        "scores": {
+          "renters_rights": {
+            "reasoning": "This policy is about consulting on VAT rules to incentivize social housing development, which does not directly or immediately impact existing renters' rights, security of tenure, or affordability protections. Any benefit is indirect and long-term.",
+            "score": 5,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The National Housing Delivery Fund will be devolved to support local leaders in delivering ambitious growth projects and developing strategic sites across the country.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 3: Secure Future, Section 3.27"
+        },
+        "scores": {
+          "renters_rights": {
+            "reasoning": "This policy concerns devolving a fund for housing delivery and growth projects, which does not directly alter renters' rights, security of tenure, or specific protections. Its impact on renters is indirect and long-term.",
+            "score": 5,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The Defence Housing Strategy is backed by an extra £1.5 billion investment this Parliament, with a total of £9 billion committed over the next decade.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 3: Secure Future, Section 3.29"
+        },
+        "scores": {
+          "renters_rights": {
+            "reasoning": "This policy concerns investment in Defence Housing, which primarily affects military personnel. It has no direct impact on the rights or protections of the general renter population.",
+            "score": 5,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The government will prevent the gap between the two rates of Landfill Tax from getting any wider to avoid undermining the target of building 1.5 million new homes in England.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 3: Secure Future, Section 3.30"
+        },
+        "scores": {
+          "renters_rights": {
+            "reasoning": "This policy relates to Landfill Tax and house building targets, which is an indirect supply-side measure and does not directly affect renters' rights, security of tenure, or affordability protections.",
+            "score": 5,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The government will amend Stamp Duty Land Tax (SDLT) rules so that property transferred within Local Government Pension Schemes is subject to an SDLT relief.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 4: Policy Decisions, Section 4.220"
+        },
+        "scores": {
+          "renters_rights": {
+            "reasoning": "This policy amends Stamp Duty Land Tax rules for specific property transfers within Local Government Pension Schemes, which has no direct bearing on renters' rights, security, or affordability.",
+            "score": 5,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The government is consulting on reducing the prevalence of privately managed estates and ensuring private homeowners have access to public amenities such as roads, play areas, and open spaces.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 2: Strong foundations, Section 2.14"
+        },
+        "scores": {
+          "renters_rights": {
+            "reasoning": "This policy is a consultation specifically addressing homeowners' access to amenities on privately managed estates, and does not directly relate to or impact renters' rights or protections.",
+            "score": 5,
+            "weight": 1
+          }
+        }
+      }
+    ]
   },
   {
     "party_name": "Conservative",

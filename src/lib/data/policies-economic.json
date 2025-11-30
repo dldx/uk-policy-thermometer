@@ -2,7 +2,408 @@
   {
     "party_name": "Labour",
     "color": "#E4003B",
-    "policies": []
+    "policies": [
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The government is doubling the buffer against the stability rule, with the current budget surplus forecast to reach £21.7 billion in 2029-30, meeting the stability rule a year early.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Executive Summary and Chapter 1: Economic and fiscal outlook, Sections 1.3 and 1.40"
+        },
+        "scores": {
+          "inequality": {
+            "reasoning": "This policy focuses on fiscal prudence and achieving a budget surplus, with no direct or significant impact on wealth or income distribution, access to services, or specific regional/intergenerational equity issues.",
+            "score": 5,
+            "weight": 1
+          },
+          "economic_democracy": {
+            "reasoning": "This policy is a technical fiscal management measure focused on government budgeting and financial stability. It does not directly impact democratic control of the economy, worker rights, public ownership, corporate accountability, or community wealth.",
+            "score": 5,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "A High Value Council Tax Surcharge will be introduced on homes worth over £2 million, as part of measures to ensure assets contribute fairly to the tax system.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Executive Summary and Chapter 1: Economic and fiscal outlook, Section 1.28 and Executive Summary (Making the tax system fairer)"
+        },
+        "scores": {
+          "inequality": {
+            "reasoning": "Introducing a surcharge on high-value homes is a progressive tax measure, specifically targeting the wealthiest homeowners and aiming to ensure assets contribute more fairly to the tax system, thus modestly reducing wealth inequality.",
+            "score": 7,
+            "weight": 2
+          },
+          "economic_democracy": {
+            "reasoning": "This policy is a progressive tax measure aimed at fairness in asset contribution. While it addresses wealth distribution, it does not directly impact the democratic control of economic sectors, worker participation, public ownership, or corporate governance structures.",
+            "score": 5,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "Taxes will be raised on property, dividend, and savings income to help close the gap between tax paid on work and tax paid on income from assets.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Executive Summary and Chapter 1: Economic and fiscal outlook, Section 1.28 and Executive Summary (Making the tax system fairer)"
+        },
+        "scores": {
+          "inequality": {
+            "reasoning": "Raising taxes on property, dividend, and savings income aims to reduce the gap between taxation on earned income and income from assets, disproportionately affecting wealthier individuals and significantly contributing to fairer wealth and income distribution.",
+            "score": 8,
+            "weight": 3
+          },
+          "economic_democracy": {
+            "reasoning": "This policy involves raising taxes on capital income to reduce the disparity with earned income. While promoting tax fairness, it does not directly alter mechanisms of economic control, ownership, or democratic participation in the economy.",
+            "score": 5,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The two-child limit in Universal Credit (UC) will be scrapped, a measure expected to lift 450,000 children out of poverty.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Executive Summary and Chapter 4: Policy Decisions, Section 4.54"
+        },
+        "scores": {
+          "inequality": {
+            "reasoning": "Scrapping the two-child limit in Universal Credit directly increases financial support for low-income families with more children, explicitly aiming to lift 450,000 children out of poverty, which is a significant reduction in income inequality.",
+            "score": 9,
+            "weight": 3
+          },
+          "economic_democracy": {
+            "reasoning": "This policy is a social welfare measure aimed at reducing child poverty. While it improves the economic security of many families, it does not directly alter democratic control over economic sectors, worker participation, or corporate governance.",
+            "score": 5,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "Universal Credit (UC) rates will be rebalanced to ensure it does not pay to be off sick rather than work, as part of welfare system reforms.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Executive Summary and Chapter 4: Policy Decisions, Section 4.55"
+        },
+        "scores": {
+          "inequality": {
+            "reasoning": "Rebalancing Universal Credit rates to disincentivize being off sick may reduce support for vulnerable individuals genuinely unable to work, potentially increasing hardship and exacerbating income inequality for this group without clear safeguards.",
+            "score": 3,
+            "weight": 2
+          },
+          "economic_democracy": {
+            "reasoning": "This policy reforms Universal Credit to adjust work incentives. It does not directly affect democratic control of the economy, worker rights, public ownership, corporate accountability, or community wealth.",
+            "score": 5,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The National Living Wage for the lowest paid will be increased to £12.71 per hour in April 2026.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Executive Summary and Chapter 4: Policy Decisions, Section 4.4"
+        },
+        "scores": {
+          "inequality": {
+            "reasoning": "Increasing the National Living Wage directly benefits the lowest-paid workers, boosting their income and helping to close the income gap between the highest and lowest earners, thereby reducing income inequality.",
+            "score": 7,
+            "weight": 2
+          },
+          "economic_democracy": {
+            "reasoning": "This policy directly increases the minimum wage, improving the economic standing and bargaining power of low-paid workers. While not a change in ownership or direct governance, it enhances worker economic leverage, which is a foundational aspect of economic democracy.",
+            "score": 6,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "Measures will be implemented to remove around £150 of costs on average from household energy bills from April next year, achieved by ending the Energy Company Obligation and funding 75% of the legacy Renewables Obligation.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Executive Summary and Chapter 4: Policy Decisions, Section 4.3"
+        },
+        "scores": {
+          "inequality": {
+            "reasoning": "Reducing household energy bills, on average, provides financial relief to all households. While universal, this measure disproportionately benefits lower-income households as energy costs represent a larger share of their budget, modestly reducing inequality.",
+            "score": 6,
+            "weight": 2
+          },
+          "economic_democracy": {
+            "reasoning": "This policy focuses on reducing household energy bills through changes in funding mechanisms for energy obligations. It does not alter public or worker ownership, corporate accountability, or democratic participation in the energy sector's governance.",
+            "score": 5,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "Public investment will be protected and increased over the Parliament, including committing almost £900 million to complete publicly funded works for the Lower Thames Crossing.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Executive Summary and Chapter 4: Policy Decisions, Section 4.25"
+        },
+        "scores": {
+          "inequality": {
+            "reasoning": "Protecting and increasing public investment, particularly in infrastructure, can create jobs and stimulate economic activity, potentially benefiting local economies and reducing regional inequalities, though the direct impact on overall wealth distribution is indirect.",
+            "score": 6,
+            "weight": 2
+          },
+          "economic_democracy": {
+            "reasoning": "This policy increases and protects public investment, strengthening the public sector's role in the economy and contributing to the creation and maintenance of publicly funded assets. While not specifying democratic governance of projects, it supports public ownership.",
+            "score": 6,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "Tax changes will be introduced to incentivise greater investment into scaling companies, alongside a new UK Listing Relief from Stamp Duty Reserve Tax and reforms to the UK R&D system.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Executive Summary and Chapter 4: Policy Decisions, Section 4.148, 4.150, and 4.170"
+        },
+        "scores": {
+          "inequality": {
+            "reasoning": "Incentivizing investment and providing tax relief primarily benefits investors and company owners. Without specific redistributive mechanisms, such policies can increase wealth concentration and potentially widen the gap between capital owners and workers.",
+            "score": 4,
+            "weight": 2
+          },
+          "economic_democracy": {
+            "reasoning": "This policy incentivizes private capital investment and growth in scaling companies through tax changes, without incorporating measures for worker control, public ownership, or enhanced democratic corporate accountability. This strengthens capital's power within the existing corporate structure.",
+            "score": 4,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "Business rates will be permanently lowered for retail, hospitality, and leisure businesses, funded by higher rates for the most expensive properties, such as warehouses used by large online retailers.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Executive Summary and Chapter 4: Policy Decisions, Section 4.29"
+        },
+        "scores": {
+          "inequality": {
+            "reasoning": "Lowering business rates for retail, hospitality, and leisure businesses, funded by higher rates for large online retailers, supports sectors that provide diverse employment and face strong competition, potentially protecting jobs and local economies, thus moderately reducing regional and employment inequality.",
+            "score": 7,
+            "weight": 2
+          },
+          "economic_democracy": {
+            "reasoning": "This policy involves a rebalancing of business rates between different types of commercial properties. While it redistributes tax burdens, it does not alter democratic control mechanisms, ownership structures, or worker participation within these businesses or the broader economy.",
+            "score": 5,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The Capital Gains Tax (CGT) rate for Business Asset Disposal Relief and Investors’ Relief will increase to match the main lower rate at 18%, effective from 6 April 2026.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 2: Strong foundations, Section 2.32"
+        },
+        "scores": {
+          "economic_democracy": {
+            "reasoning": "This policy is a fiscal measure increasing Capital Gains Tax rates. It does not directly impact democratic control of economic sectors, worker rights, public ownership, or corporate governance structures.",
+            "score": 5,
+            "weight": 1
+          },
+          "inequality": {
+            "reasoning": "Increasing Capital Gains Tax rates for business asset disposal and investors' relief is a progressive measure, as it increases the tax burden on profits from asset sales and investments, which primarily accrue to wealthier individuals and business owners.",
+            "score": 7,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "New separate tax rates will be created for property income. From 2027-28, the property basic rate will be 22%, the higher rate will be 42%, and the additional rate will be 47%.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 4: Policy Decisions, Section 4.114"
+        },
+        "scores": {
+          "economic_democracy": {
+            "reasoning": "This policy introduces new tax rates for property income. While it has redistributive implications, it does not directly affect democratic control over economic sectors, worker participation, public ownership, or corporate governance.",
+            "score": 5,
+            "weight": 1
+          },
+          "inequality": {
+            "reasoning": "Creating separate and potentially higher tax rates for property income, especially at higher and additional bands, is a progressive measure. It targets income generated from property ownership, which often benefits wealthier individuals and landlords, thus contributing to a more equitable distribution of income from capital.",
+            "score": 7,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The government will increase the ordinary and upper rates of tax on dividend income by 2 percentage points from April 2026.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 2: Strong foundations, Section 2.36"
+        },
+        "scores": {
+          "economic_democracy": {
+            "reasoning": "This is a fiscal policy increasing tax rates on dividend income. It does not directly impact democratic control of economic sectors, worker rights, public ownership, or corporate governance structures.",
+            "score": 5,
+            "weight": 1
+          },
+          "inequality": {
+            "reasoning": "Increasing the rates of tax on dividend income is a progressive policy. Dividend income primarily benefits shareholders and investors, who typically belong to higher wealth and income brackets. This measure aims to increase the tax contribution from capital income, thereby reducing income inequality.",
+            "score": 7,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The tax rate on savings income will increase by 2 percentage points across all bands from April 2027.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 2: Strong foundations, Section 2.36"
+        },
+        "scores": {
+          "economic_democracy": {
+            "reasoning": "This is a fiscal policy increasing tax rates on savings income. It does not directly impact democratic control of economic sectors, worker rights, public ownership, or corporate governance structures.",
+            "score": 5,
+            "weight": 1
+          },
+          "inequality": {
+            "reasoning": "Increasing the tax rate on savings income across all bands is a progressive measure. While affecting all savers, those with substantial savings income are typically wealthier, meaning this change will disproportionately increase tax contributions from higher-income individuals.",
+            "score": 6,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The government will abolish the dividend tax credit for non-UK residents with UK income, aligning their treatment with UK residents. This will be legislated for in Finance Bill 2025-26.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 4: Policy Decisions, Section 4.122"
+        },
+        "scores": {
+          "economic_democracy": {
+            "reasoning": "This policy abolishes a tax credit for non-UK residents to align tax treatment. It is a technical tax adjustment and does not directly affect democratic control over economic sectors or governance.",
+            "score": 5,
+            "weight": 1
+          },
+          "inequality": {
+            "reasoning": "Abolishing the dividend tax credit for non-UK residents with UK income ensures that a specific group no longer receives a tax advantage. This aligns their tax treatment with UK residents, promoting fairness in the tax system and potentially increasing government revenue, which can indirectly aid in reducing inequality.",
+            "score": 6,
+            "weight": 1
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The government will modernise the anti-avoidance provisions that apply to share exchanges and company reorganisations for Capital Gains Tax, with immediate effect.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 4: Policy Decisions, Section 4.141"
+        },
+        "scores": {
+          "economic_democracy": {
+            "reasoning": "This policy modernises anti-avoidance tax provisions. While it promotes tax fairness and indirectly strengthens corporate accountability to the tax system, it does not directly impact democratic control of economic sectors, worker participation, or governance structures.",
+            "score": 5,
+            "weight": 1
+          },
+          "inequality": {
+            "reasoning": "Modernising anti-avoidance provisions for Capital Gains Tax on share exchanges and company reorganisations targets sophisticated methods used by wealthier individuals and businesses to reduce their tax liabilities. This measure enhances tax fairness and ensures a more equitable contribution from capital gains.",
+            "score": 7,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The government will amend non-resident Capital Gains Tax rules to close loopholes for protected cell companies and clarify legislation for investors, with administrative reforms from 6 April 2026.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 4: Policy Decisions, Section 4.142"
+        },
+        "scores": {
+          "economic_democracy": {
+            "reasoning": "This policy amends non-resident Capital Gains Tax rules to close loopholes and clarify legislation. It is an administrative and anti-avoidance measure, not directly impacting democratic control over economic sectors or governance.",
+            "score": 5,
+            "weight": 1
+          },
+          "inequality": {
+            "reasoning": "Amending non-resident Capital Gains Tax rules to close loopholes for specific entities and clarify legislation is a progressive step. It aims to prevent tax avoidance by non-resident investors and companies using complex structures, ensuring they contribute more fairly to the tax system.",
+            "score": 7,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "Inheritance Tax avoidance will be prevented through legislative changes, including ensuring UK agricultural property held via non-UK entities is treated as UK-situated (from 6 April 2026).",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 4: Policy Decisions, Section 4.200"
+        },
+        "scores": {
+          "economic_democracy": {
+            "reasoning": "This policy aims to prevent Inheritance Tax avoidance. While it promotes fiscal fairness, it does not directly impact democratic control of economic sectors, worker participation, public ownership, or corporate governance structures.",
+            "score": 5,
+            "weight": 1
+          },
+          "inequality": {
+            "reasoning": "Preventing Inheritance Tax (IHT) avoidance, especially for UK agricultural property held via non-UK entities, is a highly progressive measure. IHT is designed to redistribute wealth, and closing avoidance loopholes ensures that more inherited wealth is taxed, directly combating wealth concentration and intergenerational inequality among the richest.",
+            "score": 8,
+            "weight": 3
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "The government will restrict Inheritance Tax charity exemptions to direct gifts to UK charities and clubs (for gifts in lifetime from 26 November 2025 or on death from 6 April 2026).",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 4: Policy Decisions, Section 4.200"
+        },
+        "scores": {
+          "economic_democracy": {
+            "reasoning": "This policy restricts Inheritance Tax charity exemptions. It is a change to tax incentives for charitable giving and does not directly affect democratic control over economic sectors or governance.",
+            "score": 5,
+            "weight": 1
+          },
+          "inequality": {
+            "reasoning": "Restricting Inheritance Tax charity exemptions to direct gifts to UK charities helps to ensure that more wealth is subject to IHT. This measure aims to prevent potential exploitation of loopholes, thereby increasing the effectiveness of IHT in redistributing wealth and reducing inequality.",
+            "score": 6,
+            "weight": 2
+          }
+        }
+      },
+      {
+        "date_announced": "2025-11-26",
+        "policy_text": "A cap of £5 million will be introduced on relevant property trust charges for pre-30 October 2024 excluded property trusts, applying to trust charges from 6 April 2025.",
+        "source": {
+          "url": "E03444720_Budget_2025_Web_Accessible.pdf",
+          "notes": "Chapter 4: Policy Decisions, Section 4.201"
+        },
+        "scores": {
+          "economic_democracy": {
+            "reasoning": "This policy introduces a cap on relevant property trust charges. It is a highly specific fiscal adjustment related to trusts and does not directly affect democratic control of economic sectors or governance.",
+            "score": 5,
+            "weight": 1
+          },
+          "inequality": {
+            "reasoning": "Introducing a £5 million cap on relevant property trust charges for specific excluded property trusts could be regressive. If the cap limits the tax collected from very large trusts that would otherwise incur higher charges, it effectively reduces the tax burden on the wealthiest individuals using these trusts, potentially exacerbating wealth concentration.",
+            "score": 3,
+            "weight": 2
+          }
+        }
+      }
+    ]
   },
   {
     "party_name": "Conservative",

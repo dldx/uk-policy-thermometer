@@ -2,6 +2,9 @@
     import { Plot, Dot, Line, RegressionY } from "svelteplot";
     import { weightedLoess } from "../utils";
     import PolicyTooltip from "./PolicyTooltip.svelte";
+    import { dodgeX } from "svelteplot/transforms/dodge.js";
+    import { forceSimulation, forceX, forceY, forceCollide } from "d3-force";
+    import { scaleTime, scaleLinear } from "d3-scale";
 
     interface Score {
         score: number;
@@ -33,6 +36,11 @@
         date: Date;
         tweenedScore: number;
         tweenedWeight: number;
+        // Simulated positions
+        simulatedDate?: Date;
+        simulatedScore?: number;
+        x?: number; // d3-force internal
+        y?: number; // d3-force internal
     }
 
     let {
@@ -40,22 +48,32 @@
         criterion = "human_rights",
         title = "Policy Impact",
         criterionLabel = "",
-    }: { data: Party[]; criterion?: string; title?: string; criterionLabel?: string } = $props();
+    }: {
+        data: Party[];
+        criterion?: string;
+        title?: string;
+        criterionLabel?: string;
+    } = $props();
 
     // State for toggling parties
     let visibleParties = $state(new Set(data.map((d) => d.party_name)));
 
     // State for locked tooltip (for click-to-persist behavior)
-    let lockedTooltip = $state<TweenedPolicy | null>(null);
+    let lockedTooltipKey = $state<string | null>(null);
 
     // State for hovered tooltip
-    let hoveredTooltip = $state<TweenedPolicy | null>(null);
+    let hoveredTooltipKey = $state<string | null>(null);
 
     // State for hovered party
     let hoveredParty = $state<string | null>(null);
 
     // Tooltip position
-    let tooltipPosition = $state<{ x: number; y: number; transform: string; margin: string } | null>(null);
+    let tooltipPosition = $state<{
+        x: number;
+        y: number;
+        transform: string;
+        margin: string;
+    } | null>(null);
 
     // Track if mouse is over tooltip
     let isMouseOverTooltip = $state(false);
@@ -81,6 +99,11 @@
     function cubicOut(t: number): number {
         const f = t - 1;
         return f * f * f + 1;
+    }
+
+    // Helper to generate unique key for policy
+    function getPolicyKey(partyName: string, policy: Policy): string {
+        return `${partyName}-${policy.date_announced}-${policy.policy_text.substring(0, 50)}`;
     }
 
     // Update all tween values
@@ -146,7 +169,7 @@
 
         for (const party of data) {
             for (const policy of party.policies) {
-                const policyKey = `${party.party_name}-${policy.date_announced}-${policy.policy_text.substring(0, 50)}`;
+                const policyKey = getPolicyKey(party.party_name, policy);
                 const newScore = policy.scores[currentCriterion]?.score ?? 0;
                 const newWeight = policy.scores[currentCriterion]?.weight ?? 0;
 
@@ -247,7 +270,7 @@
                 hoveredParty === party.party_name,
         )) {
             for (const policy of party.policies) {
-                const policyKey = `${party.party_name}-${policy.date_announced}-${policy.policy_text.substring(0, 50)}`;
+                const policyKey = getPolicyKey(party.party_name, policy);
                 const scoreTween = scoreTweens.get(policyKey);
                 const weightTween = weightTweens.get(policyKey);
 
@@ -267,7 +290,10 @@
         return policies;
     });
 
-    function calculateTooltipPosition(clientX: number, clientY: number): { x: number; y: number; transform: string; margin: string } {
+    function calculateTooltipPosition(
+        clientX: number,
+        clientY: number,
+    ): { x: number; y: number; transform: string; margin: string } {
         // Estimate tooltip size (can be adjusted based on actual content)
         const tooltipWidth = 450; // max-width is 28rem ~ 448px
         const tooltipHeight = 400; // estimated height
@@ -306,39 +332,47 @@
             x,
             y,
             transform: `translate(${translateX}, ${translateY})`,
-            margin: `${marginTop} 0 0 ${marginLeft}`
+            margin: `${marginTop} 0 0 ${marginLeft}`,
         };
     }
 
     function handlePolicyClick(policy: TweenedPolicy, event: MouseEvent) {
         event.stopPropagation();
-        if (lockedTooltip === policy) {
-            lockedTooltip = null;
+        const key = getPolicyKey(policy.party_name, policy);
+
+        if (lockedTooltipKey === key) {
+            lockedTooltipKey = null;
             tooltipPosition = null;
         } else {
-            lockedTooltip = policy;
-            hoveredTooltip = null;
-            tooltipPosition = calculateTooltipPosition(event.clientX, event.clientY);
+            lockedTooltipKey = key;
+            hoveredTooltipKey = null;
+            tooltipPosition = calculateTooltipPosition(
+                event.clientX,
+                event.clientY,
+            );
         }
     }
 
     function handlePolicyMouseOver(policy: TweenedPolicy, event: MouseEvent) {
-        if (!lockedTooltip) {
+        if (!lockedTooltipKey) {
             if (hoverTimeout) {
                 clearTimeout(hoverTimeout);
                 hoverTimeout = null;
             }
-            hoveredTooltip = policy;
-            tooltipPosition = calculateTooltipPosition(event.clientX, event.clientY);
+            hoveredTooltipKey = getPolicyKey(policy.party_name, policy);
+            tooltipPosition = calculateTooltipPosition(
+                event.clientX,
+                event.clientY,
+            );
         }
     }
 
     function handlePolicyMouseLeave() {
-        if (!lockedTooltip) {
+        if (!lockedTooltipKey) {
             // Delay clearing to allow mouse to move to tooltip
             hoverTimeout = setTimeout(() => {
                 if (!isMouseOverTooltip) {
-                    hoveredTooltip = null;
+                    hoveredTooltipKey = null;
                     tooltipPosition = null;
                 }
             }, 100);
@@ -355,22 +389,140 @@
 
     function handleTooltipMouseLeave() {
         isMouseOverTooltip = false;
-        if (!lockedTooltip) {
-            hoveredTooltip = null;
+        if (!lockedTooltipKey) {
+            hoveredTooltipKey = null;
             tooltipPosition = null;
         }
     }
 
     // Close locked tooltip when clicking outside
     function handleChartClick() {
-        if (lockedTooltip) {
-            lockedTooltip = null;
+        if (lockedTooltipKey) {
+            lockedTooltipKey = null;
             tooltipPosition = null;
         }
     }
 
     // Derived state for active tooltip
-    let activeTooltip = $derived(lockedTooltip || hoveredTooltip);
+    let activeTooltip = $derived.by(() => {
+        const key = lockedTooltipKey || hoveredTooltipKey;
+        if (!key) return null;
+
+        // Find the policy in the current tweenedPolicies list
+        // This ensures we get the latest reactive values
+        return (
+            tweenedPolicies.find(
+                (p) => getPolicyKey(p.party_name, p) === key,
+            ) || null
+        );
+    });
+    // Chart configuration
+    const chartConfig = {
+        x: {
+            domain: [new Date("2021-01-01"), new Date("2025-12-31")],
+            margin: { left: 50, right: 30 },
+        },
+        y: {
+            domain: [0, 10],
+            margin: { top: 20, bottom: 40 },
+        },
+    };
+
+    // Simulation state
+    let chartWidth = $state(800);
+    let chartHeight = $state(600);
+    let useForceSimulation = $state(false);
+    let simulationTimeout: ReturnType<typeof setTimeout> | null = null;
+
+    // Reset simulation delay when criterion or visible parties change
+    $effect(() => {
+        // Track dependencies
+        const _ = criterion;
+        const __ = visibleParties;
+        const ___ = tweenedPolicies; // Also track data changes (e.g., from slider updates)
+
+        // Clear existing timeout
+        if (simulationTimeout) {
+            clearTimeout(simulationTimeout);
+        }
+
+        // Disable force simulation immediately
+        useForceSimulation = false;
+
+        // Enable force simulation after 1 second
+        simulationTimeout = setTimeout(() => {
+            useForceSimulation = true;
+        }, 1000);
+
+        return () => {
+            if (simulationTimeout) {
+                clearTimeout(simulationTimeout);
+            }
+        };
+    });
+
+    // Run force simulation to prevent overlap (only when enabled)
+    let simulatedPolicies = $derived.by(() => {
+        const policies = [...tweenedPolicies]; // Create a shallow copy to mutate
+
+        if (policies.length === 0) return [];
+
+        // Define scales matching the Plot configuration
+        const xScale = scaleTime()
+            .domain(chartConfig.x.domain)
+            .range([
+                chartConfig.x.margin.left,
+                chartWidth - chartConfig.x.margin.right,
+            ]);
+
+        const yScale = scaleLinear()
+            .domain(chartConfig.y.domain)
+            .range([
+                chartHeight - chartConfig.y.margin.bottom,
+                chartConfig.y.margin.top,
+            ]);
+
+        // Initialize positions
+        const nodes = policies.map((p) => ({
+            ...p,
+            x: xScale(p.date),
+            y: yScale(p.tweenedScore),
+            r: 2 ** p.tweenedWeight + 2, // Radius for collision
+        }));
+
+        // Only run simulation if enabled
+        if (useForceSimulation) {
+            // Run simulation synchronously
+            const simulation = forceSimulation(nodes)
+                .force(
+                    "x",
+                    forceX((d: TweenedPolicy) => xScale(d.date)).strength(1),
+                ) // Strong pull to original X
+                .force(
+                    "y",
+                    forceY((d: TweenedPolicy) =>
+                        yScale(d.tweenedScore),
+                    ).strength(0.1),
+                ) // Weaker pull to original Y
+                .force(
+                    "collide",
+                    forceCollide(
+                        (d: TweenedPolicy & { r: number }) => d.r + 1,
+                    ).iterations(3),
+                ) // Prevent overlap
+                .stop();
+
+            // Tick simulation enough times to stabilize
+            for (let i = 0; i < 120; ++i) simulation.tick();
+        }
+
+        // Map back to data coordinates for Plot
+        return nodes.map((node) => ({
+            ...node,
+            simulatedDate: xScale.invert(node.x!),
+            simulatedScore: yScale.invert(node.y!),
+        }));
+    });
 </script>
 
 <div class="relative flex flex-col">
@@ -380,6 +532,7 @@
     <div
         class="relative bg-white shadow-sm p-4 border border-gray-100 rounded-xl w-full chart-container"
         onclick={handleChartClick}
+        bind:clientWidth={chartWidth}
     >
         <!-- Legend -->
         <div
@@ -392,7 +545,9 @@
                         ? party.color + "20"
                         : "transparent"}
                     style:border-color={party.color}
-                    style:opacity={visibleParties.has(party.party_name) ? 1 : 0.5}
+                    style:opacity={visibleParties.has(party.party_name)
+                        ? 1
+                        : 0.5}
                     onclick={() => handlePartyClick(party.party_name)}
                     ondblclick={() => handlePartyDoubleClick(party.party_name)}
                     onmouseenter={() => (hoveredParty = party.party_name)}
@@ -411,19 +566,19 @@
         <Plot
             height={600}
             x={{
-                domain: [new Date("2021-01-01"), new Date("2025-12-31")],
+                domain: chartConfig.x.domain,
                 grid: true,
             }}
             y={{
-                domain: [0, 10],
+                domain: chartConfig.y.domain,
                 grid: true,
             }}
-            marginLeft={50}
-            marginRight={30}
-            marginTop={20}
-            marginBottom={40}
+            marginLeft={chartConfig.x.margin.left}
+            marginRight={chartConfig.x.margin.right}
+            marginTop={chartConfig.y.margin.top}
+            marginBottom={chartConfig.y.margin.bottom}
             class="font-[Inter] [&_h3]:text-xl [&_h2]:text-center [&_h3]:text-center"
-            title={title}
+            {title}
             subtitle={criterionLabel}
         >
             <!-- Weighted LOESS Regression Lines for each party -->
@@ -476,10 +631,16 @@
                 /> -->
 
                 <!-- Data Points -->
+                <!-- We use the simulated positions for the dots to avoid overlap -->
+                {@const simulatedPoints = simulatedPolicies.filter(
+                    (p: TweenedPolicy) =>
+                        p.party_name === party.party_name &&
+                        p.scores[criterion],
+                )}
                 <Dot
-                    data={partyTweenedPolicies as any}
-                    x={(d: TweenedPolicy) => d.date}
-                    y={(d: TweenedPolicy) => d.tweenedScore}
+                    data={simulatedPoints}
+                    x={(d: TweenedPolicy) => d.simulatedDate}
+                    y={(d: TweenedPolicy) => d.simulatedScore}
                     r={(d: TweenedPolicy) => 2 ** d.tweenedWeight + 2}
                     fill={party.color}
                     opacity={hoveredParty
@@ -488,8 +649,10 @@
                             : 0.05 // hover opacity of other parties
                         : 0.2}
                     cursor="pointer"
-                    onclick={(event: MouseEvent, d: TweenedPolicy) => handlePolicyClick(d, event)}
-                    onmouseover={(event: MouseEvent, d: TweenedPolicy) => handlePolicyMouseOver(d, event)}
+                    onclick={(event: MouseEvent, d: TweenedPolicy) =>
+                        handlePolicyClick(d, event)}
+                    onmouseover={(event: MouseEvent, d: TweenedPolicy) =>
+                        handlePolicyMouseOver(d, event)}
                     onmouseleave={handlePolicyMouseLeave}
                 />
             {/each}
@@ -514,7 +677,7 @@
                 datum={activeTooltip}
                 {criterion}
                 onPolicyClick={(policy) => {
-                    lockedTooltip = null;
+                    lockedTooltipKey = null;
                     tooltipPosition = null;
                 }}
             />

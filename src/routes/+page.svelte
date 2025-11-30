@@ -9,7 +9,12 @@
     import housingPolicies from "$lib/data/policies-housing.json";
     import { TOPIC_CONFIGS } from "$lib/data/scoring-criteria";
 
-    type Topic = "migration" | "environmental" | "economic" | "housing";
+    type Topic =
+        | "migration"
+        | "environmental"
+        | "economic"
+        | "housing"
+        | "combined";
 
     const topics = {
         migration: {
@@ -69,18 +74,125 @@
                 renters_rights: "Renters' Rights",
             },
         },
+        combined: {
+            data: [], // Will be computed dynamically
+            title: "Combined Impact",
+            colors: {
+                bg: "bg-purple-600",
+                hover: "hover:bg-purple-50",
+                border: "border-purple-100",
+            },
+            criteria: [],
+            criteriaLabels: {},
+        },
     };
 
     let activeTopic = $state<Topic>("migration");
     let activeCriterion = $state<string>("human_rights");
     let methodologyOpen = $state(false);
 
+    // Sliders state
+    let weights = $state({
+        human_rights: 1.0,
+        economic_impact: 1.0,
+        climate_impact: 1.0,
+        biodiversity: 1.0,
+        financial_risk: 1.0,
+        inequality: 1.0,
+        economic_democracy: 1.0,
+        affordability: 1.0,
+        renters_rights: 1.0,
+    });
+
+    function resetWeights() {
+        weights = {
+            human_rights: 1.0,
+            economic_impact: 1.0,
+            climate_impact: 1.0,
+            biodiversity: 1.0,
+            financial_risk: 1.0,
+            inequality: 1.0,
+            economic_democracy: 1.0,
+            affordability: 1.0,
+            renters_rights: 1.0,
+        };
+    }
+
     // Update criterion when topic changes
     $effect(() => {
-        activeCriterion = topics[activeTopic].criteria[0];
+        if (activeTopic !== "combined") {
+            activeCriterion = topics[activeTopic].criteria[0];
+        }
+    });
+
+    // Compute combined data
+    let combinedData = $derived.by(() => {
+        if (activeTopic !== "combined") return [];
+
+        // We need to aggregate all policies from all topics for each party
+        const partyMap = new Map();
+
+        const allTopics = ["migration", "environmental", "economic", "housing"];
+
+        for (const topicKey of allTopics) {
+            const topicData = topics[topicKey as keyof typeof topics].data;
+            for (const party of topicData) {
+                if (!partyMap.has(party.party_name)) {
+                    partyMap.set(party.party_name, {
+                        party_name: party.party_name,
+                        color: party.color,
+                        policies: [],
+                    });
+                }
+
+                // Add policies with their scores weighted by the sliders
+                const partyEntry = partyMap.get(party.party_name);
+
+                for (const policy of party.policies) {
+                    let totalWeightedScore = 0;
+                    let totalWeight = 0;
+
+                    if (policy.scores) {
+                        for (const [criterion, scoreObj] of Object.entries(
+                            policy.scores,
+                        )) {
+                            const sliderWeight =
+                                weights[criterion as keyof typeof weights] ?? 0;
+                            if (sliderWeight > 0) {
+                                totalWeightedScore +=
+                                    scoreObj.score *
+                                    scoreObj.weight *
+                                    sliderWeight;
+                                totalWeight += scoreObj.weight * sliderWeight;
+                            }
+                        }
+                    }
+
+                    if (totalWeight > 0) {
+                        const finalScore = totalWeightedScore / totalWeight;
+                        // We create a synthetic policy object for the chart
+                        // Use log2 scale for weight to keep it reasonable for UI (max ~6 for realistic inputs)
+                        const displayWeight = Math.log2(totalWeight + 1);
+
+                        partyEntry.policies.push({
+                            ...policy,
+                            scores: {
+                                combined: {
+                                    score: finalScore,
+                                    weight: displayWeight,
+                                    reasoning:
+                                        "Combined score based on weighted criteria.",
+                                },
+                            },
+                        });
+                    }
+                }
+            }
+        }
+
+        return Array.from(partyMap.values());
     });
 </script>
-
 
 <div class="bg-amber-50 px-4 py-3 border-amber-200 border-b">
     <div
@@ -109,7 +221,7 @@
     class="px-4 md:px-6 py-6 min-h-screen overflow-hidden font-sans"
     style="background: linear-gradient(to bottom, #fb923c 0%, #fdba74 15%, #93c5fd 150%, #60a5fa 100%);"
 >
-<SkyDecoration />
+    <SkyDecoration />
     <div class="z-10 relative space-y-5 mx-auto max-w-7xl">
         <header class="space-y-3 text-center">
             <h1
@@ -154,7 +266,9 @@
                 {#each Object.entries(topics) as [topicKey, topicData]}
                     {@const isActive = activeTopic === topicKey}
                     <button
-                        class="px-6 py-2 rounded-md font-medium text-sm transition-all duration-200 {isActive ? topicData.colors.bg + ' text-white' : 'text-gray-700 ' + topicData.colors.hover}"
+                        class="px-6 py-2 rounded-md font-medium text-sm transition-all duration-200 {isActive
+                            ? topicData.colors.bg + ' text-white'
+                            : 'text-gray-700 ' + topicData.colors.hover}"
                         onclick={() => (activeTopic = topicKey as Topic)}
                     >
                         {topicData.title}
@@ -164,98 +278,188 @@
         </div>
 
         <main>
-            <!-- Criterion Selector -->
-            <div class="flex justify-center mb-4">
-                <div
-                    class="inline-flex bg-white shadow-sm p-1 border rounded-lg {topics[activeTopic].colors.border}"
-                >
-                    {#each topics[activeTopic].criteria as criterion}
-                        {@const isActive = activeCriterion === criterion}
-                        <button
-                            class="px-4 py-2 rounded-md font-medium text-sm transition-all duration-200 {isActive ? topics[activeTopic].colors.bg + ' text-white' : 'text-gray-700 ' + topics[activeTopic].colors.hover}"
-                            onclick={() => (activeCriterion = criterion)}
-                        >
-                            {topics[activeTopic].criteriaLabels[criterion]}
-                        </button>
-                    {/each}
+            <!-- Criterion Selector (Hidden for Combined) -->
+            {#if activeTopic !== "combined"}
+                <div class="flex justify-center mb-4">
+                    <div
+                        class="inline-flex bg-white shadow-sm p-1 border rounded-lg {topics[
+                            activeTopic
+                        ].colors.border}"
+                    >
+                        {#each topics[activeTopic].criteria as criterion}
+                            {@const isActive = activeCriterion === criterion}
+                            <button
+                                class="px-4 py-2 rounded-md font-medium text-sm transition-all duration-200 {isActive
+                                    ? topics[activeTopic].colors.bg +
+                                      ' text-white'
+                                    : 'text-gray-700 ' +
+                                      topics[activeTopic].colors.hover}"
+                                onclick={() => (activeCriterion = criterion)}
+                            >
+                                {topics[activeTopic].criteriaLabels[criterion]}
+                            </button>
+                        {/each}
+                    </div>
                 </div>
-            </div>
+            {:else}
+                <!-- Sliders for Combined View -->
+                <div
+                    class="bg-white/80 backdrop-blur-sm shadow-sm mb-6 p-6 border border-purple-100 rounded-xl"
+                >
+                    <div class="flex justify-center items-center gap-4 mb-4">
+                        <h3 class="font-semibold text-gray-800 text-center">
+                            Adjust Priority Weights
+                        </h3>
+                        <button
+                            class="bg-gray-100 hover:bg-gray-200 px-3 py-1 border border-gray-300 rounded-md text-gray-600 text-xs transition-colors"
+                            onclick={resetWeights}
+                        >
+                            Reset to 1x
+                        </button>
+                    </div>
+                    <div
+                        class="gap-x-8 gap-y-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+                    >
+                        {#each Object.entries(topics) as [topicKey, topicData]}
+                            {#if topicKey !== "combined"}
+                                <div class="space-y-3">
+                                    <h4
+                                        class="font-medium text-gray-500 text-xs uppercase tracking-wider"
+                                    >
+                                        {topicData.title}
+                                    </h4>
+                                    {#each topicData.criteria as criterion}
+                                        <div class="flex items-center gap-3">
+                                            <label
+                                                for="slider-{criterion}"
+                                                class="w-32 text-gray-700 text-sm truncate"
+                                                title={topicData.criteriaLabels[
+                                                    criterion
+                                                ]}
+                                            >
+                                                {topicData.criteriaLabels[
+                                                    criterion
+                                                ]}
+                                            </label>
+                                            <input
+                                                id="slider-{criterion}"
+                                                type="range"
+                                                min="0"
+                                                max="2"
+                                                step="0.1"
+                                                class="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-purple-600"
+                                                bind:value={
+                                                    weights[
+                                                        criterion as keyof typeof weights
+                                                    ]
+                                                }
+                                            />
+                                            <span
+                                                class="w-8 text-right text-gray-500 text-xs"
+                                                >{weights[
+                                                    criterion as keyof typeof weights
+                                                ].toFixed(1)}x</span
+                                            >
+                                        </div>
+                                    {/each}
+                                </div>
+                            {/if}
+                        {/each}
+                    </div>
+                </div>
+            {/if}
 
             <!-- Policy Chart -->
             {#snippet policyChartOrEmpty()}
-                {@const hasData =
-                    topics[activeTopic].data.length > 0 &&
-                    topics[activeTopic].data.some((p) => p.policies.length > 0)}
-                {@const hasScoredPolicies =
-                    hasData &&
-                    topics[activeTopic].data.some((p) =>
-                        p.policies.some(
-                            (policy) => policy.scores?.[activeCriterion],
-                        ),
-                    )}
-
-                {#if hasScoredPolicies}
+                {#if activeTopic === "combined"}
                     <PolicyChart
-                        data={topics[activeTopic].data}
-                        criterion={activeCriterion}
-                        title={topics[activeTopic].title}
-                        criterionLabel={topics[activeTopic].criteriaLabels[activeCriterion]}
+                        data={combinedData}
+                        criterion="combined"
+                        title="Combined Policy Impact"
+                        criterionLabel="Weighted Average Score"
                     />
-                {:else if hasData}
-                    <div
-                        class="bg-white shadow-sm p-12 border border-gray-200 rounded-xl text-center"
-                    >
-                        <svg
-                            class="mx-auto mb-4 w-16 h-16 text-amber-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-                            />
-                        </svg>
-                        <h3 class="mb-2 font-semibold text-gray-900 text-xl">
-                            No Scores for "{topics[activeTopic].criteriaLabels[
-                                activeCriterion
-                            ]}"
-                        </h3>
-                        <p class="mb-4 text-gray-600">
-                            Policies exist for {topics[
-                                activeTopic
-                            ].title.toLowerCase()}, but they haven't been scored
-                            for this criterion yet.
-                        </p>
-                    </div>
                 {:else}
-                    <div
-                        class="bg-white shadow-sm p-12 border border-gray-200 rounded-xl text-center"
-                    >
-                        <svg
-                            class="mx-auto mb-4 w-16 h-16 text-gray-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
+                    {@const hasData =
+                        topics[activeTopic].data.length > 0 &&
+                        topics[activeTopic].data.some(
+                            (p) => p.policies.length > 0,
+                        )}
+                    {@const hasScoredPolicies =
+                        hasData &&
+                        topics[activeTopic].data.some((p) =>
+                            p.policies.some(
+                                (policy) => policy.scores?.[activeCriterion],
+                            ),
+                        )}
+
+                    {#if hasScoredPolicies}
+                        <PolicyChart
+                            data={topics[activeTopic].data}
+                            criterion={activeCriterion}
+                            title={topics[activeTopic].title}
+                            criterionLabel={topics[activeTopic].criteriaLabels[
+                                activeCriterion
+                            ]}
+                        />
+                    {:else if hasData}
+                        <div
+                            class="bg-white shadow-sm p-12 border border-gray-200 rounded-xl text-center"
                         >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                            />
-                        </svg>
-                        <h3 class="mb-2 font-semibold text-gray-900 text-xl">
-                            No Data Available
-                        </h3>
-                        <p class="text-gray-600">
-                            Policy data for {topics[
-                                activeTopic
-                            ].title.toLowerCase()} has not been added yet.
-                        </p>
-                    </div>
+                            <svg
+                                class="mx-auto mb-4 w-16 h-16 text-amber-400"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                                />
+                            </svg>
+                            <h3
+                                class="mb-2 font-semibold text-gray-900 text-xl"
+                            >
+                                No Scores for "{topics[activeTopic]
+                                    .criteriaLabels[activeCriterion]}"
+                            </h3>
+                            <p class="mb-4 text-gray-600">
+                                Policies exist for {topics[
+                                    activeTopic
+                                ].title.toLowerCase()}, but they haven't been
+                                scored for this criterion yet.
+                            </p>
+                        </div>
+                    {:else}
+                        <div
+                            class="bg-white shadow-sm p-12 border border-gray-200 rounded-xl text-center"
+                        >
+                            <svg
+                                class="mx-auto mb-4 w-16 h-16 text-gray-400"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                />
+                            </svg>
+                            <h3
+                                class="mb-2 font-semibold text-gray-900 text-xl"
+                            >
+                                No Data Available
+                            </h3>
+                            <p class="text-gray-600">
+                                Policy data for {topics[
+                                    activeTopic
+                                ].title.toLowerCase()} has not been added yet.
+                            </p>
+                        </div>
+                    {/if}
                 {/if}
             {/snippet}
 
@@ -338,55 +542,79 @@
                         </div>
 
                         <!-- Scoring Criteria for Active Criterion -->
-                        <div>
-                            <div class="space-y-4">
-                                {#each [activeCriterion] as criterion}
-                                    {@const colors = [
-                                        {
-                                            bg: "bg-blue-50",
-                                            border: "border-blue-200",
-                                            text: "text-blue-900",
-                                        },
-                                        {
-                                            bg: "bg-green-50",
-                                            border: "border-green-200",
-                                            text: "text-green-900",
-                                        },
-                                        {
-                                            bg: "bg-amber-50",
-                                            border: "border-amber-200",
-                                            text: "text-amber-900",
-                                        },
-                                        {
-                                            bg: "bg-purple-50",
-                                            border: "border-purple-200",
-                                            text: "text-purple-900",
-                                        },
-                                    ]}
-                                    {@const index = Math.max(0, TOPIC_CONFIGS[activeTopic].criteria.indexOf(criterion))}
-                                    {@const color = colors[index % colors.length]}
-                                    {#if color && topics[activeTopic].criteriaLabels[criterion] && TOPIC_CONFIGS[activeTopic].prompts[criterion]}
-                                        <div
-                                            class="{color.bg} border {color.border} rounded-lg p-4"
-                                        >
-                                            <h5
-                                                class="font-semibold {color.text} mb-2"
+                        {#if activeTopic !== "combined"}
+                            <div>
+                                <div class="space-y-4">
+                                    {#each [activeCriterion] as criterion}
+                                        {@const colors = [
+                                            {
+                                                bg: "bg-blue-50",
+                                                border: "border-blue-200",
+                                                text: "text-blue-900",
+                                            },
+                                            {
+                                                bg: "bg-green-50",
+                                                border: "border-green-200",
+                                                text: "text-green-900",
+                                            },
+                                            {
+                                                bg: "bg-amber-50",
+                                                border: "border-amber-200",
+                                                text: "text-amber-900",
+                                            },
+                                            {
+                                                bg: "bg-purple-50",
+                                                border: "border-purple-200",
+                                                text: "text-purple-900",
+                                            },
+                                        ]}
+                                        {@const index = Math.max(
+                                            0,
+                                            TOPIC_CONFIGS[
+                                                activeTopic
+                                            ].criteria.indexOf(criterion),
+                                        )}
+                                        {@const color =
+                                            colors[index % colors.length]}
+                                        {#if color && topics[activeTopic].criteriaLabels[criterion] && TOPIC_CONFIGS[activeTopic].prompts[criterion]}
+                                            <div
+                                                class="{color.bg} border {color.border} rounded-lg p-4"
                                             >
-                                                {topics[activeTopic].criteriaLabels[
-                                                    criterion
-                                                ]}
-                                            </h5>
-                                            <Markdown
-                                                content={TOPIC_CONFIGS[activeTopic].prompts[
-                                                    criterion
-                                                ]}
-                                                class="text-xs leading-relaxed {color.text.replace('text-', 'prose-')}"
-                                            />
-                                        </div>
-                                    {/if}
-                                {/each}
+                                                <h5
+                                                    class="font-semibold {color.text} mb-2"
+                                                >
+                                                    {topics[activeTopic]
+                                                        .criteriaLabels[
+                                                        criterion
+                                                    ]}
+                                                </h5>
+                                                <Markdown
+                                                    content={TOPIC_CONFIGS[
+                                                        activeTopic
+                                                    ].prompts[criterion]}
+                                                    class="text-xs leading-relaxed {color.text.replace(
+                                                        'text-',
+                                                        'prose-',
+                                                    )}"
+                                                />
+                                            </div>
+                                        {/if}
+                                    {/each}
+                                </div>
                             </div>
-                        </div>
+                        {:else}
+                            <div>
+                                <h4 class="mb-2 font-semibold text-gray-900">
+                                    Combined Scoring
+                                </h4>
+                                <p class="text-sm leading-relaxed">
+                                    The combined view aggregates scores from all
+                                    policy areas. You can adjust the sliders
+                                    above to change the weight of each criterion
+                                    in the overall calculation.
+                                </p>
+                            </div>
+                        {/if}
 
                         <!-- AI Analysis -->
                         <div>
@@ -453,7 +681,16 @@
         <footer
             class="z-10 relative pt-8 border-gray-200 border-t text-white text-sm text-center"
         >
-    An experimental project by <a href="https://github.com/dldx" class="hover:underline" target="_blank" >Durand D'souza</a>. Data and scores have not yet been verified. View the source on <a href="https://github.com/dldx/uk-policy-thermometer" target="_blank" class="hover:underline">GitHub</a>.
-    </footer>
+            An experimental project by <a
+                href="https://github.com/dldx"
+                class="hover:underline"
+                target="_blank">Durand D'souza</a
+            >. Data and scores have not yet been verified. View the source on
+            <a
+                href="https://github.com/dldx/uk-policy-thermometer"
+                target="_blank"
+                class="hover:underline">GitHub</a
+            >.
+        </footer>
     </div>
 </div>
