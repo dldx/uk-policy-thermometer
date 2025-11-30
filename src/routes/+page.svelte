@@ -81,7 +81,6 @@
     });
 </script>
 
-<SkyDecoration />
 
 <div class="bg-amber-50 px-4 py-3 border-amber-200 border-b">
     <div
@@ -110,12 +109,13 @@
     class="px-4 md:px-6 py-6 min-h-screen overflow-hidden font-sans"
     style="background: linear-gradient(to bottom, #fb923c 0%, #fdba74 15%, #93c5fd 150%, #60a5fa 100%);"
 >
+<SkyDecoration />
     <div class="z-10 relative space-y-5 mx-auto max-w-7xl">
         <header class="space-y-3 text-center">
             <h1
                 class="font-display font-bold text-gray-900 text-5xl tracking-tight"
             >
-                2025 UK Policy Tracker
+                UK Policy Thermometer
             </h1>
             <p
                 class="mx-auto max-w-2xl font-light text-gray-600 text-lg leading-relaxed"

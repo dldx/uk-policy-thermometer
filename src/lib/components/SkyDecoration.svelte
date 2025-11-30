@@ -1,8 +1,6 @@
 <div
     class="relative w-full h-32 sm:h-40 md:h-48 overflow-hidden"
-    style="background: linear-gradient(to bottom, #fb923c 0%, #fdba74 100%);"
 >
-    <!-- Orange gradient background for sky -->
 
     <!-- SVG Container for Clouds and Sun -->
     <svg
